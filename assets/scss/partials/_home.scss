@@ -1,0 +1,130 @@
+.section-level-1 {
+  .content {
+    margin: 0 auto 100px;
+  }
+  .btn {
+    margin-top: 105px;
+  }
+}
+  .level-list {
+    overflow: hidden;
+    @include transition($transition-other);
+    > li {
+      position: relative;
+      z-index: 2;
+      float: left;
+      width: ($col*3);
+      min-height: 100vh;
+      cursor: pointer;
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      &:hover {
+        z-index: 3;
+      }
+      &:hover .bg-box {
+        display: block;
+      }
+    }
+    &.hover > li {
+      &:hover .level-box-shadow{
+        display: none;
+      }
+      &:hover .label-bg-color {
+        -webkit-transform: scaleX(1.15625)translate3d(0,0,0);
+        transform: scaleX(1.15625)translate3d(0,0,0);
+      }
+    }
+  }
+    .level-box-shadow {
+      position: absolute;
+      z-index: 3;
+      display: none;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      webkit-transition: background-color .35s,color .35s,margin .45s,-webkit-transform .5s;
+      transition: background-color .35s,color .35s,margin .45s,transform .5s;
+      @include transition($transition-other);
+      .hover & {
+        display: block;
+      }
+    }
+    .label-bg-color {
+      position: absolute;
+      z-index: 1;
+      display: block;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+      @include transition($transition-other);
+    }
+        .level-box {
+          position: relative;
+          z-index: 2;
+          padding: 120px 10px 150px;
+          text-align: center;
+          .level-title,
+          .content {
+            max-width: 330px;
+          }
+        }
+          .level-title {
+            margin: 0 auto 28px;
+            font: 32px $font-bold;
+            text-transform: uppercase;
+          }
+          .level-img-wrap {
+            position: relative;
+            height: 390px;
+            line-height: 390px;
+            text-align: center;
+
+            img {
+              position: relative;
+              z-index: 5;
+              max-width: 100%;
+              vertical-align: middle;
+            }
+            .bg-box {
+              display: none;
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              z-index: 4;
+              background-position: center;
+              background-repeat: no-repeat;
+              @include transition($transition-other);
+            }
+          }
+.section-bottom-nav {
+}
+  .bottom-nav-list {
+    > li {
+      float: left;
+      width: ($col*4);
+      padding: 29px 10px 30px;
+      text-align: center;
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      > a {
+        font: 20px $font-medium;
+        text-transform: uppercase;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }

@@ -1,6 +1,10 @@
 .section-level-1 {
+  .content-wrap {
+    margin-bottom: 100px;
+
+  }
   .content {
-    margin: 0 auto 100px;
+    margin: 0 auto;
   }
   .btn {
     margin-top: 105px;
@@ -14,7 +18,7 @@
       z-index: 2;
       float: left;
       width: ($col*3);
-      min-height: 100vh;
+      //min-height: 100vh;
       cursor: pointer;
       &:after {
         content: "";

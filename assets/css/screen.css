@@ -439,8 +439,10 @@ a.footer-logo:hover, .footer-logo a:hover {
     content: "\f106"; }
 
 /* styles used throughout site */
+.section-level-1 .content-wrap {
+  margin-bottom: 100px; }
 .section-level-1 .content {
-  margin: 0 auto 100px; }
+  margin: 0 auto; }
 .section-level-1 .btn {
   margin-top: 105px; }
 
@@ -457,7 +459,6 @@ a.footer-logo:hover, .footer-logo a:hover {
     z-index: 2;
     float: left;
     width: 25%;
-    min-height: 100vh;
     cursor: pointer; }
     .level-list > li:after {
       content: "";

@@ -59,6 +59,7 @@ jQuery(document).ready(function($) {
                 }
             }, 100);
         } else if (width < '767'){
+            contentBox.css('height', 'auto');
             listBox.css('height', 'auto');
         }
     });

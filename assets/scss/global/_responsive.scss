@@ -69,6 +69,16 @@
 }
 
 @media all and (max-width: 768px) {
+  .wrapper {
+    padding-top: 70px;
+  }
+  .header {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
     .logo-wrap {
         padding-top: 23px;
     }

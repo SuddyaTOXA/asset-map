@@ -127,7 +127,7 @@ a:link, a:visited {
 
 a:hover {
   text-decoration: underline;
-  color: #fb7e22; }
+  color: #38a9ec; }
 
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------DEFAULT CLASSES------------------------------*/
@@ -193,7 +193,7 @@ a, .btn {
 a[href^="tel"] {
   cursor: pointer; }
   a[href^="tel"]:hover {
-    color: #fb7e22;
+    color: #38a9ec;
     text-decoration: none; }
 
 img {
@@ -296,10 +296,9 @@ a.btn, .btn {
   max-width: 270px;
   width: 100%;
   margin: 0;
-  padding: 16px 20px 16px;
+  padding: 20px 20px 19px;
   font: 500 16px "Gotham", Arial, sans-serif;
   color: #525f8a;
-  font-weight: 600;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -450,6 +449,8 @@ a.logo {
       clear: both; }
     .level-list > li:hover {
       z-index: 3; }
+      .level-list > li:hover .level-box .content {
+        color: #ffffff; }
       .level-list > li:hover .level-img-wrap {
         background: inherit; }
         .level-list > li:hover .level-img-wrap img {
@@ -506,7 +507,9 @@ a.logo {
   text-align: center; }
   .level-box .level-title,
   .level-box .content {
-    max-width: 330px; }
+    max-width: 350px; }
+  .level-box .content {
+    color: rgba(255, 255, 255, 0.671); }
 
 .level-title {
   margin: 0 auto 28px;
@@ -557,20 +560,25 @@ a.logo {
     -o-transition: 0.35s;
     transition: 0.35s; }
 
-.bottom-nav-list > li {
-  float: left;
-  width: 33.33333%;
-  padding: 29px 10px 30px;
-  text-align: center; }
-  .bottom-nav-list > li:after {
-    content: "";
-    display: table;
-    clear: both; }
-  .bottom-nav-list > li > a {
-    font: 500 20px "Gotham", Arial, sans-serif;
-    text-transform: uppercase; }
-    .bottom-nav-list > li > a:hover {
-      text-decoration: none; }
+.bottom-nav-list {
+  display: table;
+  width: 100%;
+  table-layout: fixed; }
+  .bottom-nav-list > li {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
+    .bottom-nav-list > li:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .bottom-nav-list > li > a {
+      display: block;
+      padding: 29px 20px 27px;
+      font: 500 20px "Gotham", Arial, sans-serif;
+      text-transform: uppercase; }
+      .bottom-nav-list > li > a:hover {
+        text-decoration: none; }
 
 /* media */
 /*--------------------------------------MEDIA-----------------------------------------*/

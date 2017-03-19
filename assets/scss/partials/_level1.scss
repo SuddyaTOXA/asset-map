@@ -28,6 +28,11 @@
       }
       &:hover {
         z-index: 3;
+        .level-box {
+          .content {
+            color: #ffffff;
+          }
+        }
         .level-img-wrap {
           background: inherit;
           img {
@@ -84,7 +89,10 @@
           text-align: center;
           .level-title,
           .content {
-            max-width: 330px;
+            max-width: 350px;
+          }
+          .content {
+            color: rgba(255, 255, 255, 0.671);
           }
         }
           .level-title {
@@ -126,10 +134,12 @@
 .section-bottom-nav {
 }
   .bottom-nav-list {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
     > li {
-      float: left;
-      width: ($col*4);
-      padding: 29px 10px 30px;
+      display: table-cell;
+      vertical-align: middle;
       text-align: center;
       &:after {
         content: "";
@@ -137,6 +147,8 @@
         clear: both;
       }
       > a {
+        display: block;
+        padding: 29px 20px 27px;
         font: 500 20px $font-main;
         text-transform: uppercase;
         &:hover {

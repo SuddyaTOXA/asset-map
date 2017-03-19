@@ -80,17 +80,29 @@ img {
 .color-greenish-blue,
 .color-greenish-blue .label-bg-color {
     background-color: $color-greenish-blue;
+    .hover & {
+        background-color: #11363C;
+    }
 }
 .color-cobalt-blue,
 .color-cobalt-blue .label-bg-color {
     background-color: $color-cobalt-blue;
+    .hover & {
+        background-color: #1A1A34;
+    }
 }
 .color-grayish-blue .label-bg-color {
     background-color: $color-grayish-blue;
+    .hover & {
+        background-color: #293134;
+    }
 }
 .color-purple-blue,
 .color-purple-blue .label-bg-color {
     background-color: $color-purple-blue;
+    .hover & {
+        background-color: #2D2534;
+    }
 }
 .color-gray-brown,
 .color-gray-brown .label-bg-color {

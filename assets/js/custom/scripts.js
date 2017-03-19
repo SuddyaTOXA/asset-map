@@ -17,6 +17,18 @@ jQuery(document).ready(function($) {
             $(this).removeClass("hover");
         }
     );
+    //gor hover width effect
+    $(".level-list li").hover(
+        function() {
+            $(this).prev().addClass("shrink-left");
+            $(this).addClass("expand");
+            $(this).next().addClass("shrink-right");
+        }, function() {
+            $(this).prev().removeClass("shrink-left");
+            $(this).removeClass("expand");
+            $(this).next().removeClass("shrink-right");
+        }
+    );
 
     // for section Level 1
     $(window).on('load resize', function() {

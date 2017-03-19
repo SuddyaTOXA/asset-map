@@ -4,6 +4,8 @@
     width: 100%;
     min-height: 150px;
     display: table;
+    opacity: 1;
+    @include transition($transition-other);
   }
   .content {
     margin: 0 auto;
@@ -11,6 +13,9 @@
   .btn {
     margin-top: 105px;
   }
+}
+.hover .content-wrap {
+  opacity: 0.3;
 }
   .level-list {
     overflow: hidden;
@@ -44,33 +49,30 @@
           opacity: 1;
         }
       }
+      &.shrink-left .label-bg-color {
+        -webkit-transform: scaleX(.92188)translate3d(-12.5px,0,0);
+        transform: scaleX(.92188)translate3d(-12.5px,0,0);
+      }
+      &.expand .label-bg-color{
+        -webkit-transform: scaleX(1.15625)translate3d(0,0,0);
+        transform: scaleX(1.15625)translate3d(0,0,0);
+      }
+      &.shrink-right .label-bg-color {
+        -webkit-transform: scaleX(.92188)translate3d(12.5px,0,0);
+        transform: scaleX(.92188)translate3d(12.5px,0,0);
+      }
     }
     &.hover > li {
-      &:hover .level-box-shadow{
-        display: none;
+      &:hover .content-wrap {
+        opacity: 1;
       }
-      &:hover .label-bg-color {
-        -webkit-transform: scaleX(1.15625) translate3d(0,0,0);
-        transform: scaleX(1.15625) translate3d(0,0,0);
-      }
+      //&:hover .label-bg-color {
+      //  -webkit-transform: scaleX(1.15625) translate3d(0,0,0);
+      //  transform: scaleX(1.15625) translate3d(0,0,0);
+      //}
     }
   }
-    .level-box-shadow {
-      position: absolute;
-      z-index: 3;
-      display: none;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      webkit-transition: background-color .35s,color .35s,margin .45s,-webkit-transform .5s;
-      transition: background-color .35s,color .35s,margin .45s,transform .5s;
-      @include transition($transition-other);
-      .hover & {
-        display: block;
-      }
-    }
+
     .label-bg-color {
       position: absolute;
       z-index: 1;
@@ -95,7 +97,25 @@
           .content {
             color: rgba(255, 255, 255, 0.671);
           }
+          .hover &:after {
+            position: absolute;
+            z-index: 3;
+            content: '';
+            display: none;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            webkit-transition: background-color .35s,color .35s,margin .45s,-webkit-transform .5s;
+            transition: background-color .35s,color .35s,margin .45s,transform .5s;
+            @include transition($transition-other);
+          }
         }
+          .level-list.hover li:hover .level-box:after {
+            display: none;
+          }
+
           .level-title {
             margin: 0 auto 28px;
             font: 700 32px $font-main;

@@ -421,8 +421,9 @@ a.logo {
 
 /* styles used throughout site */
 .section-level-1 .content-wrap {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   width: 100%;
+  min-height: 150px;
   display: table; }
 .section-level-1 .content {
   margin: 0 auto; }

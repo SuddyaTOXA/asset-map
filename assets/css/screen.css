@@ -553,10 +553,10 @@ a.logo {
 
 .mobile-menu-toggle {
   position: absolute;
-  right: -15px;
+  right: -20px;
   top: 0;
-  height: 65px;
-  width: 65px;
+  height: 70px;
+  width: 70px;
   vertical-align: middle;
   cursor: pointer;
   font-size: 26px; }
@@ -841,6 +841,7 @@ a.logo {
       font: 500 20px "Gotham", Arial, sans-serif;
       text-transform: uppercase; }
       .bottom-nav-list > li > a:hover {
+        color: #ffffff;
         text-decoration: none; }
   .bottom-nav-list.hover a {
     opacity: 0.3; }
@@ -874,7 +875,9 @@ a.logo {
     margin-top: 35px; }
 
   .bottom-nav-list > li {
-    display: block; } }
+    display: block; }
+    .bottom-nav-list > li > a:hover {
+      color: #38a9ec; } }
 @media all and (max-width: 768px) {
   .logo-wrap {
     padding-top: 23px; }

@@ -492,6 +492,46 @@ a.logo {
     height: auto;
     margin-bottom: -5px; }
 
+/*--------------------------------------NAV-----------------------------------------*/
+.main-nav > ul {
+  float: right;
+  margin-right: -20px; }
+  .main-nav > ul > li {
+    position: relative;
+    float: left;
+    text-align: center; }
+    .main-nav > ul > li > a {
+      position: relative;
+      display: inline-block;
+      padding: 26px 20px 26px;
+      font: 18px "Myriad Pro", Arial, sans-serif;
+      color: #ffffff;
+      line-height: 1;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer; }
+      .main-nav > ul > li > a:hover {
+        color: #38a9ec;
+        text-decoration: none; }
+
+.mobile-menu {
+  padding-bottom: 30px; }
+  .mobile-menu li {
+    position: relative; }
+    .mobile-menu li a {
+      position: relative;
+      display: block;
+      padding: 15px 35px 13px;
+      font: 18px "Myriad Pro", Arial, sans-serif;
+      color: #ffffff;
+      letter-spacing: 2px;
+      text-transform: uppercase; }
+    .mobile-menu li a:hover, .mobile-menu li.active-trail > a,
+    .mobile-menu li a.active {
+      color: #38a9ec;
+      text-decoration: none; }
+
 .mobile-menu-wrap,
 .mobile-menu-toggle {
   display: none; }
@@ -533,7 +573,7 @@ a.logo {
 .mobile-menu-box {
   position: absolute;
   width: 370px;
-  max-width: 80%;
+  max-width: 90%;
   height: 100%;
   right: -400px;
   z-index: 2;
@@ -611,46 +651,6 @@ a.logo {
     transform: rotate(-45deg);
     bottom: 0;
     background-color: #38a9ec; }
-
-/*--------------------------------------NAV-----------------------------------------*/
-.main-nav > ul {
-  float: right;
-  margin-right: -20px; }
-  .main-nav > ul > li {
-    position: relative;
-    float: left;
-    text-align: center; }
-    .main-nav > ul > li > a {
-      position: relative;
-      display: inline-block;
-      padding: 26px 20px 26px;
-      font: 18px "Myriad Pro", Arial, sans-serif;
-      color: #ffffff;
-      line-height: 1;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-decoration: none;
-      cursor: pointer; }
-      .main-nav > ul > li > a:hover {
-        color: #38a9ec;
-        text-decoration: none; }
-
-.mobile-menu {
-  padding-bottom: 70px; }
-  .mobile-menu li {
-    position: relative; }
-    .mobile-menu li a {
-      position: relative;
-      display: block;
-      padding: 15px 35px 13px;
-      font: 18px "Myriad Pro", Arial, sans-serif;
-      color: #ffffff;
-      letter-spacing: 2px;
-      text-transform: uppercase; }
-    .mobile-menu li a:hover, .mobile-menu li.active-trail > a,
-    .mobile-menu li a.active {
-      color: #38a9ec;
-      text-decoration: none; }
 
 /* styles used throughout site */
 .section-level-1 .content-wrap {
@@ -853,15 +853,7 @@ a.logo {
 @media all and (max-width: 1280px) {
   .container {
     padding: 0 20px; } }
-@media all and (max-width: 1024px) {
-  .desktop {
-    display: none !important; }
-
-  .mobile-menu-wrap,
-  .mobile-category-toggle,
-  .mobile-menu-toggle {
-    display: block; }
-
+@media all and (max-width: 1140px) {
   .level-list > li {
     width: 50%; }
 
@@ -872,12 +864,15 @@ a.logo {
     margin-bottom: 30px; }
 
   .section-level-1 .btn {
-    margin-top: 35px; }
+    margin-top: 35px; } }
+@media all and (max-width: 1024px) {
+  .desktop {
+    display: none !important; }
 
-  .bottom-nav-list > li {
-    display: block; }
-    .bottom-nav-list > li > a:hover {
-      color: #38a9ec; } }
+  .mobile-menu-wrap,
+  .mobile-category-toggle,
+  .mobile-menu-toggle {
+    display: block; } }
 @media all and (max-width: 768px) {
   .wrapper {
     padding-top: 70px; }
@@ -889,18 +884,28 @@ a.logo {
     top: 0;
     width: 100%; }
 
-  .logo-wrap {
-    padding-top: 23px; }
-
-  .logo, a.logo {
-    max-width: 100px;
-    margin-right: 15px; }
-
-  .logo-wrap strong {
-    margin-top: 3px;
-    font-size: 16px; }
-
   .level-list > li {
-    width: 100%; } }
+    width: 100%; }
+
+  .bottom-nav-list > li {
+    display: block; }
+    .bottom-nav-list > li > a:hover {
+      color: #38a9ec; } }
+@media all and (max-width: 420px) {
+  .logo-wrap .logo {
+    margin-right: 20px; }
+  .logo-wrap strong {
+    margin-top: 5px;
+    font-size: 18px; }
+
+  .mobile-menu li a {
+    padding-left: 20px;
+    padding-right: 20px; } }
+@media all and (max-width: 360px) {
+  .container {
+    padding: 0 15px; }
+
+  .logo-wrap .logo {
+    margin-right: 15px; } }
 
 /*# sourceMappingURL=screen.css.map */

@@ -17,19 +17,7 @@
 
 }
 
-@media all and (max-width: 1080px) {
-
-}
-
-@media all and (max-width: 1024px) {
-  .desktop {
-    display: none !important;
-  }
-  .mobile-menu-wrap,
-  .mobile-category-toggle,
-  .mobile-menu-toggle {
-    display: block;
-  }
+@media all and (max-width: 1140px) {
   .level-list {
     > li {
       width: 50%;
@@ -44,15 +32,16 @@
   .section-level-1 .btn {
     margin-top: 35px;
   }
-  .bottom-nav-list {
-    > li {
-      display: block;
-      > a {
-        &:hover {
-          color: $color-logo-text;
-        }
-      }
-    }
+}
+
+@media all and (max-width: 1024px) {
+  .desktop {
+    display: none !important;
+  }
+  .mobile-menu-wrap,
+  .mobile-category-toggle,
+  .mobile-menu-toggle {
+    display: block;
   }
 }
 
@@ -79,22 +68,21 @@
     top: 0;
     width: 100%;
   }
-    .logo-wrap {
-        padding-top: 23px;
-    }
-    .logo, a.logo {
-        max-width: 100px;
-        margin-right: 15px;
-    }
-        .logo-wrap strong {
-            margin-top: 3px;
-            font-size: 16px;
+  .level-list {
+      > li {
+          width: 100%;
+      }
+  }
+  .bottom-nav-list {
+    > li {
+      display: block;
+      > a {
+        &:hover {
+          color: $color-logo-text;
         }
-    .level-list {
-        > li {
-            width: 100%;
-        }
+      }
     }
+  }
 }
 
 @media all and (max-width: 640px) {
@@ -110,11 +98,34 @@
 }
 
 @media all and (max-width: 420px) {
-
+  .logo-wrap {
+    .logo {
+      margin-right: 20px;
+    }
+    strong {
+      margin-top: 5px;
+      font-size: 18px;
+    }
+  }
+  .mobile-menu {
+    li {
+      a {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
 }
 
 @media all and (max-width: 360px) {
-
+  .container {
+    padding: 0 15px;
+  }
+  .logo-wrap {
+    .logo {
+      margin-right: 15px;
+    }
+  }
 }
 
 @media all and (max-width: 320px) {

@@ -9,6 +9,7 @@ function setMaxHeight(box) {
 }
 
 jQuery(document).ready(function($) {
+
     // for burger menu
     $('.mobile-menu-toggle, .mobile-menu-overlay').on('click', function(){
         $('.mobile-menu-toggle').toggleClass('active');
@@ -21,12 +22,12 @@ jQuery(document).ready(function($) {
         function() {
             $('.bottom-nav-list').addClass("hover");
             $('.level-list').addClass("hover");
-        },
-        function() {
+        }, function() {
             $('.bottom-nav-list').removeClass("hover");
             $('.level-list').removeClass("hover");
         }
     );
+
     //gor hover width effect
     $(".level-list li").hover(
         function() {
@@ -48,19 +49,23 @@ jQuery(document).ready(function($) {
             listBox         = $('.level-list > li'),
             contentBox      = listBox.find('.content-wrap');
 
-        if (width > '1024') {
-            setTimeout(function () {
-                setMaxHeight(contentBox);
+        function levelHeight(){
+            setMaxHeight(contentBox);
 
-                if (listHeight > windowHeight) {
-                    setMaxHeight(listBox);
-                } else {
-                    listBox.height(windowHeight);
-                }
-            }, 100);
-        } else if (width < '767'){
-            contentBox.css('height', 'auto');
-            listBox.css('height', 'auto');
+            if (listHeight > windowHeight)
+                setMaxHeight(listBox);
+            else
+                listBox.height(windowHeight - 70);
+        }
+
+        if (width > '1140') {
+            levelHeight();
+        } else if (width >= 769 && width <= '1140') {
+            levelHeight();
+        } else {
+            contentBox.css('height', '');
+            listBox.css('height', '');
         }
     });
+
 });

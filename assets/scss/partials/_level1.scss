@@ -162,6 +162,7 @@
       display: table-cell;
       vertical-align: middle;
       text-align: center;
+      @include transition($transition-other);
       &:after {
         content: "";
         display: table;
@@ -175,6 +176,12 @@
         &:hover {
           text-decoration: none;
         }
+      }
+    }
+    &.hover a {
+      opacity: 0.3;
+      &:hover {
+        opacity: 1;
       }
     }
   }

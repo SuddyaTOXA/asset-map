@@ -132,15 +132,42 @@ img {
 .color-gray-brown,
 .color-gray-brown .label-bg-color {
     background-color: $color-gray-brown;
+    .hover & {
+        background-color: #282420;
+    }
 }
+.hover .color-gray-brown:hover,
+.hover .color-gray-brown:hover .label-bg-color {
+    @include transition($transition-other);
+    background-color: $color-gray-brown;
+}
+
 .color-khaki,
 .color-khaki .label-bg-color {
     background-color: $color-khaki;
+    .hover & {
+        background-color: #2C2C20;
+    }
 }
+.hover .color-khaki:hover,
+.hover .color-khaki:hover .label-bg-color {
+    @include transition($transition-other);
+    background-color: $color-khaki;
+}
+
 .color-basalt-gray,
 .color-basalt-gray .label-bg-color {
     background-color: $color-basalt-gray;
+    .hover & {
+        background-color: #24282B;
+    }
 }
+.hover .color-basalt-gray:hover,
+.hover .color-basalt-gray:hover .label-bg-color {
+    @include transition($transition-other);
+    background-color: $color-basalt-gray;
+}
+
 
 .content {
     * {

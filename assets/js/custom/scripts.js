@@ -9,12 +9,22 @@ function setMaxHeight(box) {
 }
 
 jQuery(document).ready(function($) {
+    // for burger menu
+    $('.mobile-menu-toggle, .mobile-menu-overlay').on('click', function(){
+        $('.mobile-menu-toggle').toggleClass('active');
+        $('.mobile-menu-wrap').toggleClass('showing');
+        $(document.body).toggleClass('overflow');
+    });
+
     //for hover effect
-    $(".level-list").hover(
+    $(".section-level-1").hover(
         function() {
-            $(this).addClass("hover");
-        }, function() {
-            $(this).removeClass("hover");
+            $('.bottom-nav-list').addClass("hover");
+            $('.level-list').addClass("hover");
+        },
+        function() {
+            $('.bottom-nav-list').removeClass("hover");
+            $('.level-list').removeClass("hover");
         }
     );
     //gor hover width effect
@@ -40,14 +50,16 @@ jQuery(document).ready(function($) {
 
         if (width > '1024') {
             setTimeout(function () {
-                setMaxHeight(listBox);
+                setMaxHeight(contentBox);
 
                 if (listHeight > windowHeight) {
-                    setMaxHeight(contentBox);
+                    setMaxHeight(listBox);
                 } else {
                     listBox.height(windowHeight);
                 }
             }, 100);
+        } else if (width < '767'){
+            listBox.css('height', 'auto');
         }
     });
 });

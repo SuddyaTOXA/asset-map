@@ -34,14 +34,16 @@
         a {
             position: relative;
             display: block;
-            font: 16px $font-main;
             padding: 15px 35px 13px;
-            color: #40464b;
+            font: $size-nav $font-nav;
+            color: $white;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
         a:hover,
         &.active-trail > a,
         a.active {
-            color: #38a9ec;
+            color: $color-logo-text;
             text-decoration: none;
         }
     }

@@ -1,6 +1,8 @@
 .section-level-1 {
   .content-wrap {
     margin-bottom: 100px;
+    width: 100%;
+    display: table;
   }
   .content {
     margin: 0 auto;
@@ -26,9 +28,14 @@
       }
       &:hover {
         z-index: 3;
-      }
-      &:hover .bg-box {
-        display: block;
+        .level-img-wrap {
+          img {
+            opacity: 1;
+          }
+        }
+        .bg-box {
+          display: block;
+        }
       }
     }
     &.hover > li {

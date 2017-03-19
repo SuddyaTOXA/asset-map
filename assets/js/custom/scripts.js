@@ -18,7 +18,7 @@ jQuery(document).ready(function($) {
         }
     );
 
-    //for section level 1
+    // for section Level 1
     $(window).on('load resize', function() {
         var width           = $(window).width(),
             windowHeight    = $(window).height(),

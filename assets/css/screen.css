@@ -422,7 +422,9 @@ a.logo {
 
 /* styles used throughout site */
 .section-level-1 .content-wrap {
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  width: 100%;
+  display: table; }
 .section-level-1 .content {
   margin: 0 auto; }
 .section-level-1 .btn {
@@ -448,8 +450,10 @@ a.logo {
       clear: both; }
     .level-list > li:hover {
       z-index: 3; }
-    .level-list > li:hover .bg-box {
-      display: block; }
+      .level-list > li:hover .level-img-wrap img {
+        opacity: 1; }
+      .level-list > li:hover .bg-box {
+        display: block; }
   .level-list.hover > li:hover .level-box-shadow {
     display: none; }
   .level-list.hover > li:hover .label-bg-color {

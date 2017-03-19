@@ -47,7 +47,7 @@ a:hover                        { text-decoration:underline; color: #fb7e22; }
 a, .btn {
     @include transition($transition-link);
 }
-a[href^="tel:"] {
+a[href^="tel"] {
     cursor: pointer;
     &:hover {
         color: #fb7e22;

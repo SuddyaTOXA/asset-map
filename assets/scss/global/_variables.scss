@@ -1,23 +1,21 @@
 // Media queries breakpoints
 // --------------------------------------------------
 /*fonts*/
-$font-main: 'Gotham-Book', Arial, sans-serif;
-$font-bold: 'Gotham-Bold', Arial, sans-serif;
-$font-medium: 'Gotham-Medium', Arial, sans-serif;
-$font-heading: 'Gotham-Bold', Arial, sans-serif;
-$font-navigation: 'MyriadProRegular', Arial, sans-serif;
+$family: Arial, sans-serif;
+$font-main: 'Gotham', $family;
+$font-nav: 'Myriad Pro', $family;
 
 /*fonts-size*/
 $size-main: 16px;
-$size-heading2: 32px;
-$size-navigation: 18px;
+$size-heading: 32px;
+$size-nav: 18px;
 
 /*line-height*/
 $line-height: 1.5;
 
 /*colors*/
-$white: #fff;
-$black: #000;
+$white: #ffffff;
+$black: #000000;
 
 $color-main: $white;
 $color-btn: #96a1a7;

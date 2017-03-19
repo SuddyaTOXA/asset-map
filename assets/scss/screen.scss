@@ -6,12 +6,12 @@
 /*import global styles */
 @import 'global/global';
 @import 'global/buttons';
-@import 'global/headerr';
+@import 'global/header';
 @import 'global/navigation';
 @import 'global/footer';
 
 /* styles used throughout site */
-@import 'partials/home';
+@import 'partials/level1';
 
 /* media */
-@import 'global/media';
+@import 'global/responsive';

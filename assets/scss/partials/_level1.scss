@@ -1,7 +1,6 @@
 .section-level-1 {
   .content-wrap {
     margin-bottom: 100px;
-
   }
   .content {
     margin: 0 auto;
@@ -37,8 +36,8 @@
         display: none;
       }
       &:hover .label-bg-color {
-        -webkit-transform: scaleX(1.15625)translate3d(0,0,0);
-        transform: scaleX(1.15625)translate3d(0,0,0);
+        -webkit-transform: scaleX(1.15625) translate3d(0,0,0);
+        transform: scaleX(1.15625) translate3d(0,0,0);
       }
     }
   }
@@ -82,7 +81,7 @@
         }
           .level-title {
             margin: 0 auto 28px;
-            font: 32px $font-bold;
+            font: 700 32px $font-main;
             text-transform: uppercase;
           }
           .level-img-wrap {
@@ -90,12 +89,12 @@
             height: 390px;
             line-height: 390px;
             text-align: center;
-
             img {
               position: relative;
               z-index: 5;
               max-width: 100%;
               vertical-align: middle;
+              opacity: 0.3;
             }
             .bg-box {
               display: none;
@@ -124,7 +123,7 @@
         clear: both;
       }
       > a {
-        font: 20px $font-medium;
+        font: 500 20px $font-main;
         text-transform: uppercase;
         &:hover {
           text-decoration: none;

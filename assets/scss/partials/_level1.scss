@@ -22,7 +22,6 @@
     @include transition($transition-other);
     > li {
       position: relative;
-      z-index: 2;
       float: left;
       width: ($col*3);
       @include transition($transition-other);
@@ -33,7 +32,9 @@
         clear: both;
       }
       &:hover {
-        z-index: 3;
+        .label-bg-color {
+          z-index: 2;
+        }
         .level-box {
           .content {
             color: #ffffff;
@@ -50,16 +51,13 @@
         }
       }
       &.shrink-left .label-bg-color {
-        -webkit-transform: scaleX(.92188)translate3d(-12.5px,0,0);
-        transform: scaleX(.92188)translate3d(-12.5px,0,0);
+        @include css3-prefix(transform, scaleX(.92188) translate3d(-12.5px,0,0));
       }
       &.expand .label-bg-color{
-        -webkit-transform: scaleX(1.15625)translate3d(0,0,0);
-        transform: scaleX(1.15625)translate3d(0,0,0);
+        @include css3-prefix(transform, scaleX(1.15625)translate3d(0,0,0));
       }
       &.shrink-right .label-bg-color {
-        -webkit-transform: scaleX(.92188)translate3d(12.5px,0,0);
-        transform: scaleX(.92188)translate3d(12.5px,0,0);
+        @include css3-prefix(transform, scaleX(.92188)translate3d(12.5px,0,0));
       }
     }
     &.hover > li {
@@ -81,13 +79,12 @@
       top: 0;
       width: 100%;
       height: 100%;
-      -webkit-transform: translate3d(0,0,0);
-      transform: translate3d(0,0,0);
+      @include css3-prefix(transform, translate3d(0,0,0));
       @include transition($transition-other);
     }
         .level-box {
           position: relative;
-          z-index: 2;
+          z-index: 5;
           padding: 120px 10px 150px;
           text-align: center;
           .level-title,
@@ -99,7 +96,7 @@
           }
           .hover &:after {
             position: absolute;
-            z-index: 3;
+            z-index: 6;
             content: '';
             display: none;
             left: 0;
@@ -107,9 +104,8 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.8);
-            webkit-transition: background-color .35s,color .35s,margin .45s,-webkit-transform .5s;
-            transition: background-color .35s,color .35s,margin .45s,transform .5s;
-            @include transition($transition-other);
+            webkit-transition: background-color .35s, color .35s, margin .45s, -webkit-transform .5s;
+            transition: background-color .35s, color .35s,margin .45s, transform .5s;
           }
         }
           .level-list.hover li:hover .level-box:after {
@@ -132,7 +128,7 @@
             @include transition($transition-other);
             img {
               position: relative;
-              z-index: 5;
+              z-index: 7;
               max-width: 100%;
               vertical-align: middle;
               opacity: 0.3;
@@ -145,7 +141,7 @@
               top: 0;
               width: 100%;
               height: 100%;
-              z-index: 3;
+              z-index: 5;
               background-position: center;
               background-repeat: no-repeat;
               opacity: 0;

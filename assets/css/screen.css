@@ -224,12 +224,32 @@ img {
   .color-greenish-blue .label-bg-color {
     background-color: #11363C; }
 
+.hover .color-greenish-blue:hover,
+.hover .color-greenish-blue:hover .label-bg-color {
+  -webkit-transition: 0.35s;
+  -khtml-transition: 0.35s;
+  -moz-transition: 0.35s;
+  -ms-transition: 0.35s;
+  -o-transition: 0.35s;
+  transition: 0.35s;
+  background-color: #0C7281; }
+
 .color-cobalt-blue,
 .color-cobalt-blue .label-bg-color {
   background-color: #1A2340; }
   .hover .color-cobalt-blue, .hover
   .color-cobalt-blue .label-bg-color {
     background-color: #1A1A34; }
+
+.hover .color-cobalt-blue:hover,
+.hover .color-cobalt-blue:hover .label-bg-color {
+  -webkit-transition: 0.35s;
+  -khtml-transition: 0.35s;
+  -moz-transition: 0.35s;
+  -ms-transition: 0.35s;
+  -o-transition: 0.35s;
+  transition: 0.35s;
+  background-color: #1A2340; }
 
 .color-grayish-blue,
 .color-grayish-blue .label-bg-color {
@@ -238,12 +258,32 @@ img {
   .color-grayish-blue .label-bg-color {
     background-color: #293134; }
 
+.hover .color-grayish-blue:hover,
+.hover .color-grayish-blue:hover .label-bg-color {
+  -webkit-transition: 0.35s;
+  -khtml-transition: 0.35s;
+  -moz-transition: 0.35s;
+  -ms-transition: 0.35s;
+  -o-transition: 0.35s;
+  transition: 0.35s;
+  background-color: #54636B; }
+
 .color-purple-blue,
 .color-purple-blue .label-bg-color {
   background-color: #4A4268; }
   .hover .color-purple-blue, .hover
   .color-purple-blue .label-bg-color {
     background-color: #2D2534; }
+
+.hover .color-purple-blue:hover,
+.hover .color-purple-blue:hover .label-bg-color {
+  -webkit-transition: 0.35s;
+  -khtml-transition: 0.35s;
+  -moz-transition: 0.35s;
+  -ms-transition: 0.35s;
+  -o-transition: 0.35s;
+  transition: 0.35s;
+  background-color: #4A4268; }
 
 .color-gray-brown,
 .color-gray-brown .label-bg-color {
@@ -489,6 +529,12 @@ a.logo {
     z-index: 2;
     float: left;
     width: 25%;
+    -webkit-transition: 0.35s;
+    -khtml-transition: 0.35s;
+    -moz-transition: 0.35s;
+    -ms-transition: 0.35s;
+    -o-transition: 0.35s;
+    transition: 0.35s;
     cursor: pointer; }
     .level-list > li:after {
       content: "";

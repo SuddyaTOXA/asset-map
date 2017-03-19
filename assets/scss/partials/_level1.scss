@@ -25,7 +25,7 @@
       z-index: 2;
       float: left;
       width: ($col*3);
-      //min-height: 100vh;
+      @include transition($transition-other);
       cursor: pointer;
       &:after {
         content: "";

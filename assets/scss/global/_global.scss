@@ -84,6 +84,12 @@ img {
         background-color: #11363C;
     }
 }
+.hover .color-greenish-blue:hover,
+.hover .color-greenish-blue:hover .label-bg-color {
+    @include transition($transition-other);
+    background-color: $color-greenish-blue;
+}
+
 .color-cobalt-blue,
 .color-cobalt-blue .label-bg-color {
     background-color: $color-cobalt-blue;
@@ -91,6 +97,12 @@ img {
         background-color: #1A1A34;
     }
 }
+.hover .color-cobalt-blue:hover,
+.hover .color-cobalt-blue:hover .label-bg-color {
+    @include transition($transition-other);
+    background-color: $color-cobalt-blue;
+}
+
 .color-grayish-blue,
 .color-grayish-blue .label-bg-color {
     background-color: $color-grayish-blue;
@@ -98,6 +110,12 @@ img {
         background-color: #293134;
     }
 }
+.hover .color-grayish-blue:hover,
+.hover .color-grayish-blue:hover .label-bg-color {
+    @include transition($transition-other);
+    background-color: $color-grayish-blue;
+}
+
 .color-purple-blue,
 .color-purple-blue .label-bg-color {
     background-color: $color-purple-blue;
@@ -105,6 +123,12 @@ img {
         background-color: #2D2534;
     }
 }
+.hover .color-purple-blue:hover,
+.hover .color-purple-blue:hover .label-bg-color {
+    @include transition($transition-other);
+    background-color: $color-purple-blue;
+}
+
 .color-gray-brown,
 .color-gray-brown .label-bg-color {
     background-color: $color-gray-brown;

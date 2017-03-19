@@ -51,3 +51,31 @@ a.btn, .btn {
         }
     }
 }
+.section-level-1 {
+    .level-list > li {
+        > a {
+            @include transition($transition-other);
+            &:hover {
+                color: $white;
+                text-decoration: none;
+            }
+        }
+        &:hover .btn,
+        .btn:hover,
+        a.btn:hover {
+            color: $color-main;
+        }
+        &.color-greenish-blue:hover .btn {
+            background-color: #4bb5c4;
+        }
+        &.color-cobalt-blue:hover .btn {
+            background-color: #525f8a;
+        }
+        &.color-grayish-blue:hover .btn {
+            background-color: #96a1a7;
+        }
+        &.color-purple-blue:hover .btn {
+            background-color: #9f8abe;
+        }
+    }
+}

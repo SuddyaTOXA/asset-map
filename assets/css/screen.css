@@ -252,7 +252,7 @@ img {
   opacity: 0.7;
   text-decoration: none; }
 .content ul, .content ol {
-  margin-left: 30px;
+  margin-left: 20px;
   margin-bottom: 20px; }
 .content ul > li {
   list-style-type: disc; }
@@ -338,6 +338,29 @@ a.btn, .btn {
     .color-purple-blue a.btn:hover, .color-purple-blue .btn:hover {
       color: #ffffff;
       background-color: #9f8abe; }
+
+.section-level-1 .level-list > li > a {
+  -webkit-transition: 0.35s;
+  -khtml-transition: 0.35s;
+  -moz-transition: 0.35s;
+  -ms-transition: 0.35s;
+  -o-transition: 0.35s;
+  transition: 0.35s; }
+  .section-level-1 .level-list > li > a:hover {
+    color: #ffffff;
+    text-decoration: none; }
+.section-level-1 .level-list > li:hover .btn,
+.section-level-1 .level-list > li .btn:hover,
+.section-level-1 .level-list > li a.btn:hover {
+  color: #ffffff; }
+.section-level-1 .level-list > li.color-greenish-blue:hover .btn {
+  background-color: #4bb5c4; }
+.section-level-1 .level-list > li.color-cobalt-blue:hover .btn {
+  background-color: #525f8a; }
+.section-level-1 .level-list > li.color-grayish-blue:hover .btn {
+  background-color: #96a1a7; }
+.section-level-1 .level-list > li.color-purple-blue:hover .btn {
+  background-color: #9f8abe; }
 
 .header {
   min-height: 70px;

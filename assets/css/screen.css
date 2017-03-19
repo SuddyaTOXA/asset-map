@@ -231,9 +231,11 @@ img {
   .color-cobalt-blue .label-bg-color {
     background-color: #1A1A34; }
 
+.color-grayish-blue,
 .color-grayish-blue .label-bg-color {
   background-color: #54636B; }
-  .hover .color-grayish-blue .label-bg-color {
+  .hover .color-grayish-blue, .hover
+  .color-grayish-blue .label-bg-color {
     background-color: #293134; }
 
 .color-purple-blue,

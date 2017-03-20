@@ -53,21 +53,21 @@
       &.shrink-left .label-bg-color {
         @include css3-prefix(transform, scaleX(.92188) translate3d(-12.5px,0,0));
       }
-      &.expand .label-bg-color{
+      &.expand .label-bg-color {
         @include css3-prefix(transform, scaleX(1.15625)translate3d(0,0,0));
       }
       &.shrink-right .label-bg-color {
         @include css3-prefix(transform, scaleX(.92188)translate3d(12.5px,0,0));
       }
     }
+
     &.hover > li {
       &:hover .content-wrap {
         opacity: 1;
       }
-      //&:hover .label-bg-color {
-      //  -webkit-transform: scaleX(1.15625) translate3d(0,0,0);
-      //  transform: scaleX(1.15625) translate3d(0,0,0);
-      //}
+      &:hover .label-bg-color:after {
+        content: none;
+      }
     }
   }
 
@@ -81,6 +81,35 @@
       height: 100%;
       @include css3-prefix(transform, translate3d(0,0,0));
       @include transition($transition-other);
+      &:after {
+        position: absolute;
+        z-index: 10;
+        content: none;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        @include transition($transition-other);
+        .hover & {
+          content: '';
+        }
+      }
+    }
+    .label-overlay {
+      position: absolute;
+      z-index: 10;
+      display: none;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.5);
+      //webkit-transition: background-color .35s, color .35s, margin .45s, -webkit-transform .5s;
+      //transition: background-color .35s, color .35s,margin .45s, transform .5s;
+      //.hover & {
+      //  display: block;
+      //}
     }
         .level-box {
           position: relative;

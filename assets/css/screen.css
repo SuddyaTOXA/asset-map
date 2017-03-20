@@ -220,120 +220,29 @@ img {
 .color-greenish-blue,
 .color-greenish-blue .label-bg-color {
   background-color: #0C7281; }
-  .hover .color-greenish-blue, .hover
-  .color-greenish-blue .label-bg-color {
-    background-color: #11363C; }
-
-.hover .color-greenish-blue:hover,
-.hover .color-greenish-blue:hover .label-bg-color {
-  -webkit-transition: 0.35s;
-  -khtml-transition: 0.35s;
-  -moz-transition: 0.35s;
-  -ms-transition: 0.35s;
-  -o-transition: 0.35s;
-  transition: 0.35s;
-  background-color: #0C7281; }
 
 .color-cobalt-blue,
 .color-cobalt-blue .label-bg-color {
-  background-color: #1A2340; }
-  .hover .color-cobalt-blue, .hover
-  .color-cobalt-blue .label-bg-color {
-    background-color: #1A1A34; }
-
-.hover .color-cobalt-blue:hover,
-.hover .color-cobalt-blue:hover .label-bg-color {
-  -webkit-transition: 0.35s;
-  -khtml-transition: 0.35s;
-  -moz-transition: 0.35s;
-  -ms-transition: 0.35s;
-  -o-transition: 0.35s;
-  transition: 0.35s;
   background-color: #1A2340; }
 
 .color-grayish-blue,
 .color-grayish-blue .label-bg-color {
   background-color: #54636B; }
-  .hover .color-grayish-blue, .hover
-  .color-grayish-blue .label-bg-color {
-    background-color: #293134; }
-
-.hover .color-grayish-blue:hover,
-.hover .color-grayish-blue:hover .label-bg-color {
-  -webkit-transition: 0.35s;
-  -khtml-transition: 0.35s;
-  -moz-transition: 0.35s;
-  -ms-transition: 0.35s;
-  -o-transition: 0.35s;
-  transition: 0.35s;
-  background-color: #54636B; }
 
 .color-purple-blue,
 .color-purple-blue .label-bg-color {
-  background-color: #4A4268; }
-  .hover .color-purple-blue, .hover
-  .color-purple-blue .label-bg-color {
-    background-color: #2D2534; }
-
-.hover .color-purple-blue:hover,
-.hover .color-purple-blue:hover .label-bg-color {
-  -webkit-transition: 0.35s;
-  -khtml-transition: 0.35s;
-  -moz-transition: 0.35s;
-  -ms-transition: 0.35s;
-  -o-transition: 0.35s;
-  transition: 0.35s;
   background-color: #4A4268; }
 
 .color-gray-brown,
 .color-gray-brown .label-bg-color {
   background-color: #5E4E41; }
-  .hover .color-gray-brown, .hover
-  .color-gray-brown .label-bg-color {
-    background-color: #282420; }
-
-.hover .color-gray-brown:hover,
-.hover .color-gray-brown:hover .label-bg-color {
-  -webkit-transition: 0.35s;
-  -khtml-transition: 0.35s;
-  -moz-transition: 0.35s;
-  -ms-transition: 0.35s;
-  -o-transition: 0.35s;
-  transition: 0.35s;
-  background-color: #5E4E41; }
 
 .color-khaki,
 .color-khaki .label-bg-color {
   background-color: #756A3D; }
-  .hover .color-khaki, .hover
-  .color-khaki .label-bg-color {
-    background-color: #2C2C20; }
-
-.hover .color-khaki:hover,
-.hover .color-khaki:hover .label-bg-color {
-  -webkit-transition: 0.35s;
-  -khtml-transition: 0.35s;
-  -moz-transition: 0.35s;
-  -ms-transition: 0.35s;
-  -o-transition: 0.35s;
-  transition: 0.35s;
-  background-color: #756A3D; }
 
 .color-basalt-gray,
 .color-basalt-gray .label-bg-color {
-  background-color: #54595C; }
-  .hover .color-basalt-gray, .hover
-  .color-basalt-gray .label-bg-color {
-    background-color: #24282B; }
-
-.hover .color-basalt-gray:hover,
-.hover .color-basalt-gray:hover .label-bg-color {
-  -webkit-transition: 0.35s;
-  -khtml-transition: 0.35s;
-  -moz-transition: 0.35s;
-  -ms-transition: 0.35s;
-  -o-transition: 0.35s;
-  transition: 0.35s;
   background-color: #54595C; }
 
 .content * {
@@ -729,6 +638,8 @@ a.logo {
       transform: scaleX(0.92188) translate3d(12.5px, 0, 0); }
   .level-list.hover > li:hover .content-wrap {
     opacity: 1; }
+  .level-list.hover > li:hover .label-bg-color:after {
+    content: none; }
 
 .label-bg-color {
   position: absolute;
@@ -750,6 +661,33 @@ a.logo {
   -ms-transition: 0.35s;
   -o-transition: 0.35s;
   transition: 0.35s; }
+  .label-bg-color:after {
+    position: absolute;
+    z-index: 10;
+    content: none;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: 0.35s;
+    -khtml-transition: 0.35s;
+    -moz-transition: 0.35s;
+    -ms-transition: 0.35s;
+    -o-transition: 0.35s;
+    transition: 0.35s; }
+    .hover .label-bg-color:after {
+      content: ''; }
+
+.label-overlay {
+  position: absolute;
+  z-index: 10;
+  display: none;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5); }
 
 .level-box {
   position: relative;

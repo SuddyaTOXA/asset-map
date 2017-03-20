@@ -80,93 +80,93 @@ img {
 .color-greenish-blue,
 .color-greenish-blue .label-bg-color {
     background-color: $color-greenish-blue;
-    .hover & {
-        background-color: #11363C;
-    }
+    //.hover & {
+    //    background-color: #11363C;
+    //}
 }
-.hover .color-greenish-blue:hover,
-.hover .color-greenish-blue:hover .label-bg-color {
-    @include transition($transition-other);
-    background-color: $color-greenish-blue;
-}
+//.hover .color-greenish-blue:hover,
+//.hover .color-greenish-blue:hover .label-bg-color {
+//    @include transition($transition-other);
+//    background-color: $color-greenish-blue;
+//}
 
 .color-cobalt-blue,
 .color-cobalt-blue .label-bg-color {
     background-color: $color-cobalt-blue;
-    .hover & {
-        background-color: #1A1A34;
-    }
+    //.hover & {
+    //    background-color: #1A1A34;
+    //}
 }
-.hover .color-cobalt-blue:hover,
-.hover .color-cobalt-blue:hover .label-bg-color {
-    @include transition($transition-other);
-    background-color: $color-cobalt-blue;
-}
+//.hover .color-cobalt-blue:hover,
+//.hover .color-cobalt-blue:hover .label-bg-color {
+//    @include transition($transition-other);
+//    background-color: $color-cobalt-blue;
+//}
 
 .color-grayish-blue,
 .color-grayish-blue .label-bg-color {
     background-color: $color-grayish-blue;
-    .hover & {
-        background-color: #293134;
-    }
+    //.hover & {
+    //    background-color: #293134;
+    //}
 }
-.hover .color-grayish-blue:hover,
-.hover .color-grayish-blue:hover .label-bg-color {
-    @include transition($transition-other);
-    background-color: $color-grayish-blue;
-}
+//.hover .color-grayish-blue:hover,
+//.hover .color-grayish-blue:hover .label-bg-color {
+//    @include transition($transition-other);
+//    background-color: $color-grayish-blue;
+//}
 
 .color-purple-blue,
 .color-purple-blue .label-bg-color {
     background-color: $color-purple-blue;
-    .hover & {
-        background-color: #2D2534;
-    }
+    //.hover & {
+    //    background-color: #2D2534;
+    //}
 }
-.hover .color-purple-blue:hover,
-.hover .color-purple-blue:hover .label-bg-color {
-    @include transition($transition-other);
-    background-color: $color-purple-blue;
-}
+//.hover .color-purple-blue:hover,
+//.hover .color-purple-blue:hover .label-bg-color {
+//    @include transition($transition-other);
+//    background-color: $color-purple-blue;
+//}
 
 .color-gray-brown,
 .color-gray-brown .label-bg-color {
     background-color: $color-gray-brown;
-    .hover & {
-        background-color: #282420;
-    }
+    //.hover & {
+    //    background-color: #282420;
+    //}
 }
-.hover .color-gray-brown:hover,
-.hover .color-gray-brown:hover .label-bg-color {
-    @include transition($transition-other);
-    background-color: $color-gray-brown;
-}
+//.hover .color-gray-brown:hover,
+//.hover .color-gray-brown:hover .label-bg-color {
+//    @include transition($transition-other);
+//    background-color: $color-gray-brown;
+//}
 
 .color-khaki,
 .color-khaki .label-bg-color {
     background-color: $color-khaki;
-    .hover & {
-        background-color: #2C2C20;
-    }
+    //.hover & {
+    //    background-color: #2C2C20;
+    //}
 }
-.hover .color-khaki:hover,
-.hover .color-khaki:hover .label-bg-color {
-    @include transition($transition-other);
-    background-color: $color-khaki;
-}
+//.hover .color-khaki:hover,
+//.hover .color-khaki:hover .label-bg-color {
+//    @include transition($transition-other);
+//    background-color: $color-khaki;
+//}
 
 .color-basalt-gray,
 .color-basalt-gray .label-bg-color {
     background-color: $color-basalt-gray;
-    .hover & {
-        background-color: #24282B;
-    }
+    //.hover & {
+    //    background-color: #24282B;
+    //}
 }
-.hover .color-basalt-gray:hover,
-.hover .color-basalt-gray:hover .label-bg-color {
-    @include transition($transition-other);
-    background-color: $color-basalt-gray;
-}
+//.hover .color-basalt-gray:hover,
+//.hover .color-basalt-gray:hover .label-bg-color {
+//    @include transition($transition-other);
+//    background-color: $color-basalt-gray;
+//}
 
 
 .content {

@@ -18,16 +18,12 @@ jQuery(document).ready(function($) {
     });
 
     //for hover effect
-    $(".section-level-1, .footer").hover(
+    $(".section-level-1").hover(
         function() {
-            $('.bottom-nav-list').addClass("hover");
-            $('.level-list').addClass("hover");
-            //$('.footer').addClass("hover");
+            $('.bottom-nav-list, .level-list, #footer').addClass("hover");
         },
         function() {
-            $('.bottom-nav-list').removeClass("hover");
-            $('.level-list').removeClass("hover");
-            //$('.footer').removeClass("hover");
+            $('.bottom-nav-list, .level-list, #footer').removeClass("hover");
         }
     );
 

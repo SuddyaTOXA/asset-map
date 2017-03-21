@@ -696,16 +696,13 @@ a.logo {
       height: 100%;
       background-color: rgba(255, 255, 255, 0.5);
       opacity: 0;
-      visibility: hidden; }
-      .hover .level-list > li:before {
-        opacity: 1;
-        visibility: visible;
-        -webkit-transition: 0.35s;
-        -khtml-transition: 0.35s;
-        -moz-transition: 0.35s;
-        -ms-transition: 0.35s;
-        -o-transition: 0.35s;
-        transition: 0.35s; }
+      visibility: hidden;
+      -webkit-transition: 0.35s;
+      -khtml-transition: 0.35s;
+      -moz-transition: 0.35s;
+      -ms-transition: 0.35s;
+      -o-transition: 0.35s;
+      transition: 0.35s; }
     .level-list > li:hover .label-bg-color {
       z-index: 2; }
     .level-list > li:hover .level-box .content {
@@ -751,13 +748,7 @@ a.logo {
     opacity: 0; }
   .level-list.hover > li:before {
     opacity: 1;
-    visibility: visible;
-    -webkit-transition: 0.35s;
-    -khtml-transition: 0.35s;
-    -moz-transition: 0.35s;
-    -ms-transition: 0.35s;
-    -o-transition: 0.35s;
-    transition: 0.35s; }
+    visibility: visible; }
 
 .label-bg-color {
   position: absolute;

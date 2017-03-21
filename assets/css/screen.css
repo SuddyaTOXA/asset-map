@@ -427,39 +427,39 @@ a.logo {
       .main-nav > ul > li > a:hover {
         color: #38a9ec;
         text-decoration: none; }
-.main-nav .menu {
-  overflow: hidden;
-  position: absolute;
-  z-index: 999;
-  left: 0;
-  top: 60px;
-  margin: 20px 0 0 0;
-  opacity: 0;
-  visibility: hidden;
-  text-align: left;
-  background-color: #131617;
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-  -webkit-transition-duration: 0.35s;
-  -o-transition-duration: 0.35s;
-  -moz-transition-duration: 0.35s;
-  transition-duration: 0.35s;
-  transition: all 0.35s ease-in-out; }
-  .main-nav .menu > li > a {
-    position: relative;
-    display: inline-block;
-    padding: 15px 20px 15px;
-    font: 18px "Myriad Pro", Arial, sans-serif;
-    color: #ffffff;
-    line-height: 1;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer; }
-    .main-nav .menu > li > a:hover {
-      color: #38a9ec;
-      text-decoration: none; }
+    .main-nav > ul > li .menu {
+      overflow: hidden;
+      position: absolute;
+      z-index: 999;
+      left: 0;
+      top: 60px;
+      margin: 20px 0 0 0;
+      opacity: 0;
+      visibility: hidden;
+      text-align: left;
+      background-color: #131617;
+      -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+      -webkit-transition-duration: 0.35s;
+      -o-transition-duration: 0.35s;
+      -moz-transition-duration: 0.35s;
+      transition-duration: 0.35s;
+      transition: all 0.35s ease-in-out; }
+      .main-nav > ul > li .menu > li > a {
+        position: relative;
+        display: inline-block;
+        padding: 15px 20px 15px;
+        font: 18px "Myriad Pro", Arial, sans-serif;
+        color: #ffffff;
+        line-height: 1;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer; }
+        .main-nav > ul > li .menu > li > a:hover {
+          color: #38a9ec;
+          text-decoration: none; }
 
 .mobile-menu {
   padding-bottom: 30px; }
@@ -640,9 +640,11 @@ a.logo {
     .footer-nav > li > a:hover {
       text-decoration: none; }
 
-.footer-box {
-  float: right;
+.copyright {
   font-size: 12px; }
+  .copyright a:hover {
+    opacity: 0.7;
+    text-decoration: none; }
 
 /* styles used throughout site */
 .section-level-1 .content-wrap {
@@ -685,6 +687,25 @@ a.logo {
       content: "";
       display: table;
       clear: both; }
+    .level-list > li:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      opacity: 0;
+      visibility: hidden; }
+      .hover .level-list > li:before {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: 0.35s;
+        -khtml-transition: 0.35s;
+        -moz-transition: 0.35s;
+        -ms-transition: 0.35s;
+        -o-transition: 0.35s;
+        transition: 0.35s; }
     .level-list > li:hover .label-bg-color {
       z-index: 2; }
     .level-list > li:hover .level-box .content {
@@ -696,12 +717,12 @@ a.logo {
     .level-list > li:hover .bg-box {
       opacity: 1; }
     .level-list > li.shrink-left .label-bg-color {
-      -webkit-transform: scaleX(0.92188) translate3d(-14.5px, 0, 0);
-      -khtml-transform: scaleX(0.92188) translate3d(-14.5px, 0, 0);
-      -moz-transform: scaleX(0.92188) translate3d(-14.5px, 0, 0);
-      -ms-transform: scaleX(0.92188) translate3d(-14.5px, 0, 0);
-      -o-transform: scaleX(0.92188) translate3d(-14.5px, 0, 0);
-      transform: scaleX(0.92188) translate3d(-14.5px, 0, 0); }
+      -webkit-transform: scaleX(0.92188) translate3d(-12.5px, 0, 0);
+      -khtml-transform: scaleX(0.92188) translate3d(-12.5px, 0, 0);
+      -moz-transform: scaleX(0.92188) translate3d(-12.5px, 0, 0);
+      -ms-transform: scaleX(0.92188) translate3d(-12.5px, 0, 0);
+      -o-transform: scaleX(0.92188) translate3d(-12.5px, 0, 0);
+      transform: scaleX(0.92188) translate3d(-12.5px, 0, 0); }
     .level-list > li.shrink-left .level-box {
       z-index: 5; }
     .level-list > li.expand .label-bg-color {
@@ -715,12 +736,12 @@ a.logo {
     .level-list > li.expand .level-box {
       z-index: 7; }
     .level-list > li.shrink-right .label-bg-color {
-      -webkit-transform: scaleX(0.92188) translate3d(14.5px, 0, 0);
-      -khtml-transform: scaleX(0.92188) translate3d(14.5px, 0, 0);
-      -moz-transform: scaleX(0.92188) translate3d(14.5px, 0, 0);
-      -ms-transform: scaleX(0.92188) translate3d(14.5px, 0, 0);
-      -o-transform: scaleX(0.92188) translate3d(14.5px, 0, 0);
-      transform: scaleX(0.92188) translate3d(14.5px, 0, 0); }
+      -webkit-transform: scaleX(0.92188) translate3d(12.5px, 0, 0);
+      -khtml-transform: scaleX(0.92188) translate3d(12.5px, 0, 0);
+      -moz-transform: scaleX(0.92188) translate3d(12.5px, 0, 0);
+      -ms-transform: scaleX(0.92188) translate3d(12.5px, 0, 0);
+      -o-transform: scaleX(0.92188) translate3d(12.5px, 0, 0);
+      transform: scaleX(0.92188) translate3d(12.5px, 0, 0); }
     .level-list > li.shrink-right .level-box {
       z-index: 5; }
   .level-list.hover > li:hover .content-wrap {
@@ -728,6 +749,15 @@ a.logo {
   .level-list.hover > li:hover .label-bg-color:after {
     visibility: hidden;
     opacity: 0; }
+  .level-list.hover > li:before {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: 0.35s;
+    -khtml-transition: 0.35s;
+    -moz-transition: 0.35s;
+    -ms-transition: 0.35s;
+    -o-transition: 0.35s;
+    transition: 0.35s; }
 
 .label-bg-color {
   position: absolute;

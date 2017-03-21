@@ -39,10 +39,12 @@
      }
     }
   }
-  .footer-box {
-    float: right;
-    font-size: 12px;
     .copyright {
-
-    }
+      font-size: 12px;
+      a {
+        &:hover {
+          opacity: 0.7;
+          text-decoration: none;
+        }
+      }
   }

@@ -31,6 +31,22 @@
         display: table;
         clear: both;
       }
+      &:before {
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.5);
+          opacity: 0;
+          visibility: hidden;
+          .hover & {
+            opacity: 1;
+            visibility: visible;
+            @include transition($transition-other);
+          }
+      }
       &:hover {
         .label-bg-color {
           z-index: 2;
@@ -52,7 +68,7 @@
       }
       &.shrink-left {
         .label-bg-color {
-          @include css3-prefix(transform, scaleX(.92188) translate3d(-14.5px,0,0));
+          @include css3-prefix(transform, scaleX(.92188) translate3d(-12.5px,0,0));
         }
         .level-box {
           z-index: 5;
@@ -69,7 +85,7 @@
       }
       &.shrink-right {
         .label-bg-color {
-          @include css3-prefix(transform, scaleX(.92188) translate3d(14.5px, 0, 0));
+          @include css3-prefix(transform, scaleX(.92188) translate3d(12.5px, 0, 0));
         }
         .level-box {
           z-index: 5;
@@ -83,6 +99,11 @@
       &:hover .label-bg-color:after {
         visibility: hidden;
         opacity: 0;
+      }
+      &:before {
+        opacity: 1;
+        visibility: visible;
+        @include transition($transition-other);
       }
     }
   }

@@ -28,42 +28,42 @@
                     text-decoration: none;
                 }
             }
-        }
-    }
-    .menu {
-        overflow: hidden;
-        position: absolute;
-        z-index: 999;
-        left: 0;
-        top: 60px;
-        margin: 20px 0 0 0;
-        opacity: 0;
-        visibility: hidden;
-        text-align: left;
-        background-color: #131617;
-        -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-        -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-        box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-        -webkit-transition-duration: $transition-other;
-        -o-transition-duration: $transition-other;
-        -moz-transition-duration: $transition-other;
-        transition-duration: $transition-other;
-        transition: all $transition-other ease-in-out;
-        > li {
-            > a {
-                position: relative;
-                display: inline-block;
-                padding: 15px 20px 15px;
-                font: $size-nav $font-nav;
-                color: $color-main;
-                line-height: 1;
-                letter-spacing: 2px;
-                text-transform: uppercase;
-                text-decoration: none;
-                cursor: pointer;
-                &:hover {
-                    color: #38a9ec;
-                    text-decoration: none;
+            .menu {
+                overflow: hidden;
+                position: absolute;
+                z-index: 999;
+                left: 0;
+                top: 60px;
+                margin: 20px 0 0 0;
+                opacity: 0;
+                visibility: hidden;
+                text-align: left;
+                background-color: #131617;
+                -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+                -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+                box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+                -webkit-transition-duration: $transition-other;
+                -o-transition-duration: $transition-other;
+                -moz-transition-duration: $transition-other;
+                transition-duration: $transition-other;
+                transition: all $transition-other ease-in-out;
+                > li {
+                    > a {
+                        position: relative;
+                        display: inline-block;
+                        padding: 15px 20px 15px;
+                        font: $size-nav $font-nav;
+                        color: $color-main;
+                        line-height: 1;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        cursor: pointer;
+                        &:hover {
+                            color: #38a9ec;
+                            text-decoration: none;
+                        }
+                    }
                 }
             }
         }

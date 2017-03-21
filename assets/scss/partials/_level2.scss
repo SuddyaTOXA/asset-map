@@ -51,14 +51,9 @@
   &.shrink-left .evaluation-bg {
     @include css3-prefix(transform, scaleY(.9) translate3d(0 ,-13.5px,0));
   }
-  &.expand {
-    .strategy-evaluation-list {
-      z-index: 3;
-    }
-    .evaluation-bg {
-        z-index: 1;
+  &.expand .evaluation-bg {
+      z-index: 1;
       @include css3-prefix(transform, scaleY(1.2) translate3d(0,0,0));
-    }
   }
   &.shrink-right .evaluation-bg {
       @include css3-prefix(transform, scaleY(.9) translate3d(0 , 13.5px, 0));

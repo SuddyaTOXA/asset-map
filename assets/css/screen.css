@@ -383,6 +383,19 @@ a.btn-small, .btn-small {
 .section-level-1 .level-list > li.color-purple-blue:hover .btn {
   background-color: #9f8abe; }
 
+.section-level-2 .strategy-evaluation-list > li {
+  -webkit-transition: 0.35s;
+  -khtml-transition: 0.35s;
+  -moz-transition: 0.35s;
+  -ms-transition: 0.35s;
+  -o-transition: 0.35s;
+  transition: 0.35s; }
+  .section-level-2 .strategy-evaluation-list > li:hover .btn-small,
+  .section-level-2 .strategy-evaluation-list > li .btn-small:hover,
+  .section-level-2 .strategy-evaluation-list > li a.btn-small:hover {
+    color: #000000;
+    background-color: #ffffff; }
+
 .header {
   position: relative;
   z-index: 990;
@@ -986,8 +999,6 @@ a.logo {
     -ms-transform: scaleY(0.9) translate3d(0, -13.5px, 0);
     -o-transform: scaleY(0.9) translate3d(0, -13.5px, 0);
     transform: scaleY(0.9) translate3d(0, -13.5px, 0); }
-  .evaluation-list-wrap.expand .strategy-evaluation-list {
-    z-index: 3; }
   .evaluation-list-wrap.expand .evaluation-bg {
     z-index: 1;
     -webkit-transform: scaleY(1.2) translate3d(0, 0, 0);
@@ -1086,25 +1097,33 @@ a.logo {
 /* media */
 /*--------------------------------------MEDIA-----------------------------------------*/
 @media all and (max-width: 1280px) {
-  .strategy-title-list,
-  .strategy-evaluation-list,
   .container {
     padding: 0 20px; }
 
   .section-level-2 {
-    display: table; }
+    display: table;
+    width: 100%; }
 
   .evaluation-list-wrap {
     display: table-cell;
-    width: 25%; }
+    width: 25%;
+    vertical-align: top; }
 
   .strategy-title-list,
   .strategy-evaluation-list {
-    display: block; }
+    display: block;
+    padding: 0; }
     .strategy-title-list > li,
     .strategy-evaluation-list > li {
       display: block;
-      width: 100%; } }
+      width: 100%;
+      padding: 10px; }
+      .strategy-title-list > li:first-child,
+      .strategy-evaluation-list > li:first-child {
+        width: 100%; }
+
+  .strategy-title-list > li {
+    vertical-align: middle; } }
 @media all and (max-width: 1200px) {
   .footer-nav > li {
     margin-left: 10px;

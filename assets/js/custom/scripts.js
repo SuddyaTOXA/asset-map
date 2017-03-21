@@ -16,7 +16,7 @@ function customFontSize(minvalue, maxvalue, minsize, maxsize) {
             minSize = minsize,
             maxSize = maxsize,
             iteration = maxValue - minValue,
-            step = ((maxSize - minSize) / iteration).toFixed(2);
+            step = ((maxSize - minSize) / iteration).toFixed(3);
 
         evaluation.each(function () {
             var value = $(this).text();
@@ -25,7 +25,7 @@ function customFontSize(minvalue, maxvalue, minsize, maxsize) {
             } else if (value > maxValue) {
                 $(this).css('font-size', maxSize+'em');
             } else {
-                var size = (minSize + ((value - minValue) * step)).toFixed();
+                var size = (minSize + ((value - minValue) * step)).toFixed(3);
                 $(this).css('font-size', size+'em');
             }
         })
@@ -114,5 +114,17 @@ jQuery(document).ready(function($) {
             }
         );
         // for evaluation font size
-        customFontSize(3, 20, 2, 4.68);
+        customFontSize(1, 20, 2, 4.68);
+
+        //for cell
+        $(window).on('load resize', function() {
+            var width = $(window).width(),
+                cell = $('.evaluation-list-wrap li');
+
+            if (width < '1280') {
+                setMaxHeight(cell);
+            } else {
+                cell.css('height', '');
+            }
+        });
 });

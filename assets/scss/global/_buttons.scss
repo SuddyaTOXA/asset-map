@@ -87,3 +87,14 @@ a.btn-small, .btn-small {
         }
     }
 }
+.section-level-2 {
+    .strategy-evaluation-list > li {
+        @include transition($transition-other);
+        &:hover .btn-small,
+        .btn-small:hover,
+        a.btn-small:hover {
+            color: $black;
+            background-color: $white;
+        }
+    }
+}

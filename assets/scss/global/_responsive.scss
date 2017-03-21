@@ -8,25 +8,35 @@
 }
 
 @media all and (max-width: 1280px) {
-  .strategy-title-list,
-  .strategy-evaluation-list,
   .container {
         padding: 0 20px;
     }
 
   .section-level-2 {
     display: table;
+    width: 100%;
   }
   .evaluation-list-wrap {
     display: table-cell;
     width: 25%;
+    vertical-align: top;
   }
     .strategy-title-list,
     .strategy-evaluation-list {
       display: block;
+      padding: 0;
       > li {
         display: block;
         width: 100%;
+        padding: 10px;
+        &:first-child {
+          width: 100%;
+        }
+      }
+    }
+    .strategy-title-list {
+      > li {
+        vertical-align: middle;
       }
     }
 }

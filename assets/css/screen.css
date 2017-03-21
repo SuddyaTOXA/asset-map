@@ -1131,12 +1131,12 @@ a.logo {
     float: left;
     vertical-align: top; }
     .evaluation-list-wrap.shrink-left .evaluation-bg {
-      -webkit-transform: scaleX(0.9) translate3d(-13.5px, 0, 0);
-      -khtml-transform: scaleX(0.9) translate3d(-13.5px, 0, 0);
-      -moz-transform: scaleX(0.9) translate3d(-13.5px, 0, 0);
-      -ms-transform: scaleX(0.9) translate3d(-13.5px, 0, 0);
-      -o-transform: scaleX(0.9) translate3d(-13.5px, 0, 0);
-      transform: scaleX(0.9) translate3d(-13.5px, 0, 0); }
+      -webkit-transform: scaleX(0.9) translate3d(-17px, 0, 0);
+      -khtml-transform: scaleX(0.9) translate3d(-17px, 0, 0);
+      -moz-transform: scaleX(0.9) translate3d(-17px, 0, 0);
+      -ms-transform: scaleX(0.9) translate3d(-17px, 0, 0);
+      -o-transform: scaleX(0.9) translate3d(-17px, 0, 0);
+      transform: scaleX(0.9) translate3d(-17px, 0, 0); }
     .evaluation-list-wrap.expand .evaluation-bg {
       z-index: 1;
       -webkit-transform: scaleX(1.2) translate3d(0, 0, 0);
@@ -1146,12 +1146,12 @@ a.logo {
       -o-transform: scaleX(1.2) translate3d(0, 0, 0);
       transform: scaleX(1.2) translate3d(0, 0, 0); }
     .evaluation-list-wrap.shrink-right .evaluation-bg {
-      -webkit-transform: scaleX(0.9) translate3d(13.5px, 0, 0);
-      -khtml-transform: scaleX(0.9) translate3d(13.5px, 0, 0);
-      -moz-transform: scaleX(0.9) translate3d(13.5px, 0, 0);
-      -ms-transform: scaleX(0.9) translate3d(13.5px, 0, 0);
-      -o-transform: scaleX(0.9) translate3d(13.5px, 0, 0);
-      transform: scaleX(0.9) translate3d(13.5px, 0, 0); }
+      -webkit-transform: scaleX(0.9) translate3d(17px, 0, 0);
+      -khtml-transform: scaleX(0.9) translate3d(17px, 0, 0);
+      -moz-transform: scaleX(0.9) translate3d(17px, 0, 0);
+      -ms-transform: scaleX(0.9) translate3d(17px, 0, 0);
+      -o-transform: scaleX(0.9) translate3d(17px, 0, 0);
+      transform: scaleX(0.9) translate3d(17px, 0, 0); }
 
   .strategy-title-list,
   .strategy-evaluation-list {

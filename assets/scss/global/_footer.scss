@@ -38,10 +38,13 @@
       margin: 7px 20px 0;
      > a {
        text-transform: uppercase;
-       &:hover {
-         text-decoration: none;
-       }
      }
+    }
+    a:hover,
+    .active-trail > a,
+    a.active {
+      color: $color-logo-text;
+      text-decoration: none;
     }
   }
     .copyright {

@@ -24,7 +24,7 @@
                 text-decoration: none;
                 cursor: pointer;
                 &:hover {
-                    color: #38a9ec;
+                    color: $color-logo-text;
                     text-decoration: none;
                 }
             }
@@ -62,13 +62,19 @@
                         text-decoration: none;
                         cursor: pointer;
                         &:hover {
-                            color: #38a9ec;
+                            color: $color-logo-text;
                             text-decoration: none;
                         }
                     }
                 }
             }
         }
+    }
+    a:hover,
+    .active-trail > a,
+    a.active {
+        color: $color-logo-text;
+        text-decoration: none;
     }
 }
 

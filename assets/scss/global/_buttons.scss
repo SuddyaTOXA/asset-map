@@ -6,17 +6,17 @@ a.btn, .btn {
     margin: 0;
     padding: 20px 20px 19px;
     font: 500 16px $font-main;
-    color: #525f8a;
+    color: $white;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    border: 1px solid #525f8a;
+    border: 1px solid $white;
     background-color: transparent;
     @include border-radius($radius-main);
     cursor: pointer;
     &:hover {
-        color: $color-main;
-        background-color: #525f8a;
+        color: $black;
+        background-color: $white;
     }
     .color-greenish-blue & {
         color: #4bb5c4;
@@ -51,6 +51,14 @@ a.btn, .btn {
         }
     }
 }
+a.btn-small, .btn-small {
+    min-width: 112px;
+    max-width: auto;
+    padding: 10px 20px 11px;
+    font: 500 14px $font-main;
+    text-transform: uppercase;
+}
+
 .section-level-1 {
     .level-list > li {
         > a {

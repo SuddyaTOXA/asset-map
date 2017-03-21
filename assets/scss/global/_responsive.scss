@@ -8,8 +8,26 @@
 }
 
 @media all and (max-width: 1280px) {
-    .container {
+  .strategy-title-list,
+  .strategy-evaluation-list,
+  .container {
         padding: 0 20px;
+    }
+
+  .section-level-2 {
+    display: table;
+  }
+  .evaluation-list-wrap {
+    display: table-cell;
+    width: 25%;
+  }
+    .strategy-title-list,
+    .strategy-evaluation-list {
+      display: block;
+      > li {
+        display: block;
+        width: 100%;
+      }
     }
 }
 

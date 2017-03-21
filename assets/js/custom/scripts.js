@@ -8,6 +8,30 @@ function setMaxHeight(box) {
     box.height(maxHeight);
 }
 
+function customFontSize(minvalue, maxvalue, minsize, maxsize) {
+    $(window).on('load', function () {
+        var evaluation = $('.evaluation'),
+            minValue = minvalue,
+            maxValue = maxvalue,
+            minSize = minsize,
+            maxSize = maxsize,
+            iteration = maxValue - minValue,
+            step = ((maxSize - minSize) / iteration).toFixed(2);
+
+        evaluation.each(function () {
+            var value = $(this).text();
+            if (value < minValue) {
+                $(this).css('font-size', minSize+'em');
+            } else if (value > maxValue) {
+                $(this).css('font-size', maxSize+'em');
+            } else {
+                var size = (minSize + ((value - minValue) * step)).toFixed();
+                $(this).css('font-size', size+'em');
+            }
+        })
+    });
+}
+
 jQuery(document).ready(function($) {
 
     // for burger menu
@@ -27,7 +51,7 @@ jQuery(document).ready(function($) {
         }
     );
 
-    //gor hover width effect
+    //for hover width effect
     $(".level-list li").hover(
         function() {
             $(this).prev().addClass("shrink-left");
@@ -67,4 +91,28 @@ jQuery(document).ready(function($) {
         }
     });
 
+    // for section Level 2
+        //for hover effect
+        $(".section-level-2").hover(
+            function() {
+                $(this).addClass("hover");
+            },
+            function() {
+                $(this).removeClass("hover");
+            }
+        );
+        //for hover width effect
+        $(".evaluation-list-wrap").hover(
+            function() {
+                $(this).prev().addClass("shrink-left");
+                $(this).addClass("expand");
+                $(this).next().addClass("shrink-right");
+            }, function() {
+                $(this).prev().removeClass("shrink-left");
+                $(this).removeClass("expand");
+                $(this).next().removeClass("shrink-right");
+            }
+        );
+        // for evaluation font size
+        customFontSize(3, 20, 2, 4.68);
 });

@@ -78,6 +78,7 @@ img {
 }
 
 .color-greenish-blue,
+.color-greenish-blue .evaluation-bg,
 .color-greenish-blue .label-bg-color {
     background-color: $color-greenish-blue;
     //.hover & {
@@ -91,6 +92,7 @@ img {
 //}
 
 .color-cobalt-blue,
+.color-cobalt-blue .evaluation-bg,
 .color-cobalt-blue .label-bg-color {
     background-color: $color-cobalt-blue;
     //.hover & {
@@ -104,6 +106,7 @@ img {
 //}
 
 .color-grayish-blue,
+.color-grayish-blue .evaluation-bg,
 .color-grayish-blue .label-bg-color {
     background-color: $color-grayish-blue;
     //.hover & {
@@ -117,6 +120,7 @@ img {
 //}
 
 .color-purple-blue,
+.color-purple-blue .evaluation-bg,
 .color-purple-blue .label-bg-color {
     background-color: $color-purple-blue;
     //.hover & {
@@ -130,6 +134,7 @@ img {
 //}
 
 .color-gray-brown,
+.color-gray-brown .evaluation-bg,
 .color-gray-brown .label-bg-color {
     background-color: $color-gray-brown;
     //.hover & {
@@ -143,6 +148,7 @@ img {
 //}
 
 .color-khaki,
+.color-khaki .evaluation-bg,
 .color-khaki .label-bg-color {
     background-color: $color-khaki;
     //.hover & {
@@ -156,6 +162,7 @@ img {
 //}
 
 .color-basalt-gray,
+.color-basalt-gray .evaluation-bg,
 .color-basalt-gray .label-bg-color {
     background-color: $color-basalt-gray;
     //.hover & {
@@ -232,11 +239,11 @@ img {
 .wrapper {
     position: relative;
     min-height: 100%;
-    //margin-bottom: -127px;
-    //&:after {
-    //    content: '';
-    //    display: block;
-    //    width: 100%;
-    //    height: 127px;
-    //}
+    margin-bottom: -161px;
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 161px;
+    }
 }

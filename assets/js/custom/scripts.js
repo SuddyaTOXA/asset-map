@@ -18,13 +18,16 @@ jQuery(document).ready(function($) {
     });
 
     //for hover effect
-    $(".section-level-1").hover(
+    $(".section-level-1, .footer").hover(
         function() {
             $('.bottom-nav-list').addClass("hover");
             $('.level-list').addClass("hover");
-        }, function() {
+            //$('.footer').addClass("hover");
+        },
+        function() {
             $('.bottom-nav-list').removeClass("hover");
             $('.level-list').removeClass("hover");
+            //$('.footer').removeClass("hover");
         }
     );
 

@@ -1,6 +1,7 @@
 .footer {
   position: relative;
-  padding: 60px 0 50px;
+  padding: 62px 0 55px;
+  text-align: center;
   background-color: #131617;
   &:after {
     position: absolute;
@@ -25,13 +26,15 @@
   .logo, a.logo {
     max-width: 185px;
     max-height: 44px;
+    margin-right: 0;
   }
 }
   .footer-nav {
+    overflow: hidden;
     > li {
-      float: left;
+      display: inline-block;
+      margin: 7px 20px 0;
      > a {
-       padding: 10px 10px 10px;
        text-transform: uppercase;
        &:hover {
          text-decoration: none;
@@ -40,10 +43,14 @@
     }
   }
     .copyright {
+      float: right;
+      text-align: right;
+      margin-top: 10px;
+      font-family: $font-nav;
       font-size: 12px;
+      opacity: 0.5;
       a {
         &:hover {
-          opacity: 0.7;
           text-decoration: none;
         }
       }

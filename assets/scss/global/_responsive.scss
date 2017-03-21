@@ -43,6 +43,28 @@
   .mobile-menu-toggle {
     display: block;
   }
+  .footer {
+    padding: 40px 0 35px;
+    .container {
+      display: table;
+    }
+    .footer-logo-wrap {
+      display: table-header-group;
+      text-align: center;
+    }
+    .logo, a.logo {
+      float: none;
+    }
+    .footer-nav {
+      display: table-cell;
+      padding: 20px 0;
+    }
+    .copyright {
+      float: none;
+      display: table-footer-group;
+      text-align: center;
+    }
+  }
 }
 
 @media all and (max-width: 991px) {
@@ -94,7 +116,12 @@
 }
 
 @media all and (max-width: 480px) {
-
+  .footer-nav {
+    > li {
+     display: block;
+      margin-top: 12px;
+    }
+  }
 }
 
 @media all and (max-width: 420px) {

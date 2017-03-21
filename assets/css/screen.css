@@ -606,7 +606,8 @@ a.logo {
 
 .footer {
   position: relative;
-  padding: 60px 0 50px;
+  padding: 62px 0 55px;
+  text-align: center;
   background-color: #131617; }
   .footer:after {
     position: absolute;
@@ -632,20 +633,27 @@ a.logo {
     overflow: hidden; }
   .footer .logo, .footer a.logo {
     max-width: 185px;
-    max-height: 44px; }
+    max-height: 44px;
+    margin-right: 0; }
 
-.footer-nav > li {
-  float: left; }
-  .footer-nav > li > a {
-    padding: 10px 10px 10px;
-    text-transform: uppercase; }
-    .footer-nav > li > a:hover {
-      text-decoration: none; }
+.footer-nav {
+  overflow: hidden; }
+  .footer-nav > li {
+    display: inline-block;
+    margin: 7px 20px 0; }
+    .footer-nav > li > a {
+      text-transform: uppercase; }
+      .footer-nav > li > a:hover {
+        text-decoration: none; }
 
 .copyright {
-  font-size: 12px; }
+  float: right;
+  text-align: right;
+  margin-top: 10px;
+  font-family: "Myriad Pro", Arial, sans-serif;
+  font-size: 12px;
+  opacity: 0.5; }
   .copyright a:hover {
-    opacity: 0.7;
     text-decoration: none; }
 
 /* styles used throughout site */
@@ -923,7 +931,24 @@ a.logo {
   .mobile-menu-wrap,
   .mobile-category-toggle,
   .mobile-menu-toggle {
-    display: block; } }
+    display: block; }
+
+  .footer {
+    padding: 40px 0 35px; }
+    .footer .container {
+      display: table; }
+    .footer .footer-logo-wrap {
+      display: table-header-group;
+      text-align: center; }
+    .footer .logo, .footer a.logo {
+      float: none; }
+    .footer .footer-nav {
+      display: table-cell;
+      padding: 20px 0; }
+    .footer .copyright {
+      float: none;
+      display: table-footer-group;
+      text-align: center; } }
 @media all and (max-width: 768px) {
   .wrapper {
     padding-top: 70px; }
@@ -942,6 +967,10 @@ a.logo {
     display: block; }
     .bottom-nav-list > li > a:hover {
       color: #38a9ec; } }
+@media all and (max-width: 480px) {
+  .footer-nav > li {
+    display: block;
+    margin-top: 12px; } }
 @media all and (max-width: 420px) {
   .logo-wrap .logo {
     margin-right: 20px; }

@@ -73,7 +73,7 @@
       &.expand {
         .label-bg-color{
           z-index: 6;
-          @include css3-prefix(transform, scaleX(1.15625)translate3d(0,0,0));
+          @include css3-prefix(transform, scaleX(1.15625) translate3d(0,0,0));
         }
         .level-box {
           z-index: 7;

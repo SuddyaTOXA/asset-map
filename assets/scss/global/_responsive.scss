@@ -13,8 +13,11 @@
     }
 }
 
-@media all and (max-width: 1199px) {
-
+@media all and (max-width: 1200px) {
+  .footer-nav > li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 @media all and (max-width: 1140px) {
@@ -118,8 +121,11 @@
 @media all and (max-width: 480px) {
   .footer-nav {
     > li {
-     display: block;
+      display: block;
       margin-top: 12px;
+      &:last-child {
+        margin-bottom: 10px;
+      }
     }
   }
 }

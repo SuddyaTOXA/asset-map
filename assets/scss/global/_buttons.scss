@@ -52,7 +52,7 @@ a.btn, .btn {
     }
 }
 a.btn-small, .btn-small {
-    min-width: 112px;
+    min-width: 110px;
     max-width: auto;
     padding: 10px 20px 11px;
     font: 500 14px $font-main;
@@ -87,14 +87,30 @@ a.btn-small, .btn-small {
         }
     }
 }
-.section-level-2 {
-    .strategy-evaluation-list > li {
-        @include transition($transition-other);
-        &:hover .btn-small,
-        .btn-small:hover,
-        a.btn-small:hover {
-            color: $black;
-            background-color: $white;
+
+.strategy-evaluation-list > li {
+    @include transition($transition-other);
+    &:hover .btn-small,
+    .btn-small:hover,
+    a.btn-small:hover {
+        color: $black;
+        background-color: $white;
+        .color-purple-blue & {
+                    color: $color-purple-blue;
+
+        }
+        .color-gray-brown & {
+
+                    color: $color-gray-brown;
+
+        }
+        .color-basalt-gray & {
+
+                    color: $color-basalt-gray;
+
+        }
+        .color-khaki & {
+                    color: $color-khaki;
         }
     }
 }

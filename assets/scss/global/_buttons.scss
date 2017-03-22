@@ -10,7 +10,7 @@ a.btn, .btn {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    border: 1px solid $white;
+    border: 2px solid $white;
     background-color: transparent;
     @include border-radius($radius-main);
     cursor: pointer;
@@ -63,7 +63,7 @@ a.btn, .btn {
 }
 a.btn-small, .btn-small {
     min-width: 110px;
-    max-width: auto;
+    max-width: 100%;
     width: auto;
     padding: 10px 20px 11px;
     font: 500 14px $font-main;

@@ -675,7 +675,7 @@ a.btn, .btn {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
   background-color: transparent;
   -webkit-border-radius: 4em;
   -khtml-border-radius: 4em;
@@ -721,7 +721,7 @@ a.btn, .btn {
 
 a.btn-small, .btn-small {
   min-width: 110px;
-  max-width: auto;
+  max-width: 100%;
   width: auto;
   padding: 10px 20px 11px;
   font: 500 14px "Gotham", Arial, sans-serif;
@@ -1529,9 +1529,6 @@ a.logo {
 .section-level-2-2 .section-title {
   padding-top: 48px;
   margin-bottom: 48px; }
-.section-level-2-2 .strategy-title-list > li {
-  padding-top: 32px;
-  padding-bottom: 32px; }
 .section-level-2-2 .strategy-evaluation-list {
   padding: 0;
   table-layout: fixed;
@@ -1571,6 +1568,9 @@ a.logo {
     background-color: rgba(255, 255, 255, 0.05);
     opacity: 1;
     visibility: visible; }
+.section-level-2-2 .strategy-title-list > li {
+  padding-top: 32px;
+  padding-bottom: 32px; }
 .section-level-2-2 .evaluation-box .evaluation {
   margin-bottom: 14px; }
 

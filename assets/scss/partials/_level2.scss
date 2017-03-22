@@ -141,9 +141,12 @@
     width: 100%;
     min-height: 150px;
     .info-icon-wrap,
-    .content {
+    .content-wrap {
       display: table-cell;
       vertical-align: middle;
+    }
+    .content {
+      max-width: 1060px;
     }
   }
   &:before {

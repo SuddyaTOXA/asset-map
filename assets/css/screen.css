@@ -1458,9 +1458,11 @@ a.logo {
     width: 100%;
     min-height: 150px; }
     .info-box .container .info-icon-wrap,
-    .info-box .container .content {
+    .info-box .container .content-wrap {
       display: table-cell;
       vertical-align: middle; }
+    .info-box .container .content {
+      max-width: 1060px; }
   .info-box:before {
     position: absolute;
     z-index: 5;
@@ -1865,7 +1867,7 @@ img.level3-icon {
     overflow-x: scroll; }
 
   .info-box .container .info-icon-wrap,
-  .info-box .container .content {
+  .info-box .container .content-wrap {
     display: block;
     text-align: center; }
 

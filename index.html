@@ -189,10 +189,10 @@
             </div>
 
             <ul class="footer-nav">
-                <li><a href="#popup-1" class="open-popup-link">About the Map</a></li>
-                <li><a href="#popup-1" class="open-popup-link">Submit my asset</a></li>
-                <li><a href="#popup-1" class="open-popup-link">Explore</a></li>
-                <li><a href="#popup-1" class="open-popup-link">Contact</a></li>
+                <li><a href="#">About the Map</a></li>
+                <li><a href="#">Submit my asset</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </div>
     </footer>
@@ -239,5 +239,16 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="assets/js/magnifi.js"></script>
     <script src="assets/js/custom/scripts.js"></script>
+
+    <script>
+        jQuery(document).ready(function($) {
+            $.magnificPopup.open({
+                items: {src: '#popup-1'},
+                type: 'inline',
+                removalDelay: 350,
+                mainClass: 'mfp-fade'
+            }, 0);
+        });
+    </script>
 </body>
 </html>

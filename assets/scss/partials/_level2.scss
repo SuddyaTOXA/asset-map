@@ -4,7 +4,7 @@
     position: relative;
     display: table;
     overflow: hidden;
-    padding: 0 80px;
+    padding: 0 0 0 80px;
     width: 100%;
     min-width: 160px;
     clear: both;
@@ -125,5 +125,50 @@
     img {
       max-width: 63px;
       max-height: 54px;
+    }
+  }
+
+.info-box {
+  overflow: hidden;
+  position: relative;
+  padding: 50px 0 43px;
+  background-color: $color-bg-info;
+  .container {
+    display: table;
+    width: 100%;
+    min-height: 150px;
+    .info-icon-wrap,
+    .content {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  &:before {
+    position: absolute;
+    z-index: 5;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    @include transition($transition-other);
+  }
+  .hover &:before {
+    opacity: 1;
+    visibility: visible;
+  }
+  .hover &:hover:before {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+  .info-icon-wrap {
+    padding-right: 90px;
+    opacity: 0.05;
+    img {
+      max-width: 155px;
     }
   }

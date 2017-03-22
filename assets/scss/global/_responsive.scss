@@ -12,7 +12,7 @@
         padding: 0 20px;
     }
 
-  .section-level-2 {
+  .evaluation-list-wrap {
     overflow: hidden;
     display: table;
     width: 100%;
@@ -117,7 +117,12 @@
 }
 
 @media all and (max-width: 991px) {
-
+  .info-icon-wrap {
+    padding-right: 50px;
+    img {
+      max-width: 125px;
+    }
+  }
 }
 
 @media all and (max-width: 960px) {
@@ -167,9 +172,18 @@
 }
 
 @media all and (max-width: 640px) {
-  .section-level-2 {
+  .evaluation-list-wrap {
     display: block;
     overflow-x: scroll;
+  }
+  .info-box .container .info-icon-wrap,
+  .info-box .container .content {
+    display: block;
+    text-align: center;
+  }
+  .info-icon-wrap {
+    margin-bottom: 30px;
+    padding-right: 0;
   }
 }
 

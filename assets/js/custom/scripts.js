@@ -71,7 +71,7 @@ jQuery(document).ready(function($) {
                 }
             );
         } else {
-            $('.bottom-nav-list, .level-list, #footer').removeClass("hover");
+            $('.bottom-nav-list, .section-level-2, .section-level-2-2, .level-list, #footer').removeClass("hover");
             $(".level-list li").removeClass("shrink-left");
             $(".level-list li").removeClass("expand");
             $(".level-list li").removeClass("shrink-right");
@@ -113,12 +113,22 @@ jQuery(document).ready(function($) {
     if ($('section').hasClass('section-level-2')) {
         $(window).on('load resize', function () {
             var width = $(window).width(),
-                cell = $('.strategy-evaluation-list li');
+                cell = $('.strategy-evaluation-list li:not(.strategy-title-cell)'),
+                titleCell = $('.strategy-title-cell'),
+                title = titleCell.find('.locality-title');
 
             if (width < '1280') {
                 setMaxHeight(cell);
+                setMaxHeight(titleCell);
+
+                setTimeout(function () {
+                    var lineHeight = titleCell.height();
+                    title.css('line-height', lineHeight+'px');
+                }, 200);
             } else {
                 cell.css('height', '');
+                titleCell.css('height', '');
+                title.css('line-height', '');
             }
         });
     }

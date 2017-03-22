@@ -105,11 +105,10 @@ jQuery(document).ready(function($) {
         }
     });
 
-    // for section Level 2
+    // for custom font size
+    customFontSize(1, 20, 2, 4.68);
 
-        customFontSize(1, 20, 2, 4.68);
-
-        //for cell
+    //for cell
     if ($('section').hasClass('section-level-2')) {
         $(window).on('load resize', function () {
             var width = $(window).width(),
@@ -132,4 +131,12 @@ jQuery(document).ready(function($) {
             }
         });
     }
+
+    //for popup
+    $('.open-popup-link').magnificPopup({
+        type:'inline',
+        midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+        removalDelay: 300,
+        mainClass: 'mfp-fade'
+    });
 });

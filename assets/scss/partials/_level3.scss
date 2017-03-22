@@ -1,0 +1,115 @@
+.inner-section {
+  background-color: $inner-bg;
+  color: $color-inner;
+}
+.inner-container {
+  width: 100%;
+  max-width: 1620px;
+  padding: 25px 20px 60px;
+  margin: 0 auto;
+}
+.content-box {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.breadcrumbs {
+  margin-bottom: 50px;
+  text-align: center;
+  color: $color-inner;
+  font-size: 16px;
+  li {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2px;
+    padding-right: 24px;
+    &:last-child {
+      padding-right: 0;
+    }
+    &:not(:last-child):after {
+      content: '\f054';
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      display: inline-block;
+      font: normal normal normal 16px/1 FontAwesome;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: $color-level3;
+    }
+    a {
+      color: $color-inner;
+      &:hover {
+        color: $color-level3;
+        text-decoration: none;
+      }
+    }
+    a,
+    span {
+      font-size: 16px;
+    }
+  }
+}
+
+.level3-title {
+  margin-bottom: 25px;
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+img.level3-icon {
+  max-width: 100px;
+  max-height: 100px;
+  height: auto;
+  width: auto;
+  margin-bottom: 12px;
+}
+
+.level3-list {
+  margin: 0 -8px;
+  text-align: center;
+  color: #54636b;
+  > li {
+    display: inline-block;
+    padding: 0 8px;
+    width: $col*2.95;
+    margin-bottom: 21px;
+    vertical-align: top;
+    .level3-box {
+      overflow: hidden;
+      position: relative;
+      padding: 35px 45px 32px;
+      background-color: $color-bg-white;
+      text-align: left;
+      &:before {
+        content: '';
+        position: absolute;
+      }
+      .level3-list-title {
+        margin-bottom: 19px;
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: 700;
+        color: $color-inner;
+      }
+      .content {
+        font-size: 14px;
+      }
+      a {
+        font-size: 14px;
+        color: $color-level3;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      .level3-link {
+        margin-top: 20px;
+        display: inline-block;
+      }
+    }
+  }
+}

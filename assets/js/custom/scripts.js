@@ -42,8 +42,6 @@ jQuery(document).ready(function($) {
     });
 
 
-
-
     $(window).on('load resize', function() {
         var width = $(window).width();
 
@@ -72,9 +70,7 @@ jQuery(document).ready(function($) {
             );
         } else {
             $('.bottom-nav-list, .section-level-2, .section-level-2-2, .level-list, #footer').removeClass("hover");
-            $(".level-list li").removeClass("shrink-left");
-            $(".level-list li").removeClass("expand");
-            $(".level-list li").removeClass("shrink-right");
+            $(".level-list li").removeClass("shrink-left expand shrink-right");
         }
     });
 

@@ -12,11 +12,17 @@
   .strategy-evaluation-list {
     padding: 0;
     table-layout: fixed;
+    word-break: break-word;
+    &:hover .strategy-box,
+    &:hover .strategy-title {
+      opacity: 1;
+    }
     > li {
       position: relative;
       padding-top: 26px;
       padding-bottom: 33px;
       width: ($col*2.5);
+      min-width: 160px;
       &:before {
         position: absolute;
         z-index: 1;

@@ -47,6 +47,18 @@
   .strategy-evaluation-list > li:first-child {
     text-align: center;
   }
+
+  .section-level-2-2 {
+    .strategy-evaluation-list {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      > li {
+        display: table-cell;
+        width: ($col*2.5);
+      }
+    }
+  }
 }
 
 @media all and (max-width: 1200px) {
@@ -137,7 +149,17 @@
     width: $col*5.95;
   }
 }
-
+@media all and (max-width: 800px) {
+  .section-level-2-2 {
+    .evaluation-list-wrap {
+      display: block;
+      overflow-x: scroll;
+    }
+    .strategy-evaluation-list {
+      min-width: 800px;
+    }
+  }
+}
 @media all and (max-width: 768px) {
   .wrapper {
     padding-top: 70px;

@@ -1093,7 +1093,13 @@ a.logo {
 
 .strategy-title {
   font: 500 1.13em/1.4 "Gotham", Arial, sans-serif;
-  opacity: 0.4; }
+  opacity: 0.4;
+  -webkit-transition: 0.35s;
+  -khtml-transition: 0.35s;
+  -moz-transition: 0.35s;
+  -ms-transition: 0.35s;
+  -o-transition: 0.35s;
+  transition: 0.35s; }
 
 .section-title {
   display: inline-block;
@@ -1166,12 +1172,16 @@ a.logo {
   padding-bottom: 32px; }
 .section-level-2-2 .strategy-evaluation-list {
   padding: 0;
-  table-layout: fixed; }
+  table-layout: fixed;
+  word-break: break-word; }
+  .section-level-2-2 .strategy-evaluation-list:hover .strategy-box, .section-level-2-2 .strategy-evaluation-list:hover .strategy-title {
+    opacity: 1; }
   .section-level-2-2 .strategy-evaluation-list > li {
     position: relative;
     padding-top: 26px;
     padding-bottom: 33px;
-    width: 20.83333%; }
+    width: 20.83333%;
+    min-width: 160px; }
     .section-level-2-2 .strategy-evaluation-list > li:before {
       position: absolute;
       z-index: 1;
@@ -1415,7 +1425,15 @@ img.level3-icon {
 
   .strategy-title-list > li:first-child,
   .strategy-evaluation-list > li:first-child {
-    text-align: center; } }
+    text-align: center; }
+
+  .section-level-2-2 .strategy-evaluation-list {
+    display: table;
+    width: 100%;
+    table-layout: fixed; }
+    .section-level-2-2 .strategy-evaluation-list > li {
+      display: table-cell;
+      width: 20.83333%; } }
 @media all and (max-width: 1200px) {
   .footer-nav > li {
     margin-left: 10px;
@@ -1478,6 +1496,12 @@ img.level3-icon {
 @media all and (max-width: 860px) {
   .level3-list > li {
     width: 49.58333%; } }
+@media all and (max-width: 800px) {
+  .section-level-2-2 .evaluation-list-wrap {
+    display: block;
+    overflow-x: scroll; }
+  .section-level-2-2 .strategy-evaluation-list {
+    min-width: 800px; } }
 @media all and (max-width: 768px) {
   .wrapper {
     padding-top: 70px; }

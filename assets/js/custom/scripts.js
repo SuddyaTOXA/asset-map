@@ -107,29 +107,11 @@ jQuery(document).ready(function($) {
 
     // for section Level 2
 
-        // $(window).on('load resize', function() {
-        //     var width = $(window).width();
-        //
-        //     if (width > '768') {
-        //         //for hover effect
-        //         $(".section-level-2").hover(
-        //             function() {
-        //                 $('.section-level-2, .footer').addClass("hover");
-        //             },
-        //             function() {
-        //                 $('.section-level-2, .footer').removeClass("hover");
-        //             }
-        //         );
-        //
-        //     } else {
-        //         $('.section-level-2, .footer').removeClass("hover");
-        //     }
-        // });
-        // for evaluation font size
         customFontSize(1, 20, 2, 4.68);
 
         //for cell
-        $(window).on('load resize', function() {
+    if ($('section').hasClass('section-level-2')) {
+        $(window).on('load resize', function () {
             var width = $(window).width(),
                 cell = $('.strategy-evaluation-list li');
 
@@ -139,5 +121,5 @@ jQuery(document).ready(function($) {
                 cell.css('height', '');
             }
         });
-
+    }
 });

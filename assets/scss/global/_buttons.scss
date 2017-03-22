@@ -54,6 +54,7 @@ a.btn, .btn {
 a.btn-small, .btn-small {
     min-width: 110px;
     max-width: auto;
+    width: auto;
     padding: 10px 20px 11px;
     font: 500 14px $font-main;
     text-transform: uppercase;
@@ -88,29 +89,49 @@ a.btn-small, .btn-small {
     }
 }
 
-.strategy-evaluation-list > li {
-    @include transition($transition-other);
-    &:hover .btn-small,
-    .btn-small:hover,
-    a.btn-small:hover {
-        color: $black;
-        background-color: $white;
-        .color-purple-blue & {
-                    color: $color-purple-blue;
-
+.strategy-evaluation-list {
+    > li {
+        &:hover .btn-small,
+        .btn-small:hover,
+        a.btn-small:hover {
+            color: $black;
+            background-color: $white;
         }
-        .color-gray-brown & {
-
-                    color: $color-gray-brown;
-
+    }
+    &.color-purple-blue {
+        > li {
+            &:hover .btn-small,
+            .btn-small:hover,
+            a.btn-small:hover {
+                color: $color-purple-blue;
+            }
         }
-        .color-basalt-gray & {
-
-                    color: $color-basalt-gray;
-
+    }
+    &.color-gray-brown {
+        > li {
+            &:hover .btn-small,
+            .btn-small:hover,
+            a.btn-small:hover {
+                color: $color-gray-brown;
+            }
         }
-        .color-khaki & {
-                    color: $color-khaki;
+    }
+    &.color-basalt-gray {
+        > li {
+            &:hover .btn-small,
+            .btn-small:hover,
+            a.btn-small:hover {
+                color: $color-basalt-gray;
+            }
+        }
+    }
+    &.color-khaki {
+        > li {
+            &:hover .btn-small,
+            .btn-small:hover,
+            a.btn-small:hover {
+                color: $color-khaki;
+            }
         }
     }
 }

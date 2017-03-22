@@ -14,30 +14,16 @@
 
   .section-level-2 {
     overflow: hidden;
-    display: block;
+    display: table;
     width: 100%;
+    table-layout: fixed;
   }
-  .evaluation-list-wrap {
-    display: block;
-    min-width: 160px;
-    width: 25%;
-    float: left;
-    vertical-align: top;
-    &.shrink-left .evaluation-bg {
-      @include css3-prefix(transform, scaleX(.9) translate3d(-17px,0 ,0));
-    }
-    &.expand .evaluation-bg {
-      z-index: 1;
-      @include css3-prefix(transform, scaleX(1.2) translate3d(0,0,0));
-    }
-    &.shrink-right .evaluation-bg {
-      @include css3-prefix(transform, scaleX(.9) translate3d(17px, 0, 0));
-    }
-  }
-    .strategy-title-list,
     .strategy-evaluation-list {
-      display: block;
+      display: table-cell;
       padding: 0;
+      clear: none;
+      width: 25%;
+      vertical-align: top;
       > li {
         display: block;
         width: 100%;
@@ -177,14 +163,12 @@
 }
 
 @media all and (max-width: 680px) {
-  .evaluation-list-wrap {
-    display: table-cell;
-    float: none;;
-  }
+
 }
 
 @media all and (max-width: 640px) {
   .section-level-2 {
+    display: block;
     overflow-x: scroll;
   }
 }

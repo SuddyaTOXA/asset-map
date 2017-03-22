@@ -107,46 +107,31 @@ jQuery(document).ready(function($) {
 
     // for section Level 2
 
-    $(window).on('load resize', function() {
-        var width = $(window).width();
+        $(window).on('load resize', function() {
+            var width = $(window).width();
 
-        if (width > '768') {
-            //for hover effect
-            $(".section-level-2").hover(
-                function() {
-                    $('.section-level-2, .footer').addClass("hover");
-                },
-                function() {
-                    $('.section-level-2, .footer').removeClass("hover");
-                }
-            );
+            if (width > '768') {
+                //for hover effect
+                $(".section-level-2").hover(
+                    function() {
+                        $('.section-level-2, .footer').addClass("hover");
+                    },
+                    function() {
+                        $('.section-level-2, .footer').removeClass("hover");
+                    }
+                );
 
-            //for hover width effect
-            $(".evaluation-list-wrap").hover(
-                function () {
-                    $(this).prev().addClass("shrink-left");
-                    $(this).addClass("expand");
-                    $(this).next().addClass("shrink-right");
-                }, function () {
-                    $(this).prev().removeClass("shrink-left");
-                    $(this).removeClass("expand");
-                    $(this).next().removeClass("shrink-right");
-                }
-            );
-        } else {
-            $('.section-level-2, .footer').removeClass("hover");
-            $(".evaluation-list-wrap").removeClass("shrink-left");
-            $(".evaluation-list-wrap").removeClass("expand");
-            $(".evaluation-list-wrap").removeClass("shrink-right");
-        }
-    });
+            } else {
+                $('.section-level-2, .footer').removeClass("hover");
+            }
+        });
         // for evaluation font size
         customFontSize(1, 20, 2, 4.68);
 
         //for cell
         $(window).on('load resize', function() {
             var width = $(window).width(),
-                cell = $('.evaluation-list-wrap li');
+                cell = $('.strategy-evaluation-list li');
 
             if (width < '1280') {
                 setMaxHeight(cell);

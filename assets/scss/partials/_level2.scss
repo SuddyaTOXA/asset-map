@@ -1,78 +1,43 @@
-.strategy-title-list,
-.strategy-evaluation-list {
-  position: relative;
-  display: table;
-  overflow: hidden;
-  padding: 0 80px;
-  width: 100%;
-  clear: both;
-  word-break: break-all;
-  > li {
+.section-level-2 {
+}
+  .strategy-evaluation-list {
     position: relative;
-    z-index: 2;
-    display: table-cell;
-    width: ($col*1.35);
-    padding: 49px 5px;
-    text-align: center;
-    vertical-align: middle;
-    @include transition($transition-other);
-    &:first-child {
-      width: ($col*2.55);
-      text-align: left;
-    }
-    &:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    &:nth-child(even) {
-      background-color: rgba(255, 255, 255, 0.05);
-    }
-    a {
-      &:hover {
-        color: $white;
-        text-decoration: none;
+    display: table;
+    overflow: hidden;
+    padding: 0 80px;
+    width: 100%;
+    min-width: 160px;
+    clear: both;
+    word-break: break-all;
+    > li {
+      position: relative;
+      z-index: 2;
+      display: table-cell;
+      width: ($col*1.35);
+      padding: 49px 5px;
+      text-align: center;
+      vertical-align: middle;
+      @include transition($transition-other);
+      &:first-child {
+        width: ($col*2.55);
+        text-align: left;
+      }
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      &:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+      a {
+        &:hover {
+          color: $white;
+          text-decoration: none;
+        }
       }
     }
-  }
-}
-
-.strategy-title-list {
-  > li {
-    vertical-align: top;
-    &:first-child {
-      vertical-align: middle;
-    }
-  }
-}
-.strategy-evaluation-list {
-  > li {
-    &:hover .evaluation-box {
-      opacity: 1;
-    }
-  }
-}
-.evaluation-list-wrap {
-  position: relative;
-  &.shrink-left .evaluation-bg {
-    @include css3-prefix(transform, scaleY(.9) translate3d(0 ,-13.5px,0));
-  }
-  &.expand .evaluation-bg {
-      z-index: 1;
-      @include css3-prefix(transform, scaleY(1.2) translate3d(0,0,0));
-  }
-  &.shrink-right .evaluation-bg {
-      @include css3-prefix(transform, scaleY(.9) translate3d(0 , 13.5px, 0));
-  }
-}
-  .evaluation-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    @include transition($transition-other);
-    .hover .evaluation-list-wrap &:after {
+    &:before {
       position: absolute;
       z-index: 5;
       content: '';
@@ -81,61 +46,84 @@
       width: 100%;
       height: 100%;
       background-color: rgba(255, 255, 255, 0.5);
-      opacity: 1;
-      visibility: visible;
-    }
-    .hover .evaluation-list-wrap:hover &:after {
       opacity: 0;
       visibility: hidden;
       @include transition($transition-other);
     }
+    .hover &:before {
+      opacity: 1;
+      visibility: visible;
+    }
+    .hover &:hover:before {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
-.strategy-box,
-.evaluation-box {
-  position: relative;
-  z-index: 2;
-}
-.evaluation-box {
-  opacity: 0.4;
-  .evaluation {
-    display: block;
-    height: 55px;
-    margin-bottom: 49px;
-    font: 400 2em $font-main;
-    line-height: 55px;
+
+  .strategy-title-list {
+    > li {
+      padding-bottom: 42px;
+      vertical-align: top;
+      &:first-child {
+        vertical-align: middle;
+      }
+    }
   }
-}
-.strategy-title-icon-wrap {
-  display: inline-block;
-  height: 46px;
-  margin-right: 22px;
-  vertical-align: middle;
-  img {
-    opacity: 0.3;
-    max-height: 46px;
-    max-width: 65px;
-    height: auto;
+  .strategy-evaluation-list {
+    > li {
+      &:hover .evaluation-box {
+        opacity: 1;
+      }
+    }
   }
-}
-  .strategy-title {
-    font: 500 1.13em/1.4 $font-main;
+
+  .strategy-box,
+  .evaluation-box {
+    position: relative;
+    z-index: 2;
+  }
+  .evaluation-box {
     opacity: 0.4;
+    @include transition($transition-other);
+    .evaluation {
+      display: block;
+      height: 55px;
+      margin-bottom: 49px;
+      font: 400 2em $font-main;
+      line-height: 55px;
+    }
   }
-.section-title {
-  display: inline-block;
-  font: 700 2.81em $font-main;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
-.locality-title {
-  font: 700 2em $font-main;
-  text-transform: uppercase;
-}
-.strategy-img-wrap {
-  margin-bottom: 12px;
-  height: 54px;
-  img {
-    max-width: 63px;
-    max-height: 54px;
+  .strategy-title-icon-wrap {
+    display: inline-block;
+    height: 46px;
+    margin-right: 22px;
+    vertical-align: middle;
+    img {
+      opacity: 0.3;
+      max-height: 46px;
+      max-width: 65px;
+      height: auto;
+    }
   }
-}
+    .strategy-title {
+      font: 500 1.13em/1.4 $font-main;
+      opacity: 0.4;
+    }
+  .section-title {
+    display: inline-block;
+    font: 700 2.81em $font-main;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  .locality-title {
+    font: 700 2em $font-main;
+    text-transform: uppercase;
+  }
+  .strategy-img-wrap {
+    margin-bottom: 12px;
+    height: 54px;
+    img {
+      max-width: 63px;
+      max-height: 54px;
+    }
+  }

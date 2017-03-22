@@ -20,6 +20,7 @@
   &.hover:after {
     opacity: 1;
     visibility: visible;
+    @include transition($transition-other);
   }
   .container {
     overflow: hidden;

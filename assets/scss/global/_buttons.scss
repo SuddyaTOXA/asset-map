@@ -145,3 +145,38 @@ a.btn-small, .btn-small {
         }
     }
 }
+
+.section-level-2-2 {
+    .strategy-evaluation-list {
+        > li {
+            &:nth-child(2) {
+                &:hover .btn-small,
+                .btn-small:hover,
+                a.btn-small:hover {
+                    color: $color-greenish-blue;
+                }
+            }
+            &:nth-child(3) {
+                &:hover .btn-small,
+                .btn-small:hover,
+                a.btn-small:hover {
+                    color: $color-cobalt-blue;
+                }
+            }
+            &:nth-child(4) {
+                &:hover .btn-small,
+                .btn-small:hover,
+                a.btn-small:hover {
+                    color: $color-grayish-blue;
+                }
+            }
+            &:nth-child(5) {
+                &:hover .btn-small,
+                .btn-small:hover,
+                a.btn-small:hover {
+                    color: $color-purple-blue;
+                }
+            }
+        }
+    }
+}

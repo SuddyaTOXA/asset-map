@@ -49,12 +49,12 @@ jQuery(document).ready(function($) {
 
         if (width > '768') {
             //for hover effect
-            $(".section-level-1").hover(
+            $(".section-level-1, .section-level-2, .section-level-2-2").hover(
                 function() {
-                    $('.bottom-nav-list, .level-list, #footer').addClass("hover");
+                    $('.bottom-nav-list, .section-level-2, .section-level-2-2, .level-list, #footer').addClass("hover");
                 },
                 function() {
-                    $('.bottom-nav-list, .level-list, #footer').removeClass("hover");
+                    $('.bottom-nav-list, .section-level-2, .section-level-2-2, .level-list, #footer').removeClass("hover");
                 }
             );
 
@@ -107,24 +107,24 @@ jQuery(document).ready(function($) {
 
     // for section Level 2
 
-        $(window).on('load resize', function() {
-            var width = $(window).width();
-
-            if (width > '768') {
-                //for hover effect
-                $(".section-level-2").hover(
-                    function() {
-                        $('.section-level-2, .footer').addClass("hover");
-                    },
-                    function() {
-                        $('.section-level-2, .footer').removeClass("hover");
-                    }
-                );
-
-            } else {
-                $('.section-level-2, .footer').removeClass("hover");
-            }
-        });
+        // $(window).on('load resize', function() {
+        //     var width = $(window).width();
+        //
+        //     if (width > '768') {
+        //         //for hover effect
+        //         $(".section-level-2").hover(
+        //             function() {
+        //                 $('.section-level-2, .footer').addClass("hover");
+        //             },
+        //             function() {
+        //                 $('.section-level-2, .footer').removeClass("hover");
+        //             }
+        //         );
+        //
+        //     } else {
+        //         $('.section-level-2, .footer').removeClass("hover");
+        //     }
+        // });
         // for evaluation font size
         customFontSize(1, 20, 2, 4.68);
 
@@ -139,4 +139,5 @@ jQuery(document).ready(function($) {
                 cell.css('height', '');
             }
         });
+
 });

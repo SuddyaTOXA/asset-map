@@ -861,6 +861,7 @@ a.logo {
       z-index: 999;
       left: 0;
       top: 60px;
+      padding-bottom: 5px;
       margin: 20px 0 0 0;
       opacity: 0;
       visibility: hidden;

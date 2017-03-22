@@ -11,7 +11,7 @@
 .content-box {
   width: 100%;
   max-width: 680px;
-  margin: 0 auto 35px;
+  margin: 0 auto 40px;
   text-align: center;
 }
 
@@ -84,9 +84,17 @@ img.level3-icon {
       padding: 35px 45px 32px;
       background-color: $color-bg-white;
       text-align: left;
+      @include transition($transition-other);
       &:before {
         content: '';
         position: absolute;
+        left: -25px;
+        top: 20px;
+        display: inline-block;
+        background: $color-level3;
+        height: 50px;
+        width: 50px;
+        @include css3-prefix('border-radius', 50%);
       }
       .level3-list-title {
         margin-bottom: 19px;
@@ -94,9 +102,11 @@ img.level3-icon {
         line-height: 1.4;
         font-weight: 700;
         color: $color-inner;
+        @include transition($transition-other);
       }
       .content {
         font-size: 14px;
+        @include transition($transition-other);
       }
       a {
         font-size: 14px;
@@ -109,7 +119,35 @@ img.level3-icon {
       .level3-link {
         margin-top: 20px;
         display: inline-block;
+        @include transition($transition-other);
       }
+      &:hover {
+        background-color: $color-grayish-blue;
+        .level3-list-title {
+          color: $white;
+        }
+        .content {
+          color: rgba(255, 255, 255, 0.6);
+        }
+      }
+    }
+  }
+}
+
+.back-link {
+  margin-top: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+  .btn {
+    width: auto;
+    max-width: 400px;
+    padding: 11px 30px 9px;
+    border-width: 2px;
+    font-size: 14px;
+    line-height: 1.25;
+    .fa-chevron-left {
+      font-size: 13px;
+      margin-right: 4px;
     }
   }
 }

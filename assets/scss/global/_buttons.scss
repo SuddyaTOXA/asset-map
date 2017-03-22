@@ -50,6 +50,16 @@ a.btn, .btn {
             background-color: #9f8abe;
         }
     }
+
+    &.blue {
+        border-color: $color-level3;
+        background: transparent;
+        color: $color-level3;
+        &:hover {
+            background: $color-level3;
+            color: $white;
+        }
+    }
 }
 a.btn-small, .btn-small {
     min-width: 110px;

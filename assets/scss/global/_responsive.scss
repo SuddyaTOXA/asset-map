@@ -160,6 +160,112 @@
     }
   }
 }
+
+@media all and (min-width: 768px) {
+  a.btn, .btn {
+    &:hover {
+      color: $black;
+      background-color: $white;
+    }
+  }
+     .strategy-evaluation-list {
+      > li {
+        &:hover .btn-small,
+        .btn-small:hover,
+        a.btn-small:hover {
+          color: $black;
+          background-color: $white;
+        }
+      }
+      &.color-purple-blue {
+        > li {
+          &:hover .btn-small,
+          .btn-small:hover,
+          a.btn-small:hover {
+            color: $color-purple-blue;
+          }
+        }
+      }
+      &.color-gray-brown {
+        > li {
+          &:hover .btn-small,
+          .btn-small:hover,
+          a.btn-small:hover {
+            color: $color-gray-brown;
+          }
+        }
+      }
+      &.color-basalt-gray {
+        > li {
+          &:hover .btn-small,
+          .btn-small:hover,
+          a.btn-small:hover {
+            color: $color-basalt-gray;
+          }
+        }
+      }
+      &.color-khaki {
+        > li {
+          &:hover .btn-small,
+          .btn-small:hover,
+          a.btn-small:hover {
+            color: $color-khaki;
+          }
+        }
+      }
+    }
+
+    .section-level-2-2 {
+      .strategy-evaluation-list {
+        > li {
+          &:nth-child(2) {
+            &:hover .btn-small,
+            .btn-small:hover,
+            a.btn-small:hover {
+              color: $color-greenish-blue;
+            }
+          }
+          &:nth-child(3) {
+            &:hover .btn-small,
+            .btn-small:hover,
+            a.btn-small:hover {
+              color: $color-cobalt-blue;
+            }
+          }
+          &:nth-child(4) {
+            &:hover .btn-small,
+            .btn-small:hover,
+            a.btn-small:hover {
+              color: $color-grayish-blue;
+            }
+          }
+          &:nth-child(5) {
+            &:hover .btn-small,
+            .btn-small:hover,
+            a.btn-small:hover {
+              color: $color-purple-blue;
+            }
+          }
+        }
+      }
+    }
+  .section-level-2-2 {
+    .strategy-evaluation-list {
+      &:hover .strategy-box,
+      &:hover .strategy-title {
+        opacity: 1;
+      }
+    }
+  }
+  .strategy-evaluation-list {
+    > li {
+      &:hover .evaluation-box {
+        opacity: 1;
+      }
+    }
+  }
+}
+
 @media all and (max-width: 768px) {
   .wrapper {
     padding-top: 70px;
@@ -197,6 +303,7 @@
     margin: 20px auto;
     padding: 30px 40px 54px;
   }
+
 }
 
 @media all and (max-width: 680px) {

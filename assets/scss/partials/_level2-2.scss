@@ -7,10 +7,6 @@
     padding: 0;
     table-layout: fixed;
     word-break: break-word;
-    &:hover .strategy-box,
-    &:hover .strategy-title {
-      opacity: 1;
-    }
     > li {
       position: relative;
       padding-top: 26px;

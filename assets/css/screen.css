@@ -684,9 +684,6 @@ a.btn, .btn {
   -o-border-radius: 4em;
   border-radius: 4em;
   cursor: pointer; }
-  a.btn:hover, .btn:hover {
-    color: #000000;
-    background-color: #ffffff; }
   .color-greenish-blue a.btn, .color-greenish-blue .btn {
     color: #4bb5c4;
     border-color: #4bb5c4; }
@@ -750,45 +747,6 @@ a.btn-small, .btn-small {
   background-color: #96a1a7; }
 .section-level-1 .level-list > li.color-purple-blue:hover .btn {
   background-color: #9f8abe; }
-
-.strategy-evaluation-list > li:hover .btn-small,
-.strategy-evaluation-list > li .btn-small:hover,
-.strategy-evaluation-list > li a.btn-small:hover {
-  color: #000000;
-  background-color: #ffffff; }
-.strategy-evaluation-list.color-purple-blue > li:hover .btn-small,
-.strategy-evaluation-list.color-purple-blue > li .btn-small:hover,
-.strategy-evaluation-list.color-purple-blue > li a.btn-small:hover {
-  color: #4A4268; }
-.strategy-evaluation-list.color-gray-brown > li:hover .btn-small,
-.strategy-evaluation-list.color-gray-brown > li .btn-small:hover,
-.strategy-evaluation-list.color-gray-brown > li a.btn-small:hover {
-  color: #5E4E41; }
-.strategy-evaluation-list.color-basalt-gray > li:hover .btn-small,
-.strategy-evaluation-list.color-basalt-gray > li .btn-small:hover,
-.strategy-evaluation-list.color-basalt-gray > li a.btn-small:hover {
-  color: #54595C; }
-.strategy-evaluation-list.color-khaki > li:hover .btn-small,
-.strategy-evaluation-list.color-khaki > li .btn-small:hover,
-.strategy-evaluation-list.color-khaki > li a.btn-small:hover {
-  color: #756A3D; }
-
-.section-level-2-2 .strategy-evaluation-list > li:nth-child(2):hover .btn-small,
-.section-level-2-2 .strategy-evaluation-list > li:nth-child(2) .btn-small:hover,
-.section-level-2-2 .strategy-evaluation-list > li:nth-child(2) a.btn-small:hover {
-  color: #0C7281; }
-.section-level-2-2 .strategy-evaluation-list > li:nth-child(3):hover .btn-small,
-.section-level-2-2 .strategy-evaluation-list > li:nth-child(3) .btn-small:hover,
-.section-level-2-2 .strategy-evaluation-list > li:nth-child(3) a.btn-small:hover {
-  color: #1A2340; }
-.section-level-2-2 .strategy-evaluation-list > li:nth-child(4):hover .btn-small,
-.section-level-2-2 .strategy-evaluation-list > li:nth-child(4) .btn-small:hover,
-.section-level-2-2 .strategy-evaluation-list > li:nth-child(4) a.btn-small:hover {
-  color: #54636B; }
-.section-level-2-2 .strategy-evaluation-list > li:nth-child(5):hover .btn-small,
-.section-level-2-2 .strategy-evaluation-list > li:nth-child(5) .btn-small:hover,
-.section-level-2-2 .strategy-evaluation-list > li:nth-child(5) a.btn-small:hover {
-  color: #4A4268; }
 
 .header {
   position: relative;
@@ -1421,9 +1379,6 @@ a.logo {
   .strategy-title-list > li:first-child {
     vertical-align: middle; }
 
-.strategy-evaluation-list > li:hover .evaluation-box {
-  opacity: 1; }
-
 .strategy-box,
 .evaluation-box {
   position: relative;
@@ -1538,8 +1493,6 @@ a.logo {
   padding: 0;
   table-layout: fixed;
   word-break: break-word; }
-  .section-level-2-2 .strategy-evaluation-list:hover .strategy-box, .section-level-2-2 .strategy-evaluation-list:hover .strategy-title {
-    opacity: 1; }
   .section-level-2-2 .strategy-evaluation-list > li {
     position: relative;
     padding-top: 26px;
@@ -1847,6 +1800,55 @@ img.level3-icon {
     overflow-x: scroll; }
   .section-level-2-2 .strategy-evaluation-list {
     min-width: 800px; } }
+@media all and (min-width: 768px) {
+  a.btn:hover, .btn:hover {
+    color: #000000;
+    background-color: #ffffff; }
+
+  .strategy-evaluation-list > li:hover .btn-small,
+  .strategy-evaluation-list > li .btn-small:hover,
+  .strategy-evaluation-list > li a.btn-small:hover {
+    color: #000000;
+    background-color: #ffffff; }
+  .strategy-evaluation-list.color-purple-blue > li:hover .btn-small,
+  .strategy-evaluation-list.color-purple-blue > li .btn-small:hover,
+  .strategy-evaluation-list.color-purple-blue > li a.btn-small:hover {
+    color: #4A4268; }
+  .strategy-evaluation-list.color-gray-brown > li:hover .btn-small,
+  .strategy-evaluation-list.color-gray-brown > li .btn-small:hover,
+  .strategy-evaluation-list.color-gray-brown > li a.btn-small:hover {
+    color: #5E4E41; }
+  .strategy-evaluation-list.color-basalt-gray > li:hover .btn-small,
+  .strategy-evaluation-list.color-basalt-gray > li .btn-small:hover,
+  .strategy-evaluation-list.color-basalt-gray > li a.btn-small:hover {
+    color: #54595C; }
+  .strategy-evaluation-list.color-khaki > li:hover .btn-small,
+  .strategy-evaluation-list.color-khaki > li .btn-small:hover,
+  .strategy-evaluation-list.color-khaki > li a.btn-small:hover {
+    color: #756A3D; }
+
+  .section-level-2-2 .strategy-evaluation-list > li:nth-child(2):hover .btn-small,
+  .section-level-2-2 .strategy-evaluation-list > li:nth-child(2) .btn-small:hover,
+  .section-level-2-2 .strategy-evaluation-list > li:nth-child(2) a.btn-small:hover {
+    color: #0C7281; }
+  .section-level-2-2 .strategy-evaluation-list > li:nth-child(3):hover .btn-small,
+  .section-level-2-2 .strategy-evaluation-list > li:nth-child(3) .btn-small:hover,
+  .section-level-2-2 .strategy-evaluation-list > li:nth-child(3) a.btn-small:hover {
+    color: #1A2340; }
+  .section-level-2-2 .strategy-evaluation-list > li:nth-child(4):hover .btn-small,
+  .section-level-2-2 .strategy-evaluation-list > li:nth-child(4) .btn-small:hover,
+  .section-level-2-2 .strategy-evaluation-list > li:nth-child(4) a.btn-small:hover {
+    color: #54636B; }
+  .section-level-2-2 .strategy-evaluation-list > li:nth-child(5):hover .btn-small,
+  .section-level-2-2 .strategy-evaluation-list > li:nth-child(5) .btn-small:hover,
+  .section-level-2-2 .strategy-evaluation-list > li:nth-child(5) a.btn-small:hover {
+    color: #4A4268; }
+
+  .section-level-2-2 .strategy-evaluation-list:hover .strategy-box, .section-level-2-2 .strategy-evaluation-list:hover .strategy-title {
+    opacity: 1; }
+
+  .strategy-evaluation-list > li:hover .evaluation-box {
+    opacity: 1; } }
 @media all and (max-width: 768px) {
   .wrapper {
     padding-top: 70px; }

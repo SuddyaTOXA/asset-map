@@ -14,10 +14,6 @@ a.btn, .btn {
     background-color: transparent;
     @include border-radius($radius-main);
     cursor: pointer;
-    &:hover {
-        color: $black;
-        background-color: $white;
-    }
     .color-greenish-blue & {
         color: #4bb5c4;
         border-color: #4bb5c4;
@@ -71,113 +67,32 @@ a.btn-small, .btn-small {
     text-transform: uppercase;
 }
 
-.section-level-1 {
-    .level-list > li {
-        > a {
-            @include transition($transition-other);
-            &:hover {
-                color: $white;
-                text-decoration: none;
+    .section-level-1 {
+        .level-list > li {
+            > a {
+                @include transition($transition-other);
+                &:hover {
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+            &:hover .btn,
+            .btn:hover,
+            a.btn:hover {
+                color: $color-main;
+            }
+            &.color-greenish-blue:hover .btn {
+                background-color: #4bb5c4;
+            }
+            &.color-cobalt-blue:hover .btn {
+                background-color: #525f8a;
+            }
+            &.color-grayish-blue:hover .btn {
+                background-color: #96a1a7;
+            }
+            &.color-purple-blue:hover .btn {
+                background-color: #9f8abe;
             }
         }
-        &:hover .btn,
-        .btn:hover,
-        a.btn:hover {
-            color: $color-main;
-        }
-        &.color-greenish-blue:hover .btn {
-            background-color: #4bb5c4;
-        }
-        &.color-cobalt-blue:hover .btn {
-            background-color: #525f8a;
-        }
-        &.color-grayish-blue:hover .btn {
-            background-color: #96a1a7;
-        }
-        &.color-purple-blue:hover .btn {
-            background-color: #9f8abe;
-        }
     }
-}
 
-.strategy-evaluation-list {
-    > li {
-        &:hover .btn-small,
-        .btn-small:hover,
-        a.btn-small:hover {
-            color: $black;
-            background-color: $white;
-        }
-    }
-    &.color-purple-blue {
-        > li {
-            &:hover .btn-small,
-            .btn-small:hover,
-            a.btn-small:hover {
-                color: $color-purple-blue;
-            }
-        }
-    }
-    &.color-gray-brown {
-        > li {
-            &:hover .btn-small,
-            .btn-small:hover,
-            a.btn-small:hover {
-                color: $color-gray-brown;
-            }
-        }
-    }
-    &.color-basalt-gray {
-        > li {
-            &:hover .btn-small,
-            .btn-small:hover,
-            a.btn-small:hover {
-                color: $color-basalt-gray;
-            }
-        }
-    }
-    &.color-khaki {
-        > li {
-            &:hover .btn-small,
-            .btn-small:hover,
-            a.btn-small:hover {
-                color: $color-khaki;
-            }
-        }
-    }
-}
-
-.section-level-2-2 {
-    .strategy-evaluation-list {
-        > li {
-            &:nth-child(2) {
-                &:hover .btn-small,
-                .btn-small:hover,
-                a.btn-small:hover {
-                    color: $color-greenish-blue;
-                }
-            }
-            &:nth-child(3) {
-                &:hover .btn-small,
-                .btn-small:hover,
-                a.btn-small:hover {
-                    color: $color-cobalt-blue;
-                }
-            }
-            &:nth-child(4) {
-                &:hover .btn-small,
-                .btn-small:hover,
-                a.btn-small:hover {
-                    color: $color-grayish-blue;
-                }
-            }
-            &:nth-child(5) {
-                &:hover .btn-small,
-                .btn-small:hover,
-                a.btn-small:hover {
-                    color: $color-purple-blue;
-                }
-            }
-        }
-    }
-}

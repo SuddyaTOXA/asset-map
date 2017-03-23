@@ -45,32 +45,36 @@ jQuery(document).ready(function($) {
     $(window).on('load resize', function() {
         var width = $(window).width();
 
-        if (width > '768') {
-            //for hover effect
-            $(".section-level-1, .section-level-2, .section-level-2-2").hover(
-                function() {
-                    $('.bottom-nav-list, .section-level-2, .section-level-2-2, .level-list, #footer').addClass("hover");
-                },
-                function() {
-                    $('.bottom-nav-list, .section-level-2, .section-level-2-2, .level-list, #footer').removeClass("hover");
-                }
-            );
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 
-            //for hover width effect
-            $(".level-list li").hover(
-                function() {
-                    $(this).prev().addClass("shrink-left");
-                    $(this).addClass("expand");
-                    $(this).next().addClass("shrink-right");
-                }, function() {
-                    $(this).prev().removeClass("shrink-left");
-                    $(this).removeClass("expand");
-                    $(this).next().removeClass("shrink-right");
-                }
-            );
         } else {
-            $('.bottom-nav-list, .section-level-2, .section-level-2-2, .level-list, #footer').removeClass("hover");
-            $(".level-list li").removeClass("shrink-left expand shrink-right");
+            if (width > '768') {
+                //for hover effect
+                $(".section-level-1, .strategy-evaluation-list:not(.strategy-title-list)").hover(
+                    function () {
+                        $('.bottom-nav-list, .section-level-2, .section-level-2-2, .level-list').addClass("hover");
+                    },
+                    function () {
+                        $('.bottom-nav-list, .section-level-2, .section-level-2-2, .level-list').removeClass("hover");
+                    }
+                );
+
+                //for hover width effect
+                $(".level-list li").hover(
+                    function () {
+                        $(this).prev().addClass("shrink-left");
+                        $(this).addClass("expand");
+                        $(this).next().addClass("shrink-right");
+                    }, function () {
+                        $(this).prev().removeClass("shrink-left");
+                        $(this).removeClass("expand");
+                        $(this).next().removeClass("shrink-right");
+                    }
+                );
+            } else {
+                $('.bottom-nav-list, .section-level-2, .section-level-2-2, .level-list, #footer').removeClass("hover");
+                $(".level-list li").removeClass("shrink-left expand shrink-right");
+            }
         }
     });
 

@@ -52,6 +52,7 @@ a.btn, .btn {
     }
 
     &.blue {
+        font-size: 12px;
         border-color: $color-level3;
         background: transparent;
         color: $color-level3;
@@ -66,7 +67,7 @@ a.btn-small, .btn-small {
     max-width: 100%;
     width: auto;
     padding: 10px 20px 11px;
-    font: 500 14px $font-main;
+    font: 500 12px $font-main;
     text-transform: uppercase;
 }
 

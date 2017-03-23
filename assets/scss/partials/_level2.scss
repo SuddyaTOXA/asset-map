@@ -9,6 +9,12 @@
     min-width: 160px;
     clear: both;
     word-break: break-all;
+    &.strategy-title-list:before {
+      .hover & {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
     > li {
       position: relative;
       z-index: 2;
@@ -51,7 +57,7 @@
       @include transition($transition-other);
     }
     .hover &:before {
-      opacity: 1;
+      opacity: 0.2;
       visibility: visible;
     }
     .hover &:hover:before {
@@ -163,7 +169,7 @@
     @include transition($transition-other);
   }
   .hover &:before {
-    opacity: 1;
+    opacity: 0.2;
     visibility: visible;
   }
   .hover &:hover:before {

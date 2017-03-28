@@ -150,57 +150,80 @@ jQuery(document).ready(function($) {
 
     //forms checkboxes
     $(window).on('load', function () {
-       var checkGroup =  $('.webform-component-checkboxes');
+        if ($('.node-webform').hasClass('node-4653')) {
+            var checkGroup = $('.webform-component-checkboxes');
 
-       checkGroup.each(function () {
-           var groupInput = $(this).find('.form-checkbox'),
-               groupLabel = $(this).find('.option'),
-               titleLabel = $(this).children('label');
+            checkGroup.each(function () {
+                var groupInput = $(this).find('.form-checkbox'),
+                    groupLabel = $(this).find('.option'),
+                    titleLabel = $(this).children('label');
 
-           titleLabel.addClass('checkboxes-title');
-           groupInput.each(function (index) {
-               var input = groupInput.eq(index),
-                   label = groupLabel.eq(index),
-                   text = label.text();
+                titleLabel.addClass('checkboxes-title');
+                groupInput.each(function (index) {
+                    var input = groupInput.eq(index),
+                        label = groupLabel.eq(index),
+                        text = label.text();
 
-               label.addClass('check-style').empty();
-               label.append('<span>');
-               label.find('span').text(text);
-               input.prependTo(label);
-           });
-       });
+                    label.addClass('check-style').empty();
+                    label.append('<span>');
+                    label.find('span').text(text);
+                    input.prependTo(label);
+                });
+            });
 
-       //for strategy
-        var box = $('.webform-client-form > div'),
-            boxItem = box.children();
+            //for strategy
+            var box = $('.webform-client-form > div'),
+                boxItem = box.children();
 
-        box.append('<div class="left-form-box">');
-        box.append('<div class="right-form-box">');
+            box.append('<div class="left-form-box">');
+            box.append('<div class="right-form-box">');
 
-        var leftFormBox = $('.left-form-box'),
-            rightFormBox = $('.right-form-box');
+            var leftFormBox = $('.left-form-box'),
+                rightFormBox = $('.right-form-box');
 
-        boxItem.each(function (index) {
-            if (index <= 6 ) {
-                boxItem.eq(index).appendTo(leftFormBox);
-            } else {
-                boxItem.eq(index).appendTo(rightFormBox);
-            }
-        });
+            boxItem.each(function (index) {
+                if (index <= 6) {
+                    boxItem.eq(index).appendTo(leftFormBox);
+                } else {
+                    boxItem.eq(index).appendTo(rightFormBox);
+                }
+            });
 
-        leftFormBox.append('<div class="left-check-box">');
-        leftFormBox.append('<div class="right-check-box">');
+            leftFormBox.append('<div class="left-check-box">');
+            leftFormBox.append('<div class="right-check-box">');
 
-        var leftCheckBox = $('.left-check-box'),
-            rightCheckBox = $('.right-check-box');
+            var leftCheckBox = $('.left-check-box'),
+                rightCheckBox = $('.right-check-box');
 
-        checkGroup.each(function (index) {
-            if (index <= 1 ) {
-                checkGroup.eq(index).appendTo(leftCheckBox);
-            } else {
-                checkGroup.eq(index).appendTo(rightCheckBox);
-            }
-        });
+            checkGroup.each(function (index) {
+                if (index <= 1) {
+                    checkGroup.eq(index).appendTo(leftCheckBox);
+                } else {
+                    checkGroup.eq(index).appendTo(rightCheckBox);
+                }
+            });
+        } else if($('.node-webform').hasClass('node-4652')) {
+
+            //for contact
+            var box = $('.webform-client-form > div'),
+                boxItem = box.children();
+
+            $('.form-select').wrap( '<div class="select-wrap"></div>');
+            box.append('<div class="left-form-box">');
+            box.append('<div class="right-form-box">');
+
+            var leftFormBox = $('.left-form-box'),
+                rightFormBox = $('.right-form-box');
+
+            boxItem.each(function (index) {
+                if (index <= 2) {
+                    boxItem.eq(index).appendTo(leftFormBox);
+                } else {
+                    boxItem.eq(index).appendTo(rightFormBox);
+                }
+            });
+
+        }
     });
 
 });

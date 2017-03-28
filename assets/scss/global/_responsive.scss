@@ -331,6 +331,11 @@
   .level3-list > li {
     width: $col*12;
   }
+  .left-form-box,
+  .right-form-box {
+    width: 100%;
+  }
+
 }
 
 @media all and (max-width: 560px) {
@@ -349,6 +354,14 @@
   }
   .logo-wrap strong {
     letter-spacing: 0;
+  }
+  .left-form-box,
+  .right-form-box {
+    padding: 0;
+  }
+  .left-check-box,
+  .right-check-box {
+    width: 100%;
   }
 }
 

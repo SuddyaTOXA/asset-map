@@ -143,7 +143,7 @@ jQuery(document).ready(function($) {
 
 
     //forms checkboxes
-    $(window).on('load resize', function () {
+    $(window).on('load', function () {
        var checkGroup =  $('.webform-component-checkboxes');
 
        checkGroup.each(function () {

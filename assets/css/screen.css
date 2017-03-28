@@ -805,7 +805,7 @@ a.btn-small, .btn-small {
     font-family: "Gotham", Arial, sans-serif;
     font-weight: 400;
     color: #131617;
-    resize: none;
+    resize: vertical;
     -webkit-border-radius: 3px;
     -khtml-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -826,10 +826,12 @@ a.btn-small, .btn-small {
   .node-webform .webform-component-checkboxes label {
     display: inline-block; }
 
-.webform-component-checkboxes .check-style {
-  margin-bottom: 7px; }
-.webform-component-checkboxes .checkboxes-title {
-  padding-bottom: 8px; }
+.webform-component-checkboxes {
+  margin-bottom: 10px; }
+  .webform-component-checkboxes .check-style {
+    margin-bottom: 7px; }
+  .webform-component-checkboxes .checkboxes-title {
+    padding-bottom: 8px; }
 
 .left-form-box,
 .right-form-box {

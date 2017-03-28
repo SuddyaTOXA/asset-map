@@ -36,7 +36,7 @@
     font-family: "Gotham", Arial, sans-serif;
     font-weight: 400;
     color: $color-inner;
-    resize: none;
+    resize: vertical;
     @include border-radius(3px);
     border: none;
     background-color: rgb(230, 245, 245);
@@ -54,6 +54,7 @@
 }
 
 .webform-component-checkboxes {
+  margin-bottom: 10px;
   .check-style {
     margin-bottom: 7px;
   }

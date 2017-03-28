@@ -1103,8 +1103,10 @@ input.form-submit {
     color: #000000;
     background-color: #000000; }
 
-.node-type-webform .wrapper::after {
-  display: none; }
+.node-type-webform .wrapper {
+  margin-bottom: 0; }
+  .node-type-webform .wrapper:after {
+    display: none; }
 
 .header {
   position: relative;

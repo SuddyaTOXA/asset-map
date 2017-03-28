@@ -284,6 +284,11 @@ input.form-submit {
   }
 }
 
-.node-type-webform .wrapper::after {
-  display: none;
+.node-type-webform {
+  .wrapper {
+    margin-bottom: 0;
+    &:after {
+      display: none;
+    }
+  }
 }

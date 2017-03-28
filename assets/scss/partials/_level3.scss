@@ -175,11 +175,36 @@ img.level3-icon {
     max-width: 400px;
     padding: 11px 30px 9px;
     border-width: 2px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.25;
+    border-color: $color-level3;
+    background: transparent;
+    color: $color-level3;
+    &:hover {
+      background: $color-level3;
+      color: $white;
+    }
     .fa-chevron-left {
       font-size: 13px;
       margin-right: 4px;
+    }
+  }
+}
+.back-btn-wrapper {
+  .btn {
+    position: relative;
+    padding-left: 48px;
+    &:before {
+      content: "\f053";
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      margin-top: -6px;
+      display: inline-block;
+      font: normal normal normal 13px/1 FontAwesome;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
   }
 }

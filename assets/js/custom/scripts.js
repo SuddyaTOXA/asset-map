@@ -9,8 +9,8 @@ function setMaxHeight(box) {
 }
 
 function customFontSize(minvalue, maxvalue, minsize, maxsize) {
-    $(window).on('load', function () {
-        var evaluation = $('.evaluation'),
+    jQuery(window).on('load', function () {
+        var evaluation = jQuery('.evaluation'),
             minValue = minvalue,
             maxValue = maxvalue,
             minSize = minsize,
@@ -19,14 +19,14 @@ function customFontSize(minvalue, maxvalue, minsize, maxsize) {
             step = ((maxSize - minSize) / iteration).toFixed(3);
 
         evaluation.each(function () {
-            var value = $(this).text().replace(/ /g,'').replace(/,/g , '');
+            var value = jQuery(this).text().replace(/ /g,'').replace(/,/g , '');
             if (value < minValue) {
-                $(this).css('font-size', minSize+'em');
+                jQuery(this).css('font-size', minSize+'em');
             } else if (value > maxValue) {
-                $(this).css('font-size', maxSize+'em');
+                jQuery(this).css('font-size', maxSize+'em');
             } else {
                 var size = (minSize + ((value - minValue) * step)).toFixed(3);
-                $(this).css('font-size', size+'em');
+                jQuery(this).css('font-size', size+'em');
             }
         })
     });
@@ -147,9 +147,9 @@ jQuery(document).ready(function($) {
        var checkGroup =  $('.webform-component-checkboxes');
 
        checkGroup.each(function () {
-          var groupInput = $(this).find('.form-checkbox'),
-              groupLabel = $(this).find('.option'),
-              titleLabel = $(this).children('label');
+           var groupInput = $(this).find('.form-checkbox'),
+               groupLabel = $(this).find('.option'),
+               titleLabel = $(this).children('label');
 
            titleLabel.addClass('checkboxes-title');
            groupInput.each(function (index) {
@@ -157,15 +157,11 @@ jQuery(document).ready(function($) {
                    label = groupLabel.eq(index),
                    text = label.text().replace(/ /g,'');
 
-
                label.addClass('check-style').empty();
                label.append('<span>');
                label.find('span').text(text);
                input.prependTo(label);
-               console.log(text);
            });
-
-
        });
 
        //for strategy

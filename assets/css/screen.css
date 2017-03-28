@@ -2054,12 +2054,34 @@ img.level3-icon {
     max-width: 400px;
     padding: 11px 30px 9px;
     border-width: 2px;
-    font-size: 14px;
-    line-height: 1.25; }
+    font-size: 12px;
+    line-height: 1.25;
+    border-color: #0cbcc9;
+    background: transparent;
+    color: #0cbcc9; }
+    .back-link .btn:hover,
+    .back-btn-wrapper .btn:hover {
+      background: #0cbcc9;
+      color: #ffffff; }
     .back-link .btn .fa-chevron-left,
     .back-btn-wrapper .btn .fa-chevron-left {
       font-size: 13px;
       margin-right: 4px; }
+
+.back-btn-wrapper .btn {
+  position: relative;
+  padding-left: 48px; }
+  .back-btn-wrapper .btn:before {
+    content: "\f053";
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    margin-top: -6px;
+    display: inline-block;
+    font: normal normal normal 13px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
 
 .pager {
   margin-top: 45px;

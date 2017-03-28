@@ -8,11 +8,18 @@
     width: 100%;
     min-width: 160px;
     clear: both;
-    word-break: break-all;
     &.strategy-title-list:before {
       .hover & {
         opacity: 0;
         visibility: hidden;
+      }
+    }
+    &:not(.strategy-title-list) {
+      > li {
+        cursor: pointer;
+        &:first-child {
+          cursor: default;
+        }
       }
     }
     > li {

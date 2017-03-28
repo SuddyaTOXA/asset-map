@@ -22,6 +22,9 @@
     visibility: visible;
     @include transition($transition-other);
   }
+  div {
+    position: relative;
+  }
   .container {
     overflow: hidden;
   }
@@ -48,6 +51,9 @@
       text-decoration: none;
     }
   }
+  .footer .menu {
+    @extend .footer-nav;
+  }
     .copyright {
       float: right;
       text-align: right;
@@ -55,9 +61,11 @@
       font-family: $font-nav;
       font-size: 12px;
       opacity: 0.5;
+      color: white;
       a {
         &:hover {
           text-decoration: none;
         }
       }
   }
+  

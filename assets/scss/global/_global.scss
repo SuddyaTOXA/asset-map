@@ -141,6 +141,9 @@ img {
     //    background-color: #282420;
     //}
 }
+.local {
+    @extend .color-gray-brown; 
+}
 //.hover .color-gray-brown:hover,
 //.hover .color-gray-brown:hover .label-bg-color {
 //    @include transition($transition-other);
@@ -149,11 +152,14 @@ img {
 
 .color-khaki,
 .color-khaki .evaluation-bg,
-.color-khaki .label-bg-color {
+.color-khaki .label-bg-color  {
     background-color: $color-khaki;
     //.hover & {
     //    background-color: #2C2C20;
     //}
+}
+.national {
+    @extend .color-khaki;
 }
 //.hover .color-khaki:hover,
 //.hover .color-khaki:hover .label-bg-color {
@@ -163,11 +169,14 @@ img {
 
 .color-basalt-gray,
 .color-basalt-gray .evaluation-bg,
-.color-basalt-gray .label-bg-color {
+.color-basalt-gray .label-bg-color  {
     background-color: $color-basalt-gray;
     //.hover & {
     //    background-color: #24282B;
     //}
+}
+.state {
+    @extend .color-basalt-gray;
 }
 //.hover .color-basalt-gray:hover,
 //.hover .color-basalt-gray:hover .label-bg-color {
@@ -240,6 +249,9 @@ img {
     position: relative;
     min-height: 100%;
     margin-bottom: -161px;
+
+    overflow: hidden;
+
     &:after {
         content: '';
         display: block;

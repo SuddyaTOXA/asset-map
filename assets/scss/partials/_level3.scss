@@ -20,6 +20,7 @@
   text-align: center;
   color: $color-inner;
   font-size: 16px;
+  text-transform: capitalize;
   li {
     position: relative;
     display: inline-block;
@@ -67,11 +68,28 @@ img.level3-icon {
   width: auto;
   margin-bottom: 12px;
 }
+.view-asset-list  {
+    .view-header {
+      border-top: solid 1px #e5edef;
+      margin-bottom: 21px;
+      text-align: center;
+      margin-top: 18px;
 
+          .inner {
+              background-color: #f2fafa;
+              display: inline-block;
+              transform: translateY(-11px);
+              padding: 0 25px;
+              color: #0cbcc9;
+              font-weight: 600;
+          }
+    }
+}
 .level3-list {
   margin: 0 -8px;
   text-align: center;
   color: #54636b;
+  
   > li {
     display: inline-block;
     padding: 0 8px;
@@ -103,6 +121,13 @@ img.level3-icon {
         font-weight: 700;
         color: $color-inner;
         @include transition($transition-other);
+        & ~ *:not(.content){
+          @include transition($transition-other);
+        }
+      }
+      h5 {
+        margin-top: -6px;
+        margin-bottom: 16px;
       }
       .content {
         font-size: 14px;
@@ -125,6 +150,12 @@ img.level3-icon {
         background-color: $color-grayish-blue;
         .level3-list-title {
           color: $white;
+          & ~ *:not(.content){
+            color: rgba(255, 255, 255, 0.8);
+          }
+        }
+        .level3-link {
+          color: #38a9ec !important;
         }
         .content {
           color: rgba(255, 255, 255, 0.6);
@@ -134,7 +165,8 @@ img.level3-icon {
   }
 }
 
-.back-link {
+.back-link,
+.back-btn-wrapper {
   margin-top: 18px;
   margin-bottom: 20px;
   text-align: center;

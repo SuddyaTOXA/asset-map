@@ -10,12 +10,14 @@
 @import 'global/header';
 @import 'global/navigation';
 @import 'global/footer';
+@import 'global/drupalfixes';
 
 /* styles used throughout site */
 @import 'partials/level1';
 @import 'partials/level2';
 @import 'partials/level2-2';
 @import 'partials/level3';
+@import 'partials/pagination';
 
 /* media */
 @import 'global/responsive';

@@ -107,6 +107,10 @@
     }
 }
 
+.mobile-menu-box > ul {
+    @extend .mobile-menu;
+}
+
 .mobile-menu-wrap,
 .mobile-menu-toggle {
     display: none;

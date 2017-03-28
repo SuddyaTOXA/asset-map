@@ -106,7 +106,7 @@ jQuery(document).ready(function($) {
     });
 
     // for custom font size
-    customFontSize(1, 20, 2, 4.68);
+    customFontSize(1, 20, 2, 3);
 
     //for cell
     if ($('section').hasClass('section-level-2')) {
@@ -131,5 +131,15 @@ jQuery(document).ready(function($) {
             }
         });
     }
+
+    $('.strategy-evaluation-list li:has(a)').on({
+        click: function(e) {
+            e.preventDefault();
+
+            window.location = $(this).parent().find('a.btn').attr('href');
+            return false;
+        }
+    });
+
 
 });

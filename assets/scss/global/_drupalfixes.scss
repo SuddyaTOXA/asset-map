@@ -1,0 +1,24 @@
+// page vie and edit tabs
+.tabs__tab-link:active, .tabs__tab-link.is-active, .tabs__tab-link--is-active {
+    background: #0cbcc9;
+}
+.tabs__tab.is-active {
+    border-color: #0cbcc9;
+}
+
+
+//Custom edit block link code
+.edit_block_link {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	opacity:0;
+	padding: 4px 8px;
+	background-color: grey;
+	z-index: 99;
+}
+.block_edit_hover {
+	.edit_block_link {
+		opacity: 1;
+	}
+}

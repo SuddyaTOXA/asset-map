@@ -1,0 +1,37 @@
+.pager {
+	margin-top: 45px;
+	margin-bottom: 47px;
+	a {
+		display: inline-block;
+		color: #54636b;
+		background-color: white;
+		@include border-radius(4px);
+		padding: 8px 14px;
+		margin: .5em;
+		font-weight: 600;
+		
+		&:hover {
+			background-color: #0cbcc9;
+			color: white;
+			text-decoration: none;
+		}
+	}
+	.first, .last {display: none;}
+}
+.pager__item,
+.pager__current-item,
+.pager-current,
+.pager-item,
+.pager-first,
+.pager-previous,
+.pager-next,
+.pager-last,
+.pager-ellipsis {
+	padding: 0;
+}
+.pager-current {
+	background-color: #0cbcc9;
+	color: white;
+	@include border-radius(4px);
+	padding: 10px 14px;
+}

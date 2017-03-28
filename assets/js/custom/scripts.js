@@ -142,6 +142,12 @@ jQuery(document).ready(function($) {
     });
 
 
+    // for 2x sizes of images
+    $('.section-level-1 .level-box img[src*="@2x"]').each(function( index ) {
+       $(this).css( 'width', $(this).prop("naturalWidth")/2 );
+    });
+
+
     //forms checkboxes
     $(window).on('load', function () {
        var checkGroup =  $('.webform-component-checkboxes');

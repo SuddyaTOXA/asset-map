@@ -8,7 +8,7 @@
     color: $color-inner;
   }
 }
-.form-item {
+.form-item:not(.form-type-checkbox) {
   margin: 1rem 0;
 }
 .node-webform {

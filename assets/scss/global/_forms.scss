@@ -8,6 +8,9 @@
     color: $color-inner;
   }
 }
+.form-item {
+  margin: 1rem 0;
+}
 .node-webform {
   display: block;
   max-width: 780px;
@@ -172,8 +175,8 @@ input.form-submit {
   min-width: 170px;
   height: auto;
   margin: 0;
-  padding: 10px 20px 11px;
-  font: 500 12px $font-main;
+  padding: 11px 20px;
+  font: 500 13px $font-main;
   color: $white;
   text-align: center;
   text-decoration: none;

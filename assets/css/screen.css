@@ -763,6 +763,9 @@ a.btn-small, .btn-small {
   text-align: center;
   color: #131617; }
 
+.form-item {
+  margin: 1rem 0; }
+
 .node-webform {
   display: block;
   max-width: 780px;
@@ -975,8 +978,8 @@ input.form-submit {
   min-width: 170px;
   height: auto;
   margin: 0;
-  padding: 10px 20px 11px;
-  font: 500 12px "Gotham", Arial, sans-serif;
+  padding: 11px 20px;
+  font: 500 13px "Gotham", Arial, sans-serif;
   color: #ffffff;
   text-align: center;
   text-decoration: none;
@@ -1189,7 +1192,7 @@ a.logo {
       .main-nav > ul > li .menu > li > a {
         position: relative;
         display: inline-block;
-        min-width: 150px;
+        min-width: 180px;
         max-width: 250px;
         padding: 15px 20px 15px;
         font: 18px "Myriad Pro", Arial, sans-serif;

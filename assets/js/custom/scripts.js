@@ -19,7 +19,7 @@ function customFontSize(minvalue, maxvalue, minsize, maxsize) {
             step = ((maxSize - minSize) / iteration).toFixed(3);
 
         evaluation.each(function () {
-            var value = $(this).text();
+            var value = $(this).text().replace(/ /g,'').replace(/,/g , '');
             if (value < minValue) {
                 $(this).css('font-size', minSize+'em');
             } else if (value > maxValue) {

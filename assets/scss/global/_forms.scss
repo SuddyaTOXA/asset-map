@@ -1,0 +1,242 @@
+.node-webform {
+  display: block;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 40px 20px 40px;
+  color: $color-inner;
+  background-color: $white;
+  @include border-radius($radius-small);
+  .form-required {
+    display: none;
+  }
+  label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  input.form-text {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 0 0 16px 0;
+    padding: 14px 15px;
+    box-shadow: none;
+    color: $color-8;
+    line-height: 40px;
+    @include border-radius(3px);
+    border: none;
+    background-color: rgb(230, 245, 245);
+    @include transition($transition-other);
+  }
+  textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 14px 15px;
+    font-family: "Gotham", Arial, sans-serif;
+    font-weight: 400;
+    color: $color-inner;
+    resize: none;
+    @include border-radius(3px);
+    border: none;
+    background-color: rgb(230, 245, 245);
+    @include transition($transition-other);
+  }
+  .form-actions {
+    margin-top: 40px;
+    text-align: center;
+  }
+  .webform-component-checkboxes {
+    label {
+      display: inline-block;
+    }
+  }
+}
+
+.webform-component-checkboxes {
+  .check-style {
+    margin-bottom: 7px;
+  }
+  .checkboxes-title {
+    padding-bottom: 8px;
+  }
+}
+.left-form-box,
+.right-form-box {
+  display: inline-block;
+  width: ($col*6);
+  vertical-align: top;
+  padding: 0 20px;
+}
+.left-check-box,
+.right-check-box {
+  display: inline-block;
+  width: ($col*6);
+  vertical-align: top;
+  padding: 0 10px;
+}
+
+input::-webkit-input-placeholder {
+  color: $color-inner;
+  opacity: 0.3;
+  @include transition($transition-other);
+}
+input::-moz-placeholder {
+  color: $color-inner;
+  opacity: 0.3;
+  @include transition($transition-other);
+}
+input:-ms-input-placeholder {
+  color: $color-inner;
+  opacity: 0.3;
+  @include transition($transition-other);
+}
+input:-moz-placeholder {
+  color: $color-inner;
+  opacity: 0.3;
+  @include transition($transition-other);
+}
+
+textarea::-webkit-input-placeholder {
+  font-family: "Gotham", Arial, sans-serif;
+  font-weight: 400;
+  color: $color-inner;
+  opacity: 0.3;
+  @include transition($transition-other);
+}
+textarea::-moz-placeholder {
+  font-family: "Gotham", Arial, sans-serif;
+  font-weight: 400;
+  color: $color-inner;
+  opacity: 0.3;
+  @include transition($transition-other);
+}
+textarea:-ms-input-placeholder {
+  font-family: "Gotham", Arial, sans-serif;
+  font-weight: 400;
+  color: $color-inner;
+  opacity: 0.3;
+  @include transition($transition-other);
+}
+textarea:-moz-placeholder {
+  font-family: "Gotham", Arial, sans-serif;
+  font-weight: 400;
+  color: $color-inner;
+  opacity: 0.3;
+  @include transition($transition-other);
+}
+
+input.webform-submit,
+input.button-primary,
+input.form-submit {
+  position: relative;
+  display: inline-block;
+  max-width: 270px;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 20px 20px 19px;
+  font: 500 16px $font-main;
+  color: $white;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid rgb(12, 188, 201);
+  background-color: rgb(12, 188, 201);
+  @include border-radius($radius-main);
+  cursor: pointer;
+  &:hover {
+    color: rgb(12, 188, 201);
+    background-color: transparent;
+  }
+}
+
+.check-style,
+.radio-style  {
+  input[type=radio],
+  input[type=checkbox] {
+    display: none;
+  }
+}
+.check-style span,
+.radio-style span {
+  position: relative;
+  display: inline-block;
+  padding-top: 5px;
+  padding-left: 34px;
+  line-height: 1.3;
+}
+.check-style span:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -9px;
+  left: 0;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: none;
+  cursor: pointer;
+  color: $white;
+  font: normal normal normal 15px/16px FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  background: #E6F5F5;
+  @include border-radius(3px);
+  @include transition($transition-other);
+}
+.check-style input[type=checkbox]:checked + span:before {
+  background-color: $color-level3;
+}
+.check-style input[type=checkbox]:checked + span:after {
+  position: absolute;
+  font: normal normal normal 15px/16px FontAwesome;
+  content: "\f00c";
+  left: 4px;
+  top: 6px;
+  color: $white;
+}
+.radio-style span:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -9px;
+  left: 0;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid $color-7;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+  color: $color-8;
+  font: normal normal normal 14px/16px FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  background: #ffffff;
+  letter-spacing: 1px;
+  .inverse & {
+    color: $color-0;
+    border-color: $color-0;
+    background-color: transparent;
+  }
+}
+.radio-style input[type=radio]:checked + span:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  background-color: $color-8;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  .inverse & {
+    color: $color-0;
+    background-color: $color-0;
+  }
+}

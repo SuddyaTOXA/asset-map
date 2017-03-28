@@ -155,7 +155,7 @@ jQuery(document).ready(function($) {
            groupInput.each(function (index) {
                var input = groupInput.eq(index),
                    label = groupLabel.eq(index),
-                   text = label.text().replace(/ /g,'');
+                   text = label.text();
 
                label.addClass('check-style').empty();
                label.append('<span>');

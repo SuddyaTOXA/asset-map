@@ -195,7 +195,8 @@ input.form-submit {
   font: normal normal normal 15px/16px FontAwesome;
   content: "\f00c";
   left: 4px;
-  top: 6px;
+  top: 50%;
+  margin-top: -6px;
   color: $white;
 }
 .radio-style span:before {

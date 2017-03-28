@@ -211,6 +211,7 @@
       display: table-cell;
       vertical-align: middle;
       text-align: center;
+      @include transition($transition-other);
       &:after {
         content: "";
         display: table;
@@ -228,7 +229,9 @@
         visibility: hidden;
         opacity: 0;
         @include transition($transition-other);
-
+      }
+      &:hover {
+        opacity: .6;
       }
       > a {
         display: block;

@@ -69,27 +69,25 @@ img.level3-icon {
   margin-bottom: 12px;
 }
 .view-asset-list  {
-    .view-header {
-      border-top: solid 1px #e5edef;
-      margin-bottom: 21px;
-      text-align: center;
-      margin-top: 18px;
-
-          .inner {
-              background-color: #f2fafa;
-              display: inline-block;
-              transform: translateY(-11px);
-              padding: 0 25px;
-              color: #0cbcc9;
-              font-weight: 600;
-          }
+  .view-header {
+    border-top: solid 1px #e5edef;
+    margin-bottom: 21px;
+    text-align: center;
+    margin-top: 18px;
+    .inner {
+      background-color: #f2fafa;
+      display: inline-block;
+      transform: translateY(-11px);
+      padding: 0 25px;
+      color: #0cbcc9;
+      font-weight: 600;
     }
+  }
 }
 .level3-list {
   margin: 0 -8px;
   text-align: center;
   color: #54636b;
-  
   > li {
     display: inline-block;
     padding: 0 8px;

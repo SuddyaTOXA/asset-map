@@ -65,7 +65,7 @@
       color: rgba(19, 22, 23, 0.3);
       z-index: 3;
       text-align: center;
-      line-height: 36px;
+      line-height: 38px;
       background-color: rgb(230, 245, 245);
       pointer-events: none;
     }
@@ -80,9 +80,9 @@
     color: $color-inner;
     background-color: rgb(230, 245, 245);
     border: none;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     cursor:pointer;
   }
   .form-actions {

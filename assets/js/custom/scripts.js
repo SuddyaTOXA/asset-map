@@ -136,7 +136,7 @@ jQuery(document).ready(function($) {
         click: function(e) {
             e.preventDefault();
 
-            window.location = $(this).parent().find('a.btn').attr('href');
+            window.location = $(this).find('a.btn').attr('href');
             return false;
         }
     });

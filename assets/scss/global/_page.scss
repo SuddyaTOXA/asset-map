@@ -1,0 +1,11 @@
+.page-node {
+	.page-content {
+		  display: block;
+		  max-width: 100%;
+		  margin: 0 auto;
+		  padding: 10px 40px 30px;
+		  color: $color-inner;
+		  background-color: $white;
+		  @include border-radius($radius-small);
+	}
+}

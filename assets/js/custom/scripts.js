@@ -76,6 +76,17 @@ jQuery(document).ready(function($) {
                 $(".level-list li").removeClass("shrink-left expand shrink-right");
             }
         }
+
+
+        //drupal block edit links - move into previous container
+        $('.footer .edit_block_link').each(function() {
+            $(this).prev().append($(this));
+        });
+        
+        $('.edit_block_link').parent().on( "mouseenter mouseleave", function( event ) {
+          $( this ).toggleClass( "block_edit_hover" );
+        });
+
     });
 
     // for section Level 1
@@ -143,9 +154,9 @@ jQuery(document).ready(function($) {
 
 
     // for 2x sizes of images
-    $('.section-level-1 .level-box img[src*="@2x"]').each(function( index ) {
-       $(this).css( 'width', $(this).prop("naturalWidth")/2 );
-    });
+    // $('.section-level-1 .level-box img[src*="2x"]').each(function( index ) {
+    //    $(this).css( 'width', $(this).prop("naturalWidth")/2 );
+    // });
 
 
     //forms checkboxes
@@ -224,6 +235,37 @@ jQuery(document).ready(function($) {
             });
 
         }
+    });
+
+
+    // for popup agree on load Homepage
+    $(window).load(function(){
+        // if ($.cookie('assetMapPopup') == null) {
+            if ( $( "#popup-1" ).length ) {
+                $.magnificPopup.open({
+                    items: {src: '.front #popup-1'},
+                    type: 'inline',
+                    removalDelay: 350,
+                    mainClass: 'mfp-fade'
+                });
+            }
+        //     $.cookie('assetMapPopup', '1', { expires: 30 });
+        // };
+
+        //view more link in drupal views automatically formats the URL unless
+        //you put an absolute URL, so I used the replaceme placeholder below
+        // and replace it after the page loads
+        $('.views-more-link').each(function(){
+            this.href = this.href.replace('http://replaceme/', '');
+        });
+    });
+
+    //popup for readmore on stragety list page
+    $('.level3-box .views-more-link').magnificPopup({
+      type:'inline',
+      midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+      removalDelay: 350,
+      mainClass: 'mfp-fade'
     });
 
 });

@@ -1,0 +1,108 @@
+
+.section-node-edit,
+.section-node-add  {
+	.tabs {
+		margin-bottom: 25px;	
+	}
+	.form-actions {
+		input {
+			margin-right: 10px;
+		}
+	}
+	input[type="text"] {
+		padding: 6px;
+		background-color: #f7f7f7;
+		border: solid 1px #ccc;
+	}
+	.cke_contents {
+		padding: 25px;
+	}
+	.field-edit-link {
+		display: none;
+	}
+	.node-form {
+		// background: #ccc;
+
+	}
+	.wysiwyg-toggle-wrapper {
+		a {
+			color: red;
+		}
+	}
+	.filter-guidelines {
+		display: none;
+	}
+	.filter-help {
+		display: none;
+	}
+	h1 {
+		    font-size: 25px;
+		    text-align: left;
+	}
+}
+div.vertical-tabs {
+	background-color: #f7f7f7;
+	margin-bottom: 35px;
+	
+
+	clear: left;
+	.vertical-tabs-panes {
+		background-color: #f7f7f7;
+	}
+	input[type="text"] {
+		background-color: white;
+
+	}
+	fieldset.vertical-tabs-pane {
+		padding: 25px;
+	}
+	a {
+		color: #0072b9;
+	}
+	.vertical-tab-button {
+		a {
+			color: #666;
+		}
+
+		&.selected {
+			a {
+				color: black;
+			}
+		}
+	}
+	ul.vertical-tabs-list li.selected {
+		background-color: #f7f7f7;
+	}
+}
+
+.section-node-add {
+	.node-type-list {
+		a {
+			color: red;
+		}
+		dd {
+			padding-bottom: 25px;
+			margin-bottom: 25px;
+			border-bottom: solid 1px #ccc;
+		}
+	}
+}
+
+.form-field-name-field-asset-level-term {
+	float: left;
+	width: $col*3;
+	margin-bottom: 30px;
+
+	.form-type-checkbox {
+		margin-top: 10px;	
+	}
+}
+.form-field-name-field-asset-stage-term {
+	@extend .form-field-name-field-asset-level-term;
+}
+.form-field-name-field-asset-type-term {
+	@extend .form-field-name-field-asset-level-term;
+}
+.form-field-name-field-target-term {
+	@extend .form-field-name-field-asset-level-term;
+}

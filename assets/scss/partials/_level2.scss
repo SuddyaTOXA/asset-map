@@ -25,8 +25,8 @@
   .info-box {
     width: ($col*9.45);
   }
-  .table-label {
-
+  .table-label-box {
+    position: relative;
   }
     .strategy-label,
     .age-label {
@@ -220,14 +220,14 @@
     visibility: hidden;
     @include transition($transition-other);
   }
-  .hover &:before {
-    opacity: 0.2;
-    visibility: visible;
-  }
-  .hover &:hover:before {
-    opacity: 0;
-    visibility: hidden;
-  }
+  //.hover &:before {
+  //  opacity: 0.2;
+  //  visibility: visible;
+  //}
+  //.hover &:hover:before {
+  //  opacity: 0;
+  //  visibility: hidden;
+  //}
 }
   .info-icon-wrap {
     padding-right: 30px;

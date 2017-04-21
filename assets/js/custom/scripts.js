@@ -34,8 +34,12 @@ function customFontSize(minvalue, maxvalue, minsize, maxsize) {
 
 function drawSlash() {
     jQuery(window).on('load resize', function () {
-        var cell = jQuery('.table-label'),
-            slash = jQuery('#slash'),
+        if (jQuery('section').hasClass('section-level-2')) {
+            var cell = jQuery('.table-label');
+        } else if (jQuery('section').hasClass('section-level-2-2')) {
+            var cell = jQuery('.table-label-box');
+        }
+        var slash = jQuery('#slash'),
             cellWidth =cell.innerWidth() - 18,
             cellHeight = cell.innerHeight() - 18;
 
@@ -46,7 +50,7 @@ function drawSlash() {
             strokeStyle: '#fff',
             strokeWidth: 2,
             rounded: true,
-            x1: 2, y1: 2,
+            x1: 10, y1: 2,
             x2: cellWidth, y2: cellHeight
         });
     });

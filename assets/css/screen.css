@@ -2061,7 +2061,8 @@ div.vertical-tabs {
     min-height: 20px;
     vertical-align: middle; }
   .section-title-box .strategy-title-icon-wrap {
-    padding-right: 10px; }
+    padding-right: 10px;
+    width: 75px; }
 
 .strategy-title-list > li {
   padding-bottom: 42px;

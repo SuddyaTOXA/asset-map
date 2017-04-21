@@ -1882,6 +1882,8 @@ div.vertical-tabs {
         padding-top: 25px;
         padding-left: 20px;
         margin-left: -20px; }
+        .section-level-2 .strategy-evaluation-list > li.table-label .table-label-box {
+          max-width: 250px; }
       .strategy-evaluation-list > li.table-label .strategy-label {
         margin-bottom: 80px; }
     .strategy-evaluation-list > li a:hover {

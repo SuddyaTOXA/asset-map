@@ -115,7 +115,7 @@
     }
   }
   .level-box {
-    padding: 50px 10px 70px;
+    padding: 150px 10px 70px;
   }
   .section-level-1 .content-wrap {
     margin-bottom: 30px;
@@ -382,7 +382,9 @@
     margin: 20px auto;
     padding: 30px 40px 54px;
   }
-
+  .level-1-title-box {
+    top: 40px;
+  }
 }
 
 @media all and (max-width: 680px) {

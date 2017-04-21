@@ -2052,6 +2052,17 @@ div.vertical-tabs {
     opacity: 0;
     visibility: hidden; }
 
+.section-title-box {
+  display: table;
+  width: 100%; }
+  .section-title-box .strategy-title-icon-wrap,
+  .section-title-box .section-title {
+    display: table-cell;
+    min-height: 20px;
+    vertical-align: middle; }
+  .section-title-box .strategy-title-icon-wrap {
+    padding-right: 10px; }
+
 .strategy-title-list > li {
   padding-bottom: 42px;
   vertical-align: top; }

@@ -34,12 +34,8 @@ function customFontSize(minvalue, maxvalue, minsize, maxsize) {
 
 function drawSlash() {
     jQuery(window).on('load resize', function () {
-        if (jQuery('section').hasClass('section-level-2')) {
-            var cell = jQuery('.table-label');
-        } else if (jQuery('section').hasClass('section-level-2-2')) {
-            var cell = jQuery('.table-label-box');
-        }
-        var slash = jQuery('#slash'),
+        var cell = jQuery('.table-label-box'),
+            slash = jQuery('#slash'),
             cellWidth =cell.innerWidth() - 18,
             cellHeight = cell.innerHeight() - 18;
 
@@ -265,14 +261,14 @@ jQuery(document).ready(function($) {
     // for popup agree on load Homepage
     $(window).load(function(){
         // if ($.cookie('assetMapPopup') == null) {
-            if ( $( "#popup-1" ).length ) {
-                $.magnificPopup.open({
-                    items: {src: '.front #popup-1'},
-                    type: 'inline',
-                    removalDelay: 350,
-                    mainClass: 'mfp-fade'
-                });
-            }
+        //     if ( $( "#popup-1" ).length ) {
+        //         $.magnificPopup.open({
+        //             items: {src: '.front #popup-1'},
+        //             type: 'inline',
+        //             removalDelay: 350,
+        //             mainClass: 'mfp-fade'
+        //         });
+        //     }
         //     $.cookie('assetMapPopup', '1', { expires: 30 });
         // };
 

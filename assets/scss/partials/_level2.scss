@@ -25,9 +25,8 @@
   .info-box {
     width: ($col*9.45);
   }
-  .table-label-box {
-    position: relative;
-  }
+
+
     .strategy-label,
     .age-label {
       display: block;
@@ -91,6 +90,20 @@
       }
       &:nth-child(even) {
         background-color: rgba(255, 255, 255, 0.05);
+      }
+      &.table-label {
+        padding-top: 0;
+        padding-bottom: 0;
+        .table-label-box {
+          position: relative;
+          max-width: 200px;
+          padding-top: 25px;
+          padding-left: 20px;
+          margin-left: -20px;
+        }
+        .strategy-label {
+          margin-bottom: 80px;
+        }
       }
       a {
         &:hover {

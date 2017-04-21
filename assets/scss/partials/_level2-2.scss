@@ -3,10 +3,6 @@
     padding-top: 48px;
     margin-bottom: 48px;
   }
-  .table-label-box {
-    margin: 0 auto;
-    max-width: 200px;
-  }
   .strategy-evaluation-list {
     padding: 0;
     table-layout: fixed;
@@ -64,13 +60,12 @@
       padding-bottom: 32px;
       &.table-label {
         padding-top: 0;
-        padding-bottom: 20px;
+        padding-bottom: 0;
         .table-label-box {
-          padding-top: 25px;
-          padding-left: 20px;
-          .strategy-label {
-            margin-bottom: 30px;
-          }
+          margin: 0 auto;
+        }
+        .strategy-label {
+          margin-bottom: 20px;
         }
       }
     }

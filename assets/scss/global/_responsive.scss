@@ -50,6 +50,33 @@
   .strategy-evaluation-list > li:first-child {
     text-align: center;
   }
+  .strategy-evaluation-list {
+    > li {
+      &.table-label {
+        padding-left: 0;
+        padding-right: 0;
+        .table-label-box {
+          max-width: 100%;
+          padding-bottom: 20px;
+          margin-left: 0;
+        }
+        .strategy-label {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .section-level-2 {
+    .strategy-evaluation-list {
+      > li {
+        &.strategy-title-cell {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
 
   .section-level-2-2 {
     .strategy-evaluation-list {
@@ -57,21 +84,15 @@
       width: 100%;
       table-layout: fixed;
       > li {
+        &.table-label {
+          padding-bottom: 0;
+        }
+        .table-label-box {
+          max-width: 100%;
+          padding-bottom: 20px;
+        }
         display: table-cell;
         width: ($col*2.5);
-        &.table-label {
-          padding-left: 0;
-          padding-right: 0;
-          .table-label-box {
-            max-width: 100%;
-          }
-          .strategy-label {
-            padding-right: 40px;
-          }
-          .age-label {
-            padding-left: 20px;
-          }
-        }
       }
     }
   }
@@ -178,7 +199,6 @@
       max-width: 80px;
     }
   }
-  .section-level-2-2 {
     .strategy-evaluation-list {
       > li {
         &.table-label {
@@ -188,6 +208,7 @@
           }
           .strategy-label {
             padding-right: 20px;
+            //margin-bottom: 20px;
           }
           .age-label {
             padding-left: 0;
@@ -195,10 +216,7 @@
         }
       }
     }
-  }
-  .section-level-2-2 .strategy-title-list > li.table-label .table-label-box .strategy-label {
-    margin-bottom: 10px;
-  }
+
 }
 
 @media all and (max-width: 960px) {

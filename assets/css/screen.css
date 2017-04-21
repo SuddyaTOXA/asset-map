@@ -1814,9 +1814,6 @@ div.vertical-tabs {
 .info-box {
   width: 78.75%; }
 
-.table-label-box {
-  position: relative; }
-
 .strategy-label,
 .age-label {
   display: block;
@@ -1876,6 +1873,17 @@ div.vertical-tabs {
       clear: both; }
     .strategy-evaluation-list > li:nth-child(even) {
       background-color: rgba(255, 255, 255, 0.05); }
+    .strategy-evaluation-list > li.table-label {
+      padding-top: 0;
+      padding-bottom: 0; }
+      .strategy-evaluation-list > li.table-label .table-label-box {
+        position: relative;
+        max-width: 200px;
+        padding-top: 25px;
+        padding-left: 20px;
+        margin-left: -20px; }
+      .strategy-evaluation-list > li.table-label .strategy-label {
+        margin-bottom: 80px; }
     .strategy-evaluation-list > li a:hover {
       color: #ffffff;
       text-decoration: none; }
@@ -2013,9 +2021,6 @@ div.vertical-tabs {
 .section-level-2-2 .section-title {
   padding-top: 48px;
   margin-bottom: 48px; }
-.section-level-2-2 .table-label-box {
-  margin: 0 auto;
-  max-width: 200px; }
 .section-level-2-2 .strategy-evaluation-list {
   padding: 0;
   table-layout: fixed;
@@ -2058,12 +2063,11 @@ div.vertical-tabs {
   padding-bottom: 32px; }
   .section-level-2-2 .strategy-title-list > li.table-label {
     padding-top: 0;
-    padding-bottom: 20px; }
+    padding-bottom: 0; }
     .section-level-2-2 .strategy-title-list > li.table-label .table-label-box {
-      padding-top: 25px;
-      padding-left: 20px; }
-      .section-level-2-2 .strategy-title-list > li.table-label .table-label-box .strategy-label {
-        margin-bottom: 30px; }
+      margin: 0 auto; }
+    .section-level-2-2 .strategy-title-list > li.table-label .strategy-label {
+      margin-bottom: 20px; }
 .section-level-2-2 .evaluation-box .evaluation {
   margin-bottom: 14px; }
 
@@ -2366,6 +2370,20 @@ img.level3-icon {
   .strategy-evaluation-list > li:first-child {
     text-align: center; }
 
+  .strategy-evaluation-list > li.table-label {
+    padding-left: 0;
+    padding-right: 0; }
+    .strategy-evaluation-list > li.table-label .table-label-box {
+      max-width: 100%;
+      padding-bottom: 20px;
+      margin-left: 0; }
+    .strategy-evaluation-list > li.table-label .strategy-label {
+      margin-bottom: 20px; }
+
+  .section-level-2 .strategy-evaluation-list > li.strategy-title-cell {
+    padding-top: 0;
+    padding-bottom: 0; }
+
   .section-level-2-2 .strategy-evaluation-list {
     display: table;
     width: 100%;
@@ -2374,14 +2392,10 @@ img.level3-icon {
       display: table-cell;
       width: 20.83333%; }
       .section-level-2-2 .strategy-evaluation-list > li.table-label {
-        padding-left: 0;
-        padding-right: 0; }
-        .section-level-2-2 .strategy-evaluation-list > li.table-label .table-label-box {
-          max-width: 100%; }
-        .section-level-2-2 .strategy-evaluation-list > li.table-label .strategy-label {
-          padding-right: 40px; }
-        .section-level-2-2 .strategy-evaluation-list > li.table-label .age-label {
-          padding-left: 20px; } }
+        padding-bottom: 0; }
+      .section-level-2-2 .strategy-evaluation-list > li .table-label-box {
+        max-width: 100%;
+        padding-bottom: 20px; } }
 @media all and (max-width: 1200px) {
   .footer-nav > li, .footer .menu > li {
     margin-left: 10px;
@@ -2460,17 +2474,14 @@ img.level3-icon {
     .info-icon-wrap img {
       max-width: 80px; }
 
-  .section-level-2-2 .strategy-evaluation-list > li.table-label {
+  .strategy-evaluation-list > li.table-label {
     padding-bottom: 0; }
-    .section-level-2-2 .strategy-evaluation-list > li.table-label .table-label-box {
+    .strategy-evaluation-list > li.table-label .table-label-box {
       padding-bottom: 20px; }
-    .section-level-2-2 .strategy-evaluation-list > li.table-label .strategy-label {
+    .strategy-evaluation-list > li.table-label .strategy-label {
       padding-right: 20px; }
-    .section-level-2-2 .strategy-evaluation-list > li.table-label .age-label {
-      padding-left: 0; }
-
-  .section-level-2-2 .strategy-title-list > li.table-label .table-label-box .strategy-label {
-    margin-bottom: 10px; } }
+    .strategy-evaluation-list > li.table-label .age-label {
+      padding-left: 0; } }
 @media all and (max-width: 860px) {
   .level3-list > li {
     width: 49.58333%; } }

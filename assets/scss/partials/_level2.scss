@@ -1,5 +1,54 @@
 .section-level-2 {
 }
+  .strategy-header {
+      display: table;
+      width: 100%;
+      min-height: 250px;
+      padding: 0 0 0 86px;
+  }
+  .section-title-wrap,
+  .info-box {
+    position: relative;
+    z-index: 2;
+    display: table-cell;
+    width: ($col*2.55);
+    padding: 49px 5px;
+    vertical-align: middle;
+    @include transition($transition-other);
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  .section-title-wrap { }
+  .info-box {
+    width: ($col*9.45);
+  }
+  .table-label {
+
+  }
+    .strategy-label,
+    .age-label {
+      display: block;
+      min-height: 54px;
+      font-size: 1.37em;
+    }
+    .strategy-label {
+      margin-top: -10px;
+      margin-bottom: 18px;
+      padding-right: 20px;
+      text-align: right;
+    }
+    .age-label {
+      text-align: left;
+    }
+    #slash {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0.1;
+    }
   .strategy-evaluation-list {
     position: relative;
     display: table;
@@ -102,7 +151,7 @@
   }
   .strategy-title-icon-wrap {
     display: inline-block;
-    display: none;
+    //display: none;
 
     height: 46px;
     margin-right: 22px;
@@ -142,12 +191,13 @@
 .info-box {
   overflow: hidden;
   position: relative;
-  padding: 50px 0 43px;
-  background-color: $color-bg-info;
+  //padding: 50px 0 43px;
+  background-color: transparent;
   .container {
     display: table;
     width: 100%;
     min-height: 150px;
+    padding: 0 50px;
     .info-icon-wrap,
     .content-wrap {
       display: table-cell;
@@ -180,11 +230,11 @@
   }
 }
   .info-icon-wrap {
-    padding-right: 90px;
+    padding-right: 30px;
     opacity: 0.05;
     img {
-      max-width: 152px;
-      max-height: 152px;
+      max-width: 112px;
+      max-height: 112px;
       height: auto;
       width: auto;
     }

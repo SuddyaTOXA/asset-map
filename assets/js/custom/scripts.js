@@ -32,6 +32,26 @@ function customFontSize(minvalue, maxvalue, minsize, maxsize) {
     });
 }
 
+function drawSlash() {
+    jQuery(window).on('load resize', function () {
+        var cell = jQuery('.table-label'),
+            slash = jQuery('#slash'),
+            cellWidth =cell.innerWidth() - 18,
+            cellHeight = cell.innerHeight() - 18;
+
+        slash.attr('width', cellWidth);
+        slash.attr('height', cellHeight);
+
+        slash.drawLine({
+            strokeStyle: '#fff',
+            strokeWidth: 2,
+            rounded: true,
+            x1: 2, y1: 2,
+            x2: cellWidth, y2: cellHeight
+        });
+    });
+}
+
 jQuery(document).ready(function($) {
 
     // for burger menu
@@ -268,4 +288,28 @@ jQuery(document).ready(function($) {
       mainClass: 'mfp-fade'
     });
 
+    //draw slash
+    drawSlash();
+
+    // for section-level-2
+    var strategyLabel = $('.strategy-label'),
+        ageLabel = $('.age-label'),
+        ageText = ageLabel.text(),
+        strategyText = strategyLabel.text();
+
+    $(window).on('load resize', function () {
+        if ($('section').hasClass('section-level-2')) {
+            var width = $(window).width(),
+                ageNewText = ageLabel.text();
+
+            if (width > '1280' && ageText !== ageNewText){
+                strategyLabel.text(strategyText);
+                ageLabel.text(ageText);
+            } else if (width < '1280' && ageText == ageNewText) {
+                strategyLabel.text(ageText);
+                ageLabel.text(strategyText);
+            }
+        }
+
+    });
 });

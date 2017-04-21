@@ -18,6 +18,9 @@
     width: 100%;
     table-layout: fixed;
   }
+    .strategy-header {
+      padding: 0 15px;
+    }
     .strategy-evaluation-list {
       display: table-cell;
       padding: 0;
@@ -86,6 +89,13 @@
   .section-level-1 .btn {
     margin-top: 35px;
   }
+  li.table-label {
+    padding: 32px 5px;
+  }
+  .age-label {
+    padding-top: 25px;
+  }
+
 }
 
 @media all and (max-width: 1024px) {
@@ -122,20 +132,37 @@
   .locality-title {
     font-size: 1.4em;
   }
-  .strategy-title-icon-wrap {
-    display: block;
-    margin-right: 0;
-  }
+  //.strategy-title-icon-wrap {
+  //  display: block;
+  //  margin-right: 0;
+  //}
   .section-title {
-    font-size: 2em;
+    font-size: 2.4em;
   }
 }
 
 @media all and (max-width: 991px) {
+  .section-title-wrap {
+    display: block;
+    width: 100%;
+    padding: 30px 0;
+  }
+  .section-level-2-2 .section-title {
+    padding: 0;
+    margin: 0;
+  }
+  .info-box {
+    display: block;
+    width: 100%;
+    padding: 0 0 30px;
+    .container {
+      padding: 0;
+    }
+  }
   .info-icon-wrap {
-    padding-right: 50px;
+    padding-right: 30px;
     img {
-      max-width: 125px;
+      max-width: 80px;
     }
   }
 }

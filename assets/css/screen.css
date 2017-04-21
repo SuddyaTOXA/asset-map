@@ -1785,6 +1785,56 @@ div.vertical-tabs {
     opacity: 0;
     visibility: hidden; }
 
+.strategy-header {
+  display: table;
+  width: 100%;
+  min-height: 250px;
+  padding: 0 0 0 86px; }
+
+.section-title-wrap,
+.info-box {
+  position: relative;
+  z-index: 2;
+  display: table-cell;
+  width: 21.25%;
+  padding: 49px 5px;
+  vertical-align: middle;
+  -webkit-transition: 0.35s;
+  -khtml-transition: 0.35s;
+  -moz-transition: 0.35s;
+  -ms-transition: 0.35s;
+  -o-transition: 0.35s;
+  transition: 0.35s; }
+  .section-title-wrap:after,
+  .info-box:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.info-box {
+  width: 78.75%; }
+
+.strategy-label,
+.age-label {
+  display: block;
+  min-height: 54px;
+  font-size: 1.37em; }
+
+.strategy-label {
+  margin-top: -10px;
+  margin-bottom: 18px;
+  padding-right: 20px;
+  text-align: right; }
+
+.age-label {
+  text-align: left; }
+
+#slash {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.1; }
+
 .strategy-evaluation-list {
   position: relative;
   display: table;
@@ -1878,7 +1928,6 @@ div.vertical-tabs {
 
 .strategy-title-icon-wrap {
   display: inline-block;
-  display: none;
   height: 46px;
   margin-right: 22px;
   vertical-align: middle; }
@@ -1919,12 +1968,12 @@ div.vertical-tabs {
 .info-box {
   overflow: hidden;
   position: relative;
-  padding: 50px 0 43px;
-  background-color: #1D2021; }
+  background-color: transparent; }
   .info-box .container {
     display: table;
     width: 100%;
-    min-height: 150px; }
+    min-height: 150px;
+    padding: 0 50px; }
     .info-box .container .info-icon-wrap,
     .info-box .container .content-wrap {
       display: table-cell;
@@ -1956,11 +2005,11 @@ div.vertical-tabs {
     visibility: hidden; }
 
 .info-icon-wrap {
-  padding-right: 90px;
+  padding-right: 30px;
   opacity: 0.05; }
   .info-icon-wrap img {
-    max-width: 152px;
-    max-height: 152px;
+    max-width: 112px;
+    max-height: 112px;
     height: auto;
     width: auto; }
 
@@ -2283,6 +2332,9 @@ img.level3-icon {
     width: 100%;
     table-layout: fixed; }
 
+  .strategy-header {
+    padding: 0 15px; }
+
   .strategy-evaluation-list {
     display: table-cell;
     padding: 0;
@@ -2331,7 +2383,13 @@ img.level3-icon {
     margin-bottom: 30px; }
 
   .section-level-1 .btn {
-    margin-top: 35px; } }
+    margin-top: 35px; }
+
+  li.table-label {
+    padding: 32px 5px; }
+
+  .age-label {
+    padding-top: 25px; } }
 @media all and (max-width: 1024px) {
   .desktop {
     display: none !important; }
@@ -2361,17 +2419,29 @@ img.level3-icon {
   .locality-title {
     font-size: 1.4em; }
 
-  .strategy-title-icon-wrap {
-    display: block;
-    margin-right: 0; }
-
   .section-title {
-    font-size: 2em; } }
+    font-size: 2.4em; } }
 @media all and (max-width: 991px) {
+  .section-title-wrap {
+    display: block;
+    width: 100%;
+    padding: 30px 0; }
+
+  .section-level-2-2 .section-title {
+    padding: 0;
+    margin: 0; }
+
+  .info-box {
+    display: block;
+    width: 100%;
+    padding: 0 0 30px; }
+    .info-box .container {
+      padding: 0; }
+
   .info-icon-wrap {
-    padding-right: 50px; }
+    padding-right: 30px; }
     .info-icon-wrap img {
-      max-width: 125px; } }
+      max-width: 80px; } }
 @media all and (max-width: 860px) {
   .level3-list > li {
     width: 49.58333%; } }

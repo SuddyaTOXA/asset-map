@@ -383,7 +383,21 @@
     padding: 30px 40px 54px;
   }
   .level-1-title-box {
-    top: 40px;
+    display: none;
+  }
+  .level-list {
+    > li {
+      > a {
+        &:before,
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+
+  .level-box {
+   padding-top: 50px;
   }
 }
 

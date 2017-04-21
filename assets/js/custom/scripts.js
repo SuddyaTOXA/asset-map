@@ -55,17 +55,17 @@ function drawSlash() {
 jQuery(document).ready(function($) {
 
     // for burger menu
-    $('.mobile-menu-toggle, .mobile-menu-overlay').on('click', function(){
+    $('.mobile-menu-toggle, .mobile-menu-overlay').on('click', function () {
         $('.mobile-menu-toggle').toggleClass('active');
         $('.mobile-menu-wrap').toggleClass('showing');
         $(document.body).toggleClass('overflow');
     });
 
 
-    $(window).on('load resize', function() {
+    $(window).on('load resize', function () {
         var width = $(window).width();
 
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
         } else {
             if (width > '768') {
@@ -99,25 +99,25 @@ jQuery(document).ready(function($) {
 
 
         //drupal block edit links - move into previous container
-        $('.footer .edit_block_link').each(function() {
+        $('.footer .edit_block_link').each(function () {
             $(this).prev().append($(this));
         });
-        
-        $('.edit_block_link').parent().on( "mouseenter mouseleave", function( event ) {
-          $( this ).toggleClass( "block_edit_hover" );
+
+        $('.edit_block_link').parent().on("mouseenter mouseleave", function (event) {
+            $(this).toggleClass("block_edit_hover");
         });
 
     });
 
     // for section Level 1
-    $(window).on('load resize', function() {
-        var width           = $(window).width(),
-            windowHeight    = $(window).height(),
-            listHeight      = $('.level-list').height(),
-            listBox         = $('.level-list > li'),
-            contentBox      = listBox.find('.content-wrap');
+    $(window).on('load resize', function () {
+        var width = $(window).width(),
+            windowHeight = $(window).height(),
+            listHeight = $('.level-list').height(),
+            listBox = $('.level-list > li'),
+            contentBox = listBox.find('.content-wrap');
 
-        function levelHeight(){
+        function levelHeight() {
             setMaxHeight(contentBox);
 
             if (listHeight > windowHeight)
@@ -153,7 +153,7 @@ jQuery(document).ready(function($) {
 
                 setTimeout(function () {
                     var lineHeight = titleCell.height();
-                    title.css('line-height', lineHeight+'px');
+                    title.css('line-height', lineHeight + 'px');
                 }, 200);
             } else {
                 cell.css('height', '');
@@ -164,7 +164,7 @@ jQuery(document).ready(function($) {
     }
 
     $('.strategy-evaluation-list li:has(a)').on({
-        click: function(e) {
+        click: function (e) {
             e.preventDefault();
 
             window.location = $(this).find('a.btn').attr('href');
@@ -233,13 +233,13 @@ jQuery(document).ready(function($) {
                     checkGroup.eq(index).appendTo(rightCheckBox);
                 }
             });
-        } else if($('.node-webform').hasClass('node-4652')) {
+        } else if ($('.node-webform').hasClass('node-4652')) {
 
             //for contact
             var box = $('.webform-client-form > div'),
                 boxItem = box.children();
 
-            $('.form-select').wrap( '<div class="select-wrap"></div>');
+            $('.form-select').wrap('<div class="select-wrap"></div>');
             box.append('<div class="left-form-box">');
             box.append('<div class="right-form-box">');
 
@@ -259,7 +259,7 @@ jQuery(document).ready(function($) {
 
 
     // for popup agree on load Homepage
-    $(window).load(function(){
+    $(window).load(function () {
         // if ($.cookie('assetMapPopup') == null) {
         //     if ( $( "#popup-1" ).length ) {
         //         $.magnificPopup.open({
@@ -275,21 +275,23 @@ jQuery(document).ready(function($) {
         //view more link in drupal views automatically formats the URL unless
         //you put an absolute URL, so I used the replaceme placeholder below
         // and replace it after the page loads
-        $('.views-more-link').each(function(){
+        $('.views-more-link').each(function () {
             this.href = this.href.replace('http://replaceme/', '');
         });
     });
 
     //popup for readmore on stragety list page
     $('.level3-box .views-more-link').magnificPopup({
-      type:'inline',
-      midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-      removalDelay: 350,
-      mainClass: 'mfp-fade'
+        type: 'inline',
+        midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+        removalDelay: 350,
+        mainClass: 'mfp-fade'
     });
 
     //draw slash
-    drawSlash();
+    if ($('div').hasClass('table-label-box')) {
+        drawSlash();
+    }
 
     // for section-level-2
     var strategyLabel = $('.strategy-label'),

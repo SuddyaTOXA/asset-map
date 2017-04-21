@@ -2717,7 +2717,13 @@ img.level3-icon {
     padding: 30px 40px 54px; }
 
   .level-1-title-box {
-    top: 40px; } }
+    display: none; }
+
+  .level-list > li > a:before, .level-list > li > a:after {
+    content: none; }
+
+  .level-box {
+    padding-top: 50px; } }
 @media all and (max-width: 640px) {
   .evaluation-list-wrap {
     display: block;

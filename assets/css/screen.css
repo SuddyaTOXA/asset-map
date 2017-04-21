@@ -1650,7 +1650,6 @@ div.vertical-tabs {
     .level-list > li.color-purple-blue > a:after {
       background-color: #A5A1B4; }
     .level-list > li > a {
-      position: relative;
       display: block; }
       .level-list > li > a:before {
         position: absolute;
@@ -2062,7 +2061,8 @@ div.vertical-tabs {
     vertical-align: middle; }
   .section-title-box .strategy-title-icon-wrap {
     padding-right: 10px;
-    width: 75px; }
+    width: 75px;
+    text-align: center; }
 
 .strategy-title-list > li {
   padding-bottom: 42px;

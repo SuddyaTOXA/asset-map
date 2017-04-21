@@ -2062,7 +2062,8 @@ div.vertical-tabs {
     visibility: visible; }
 .section-level-2-2 .strategy-title-list > li {
   padding-top: 32px;
-  padding-bottom: 32px; }
+  padding-bottom: 32px;
+  vertical-align: middle; }
   .section-level-2-2 .strategy-title-list > li.table-label {
     padding-top: 0;
     padding-bottom: 0; }

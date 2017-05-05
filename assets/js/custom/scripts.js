@@ -147,7 +147,7 @@ jQuery(document).ready(function($) {
                 titleCell = $('.strategy-title-cell'),
                 title = titleCell.find('.locality-title');
 
-            if (width < '1280') {
+            if (width <= '1280') {
                 setMaxHeight(cell);
                 setMaxHeight(titleCell);
 

@@ -74,13 +74,13 @@
       position: relative;
       z-index: 2;
       display: table-cell;
-      width: ($col*1.35);
+      width: ($col*1.26);
       padding: 49px 5px;
       text-align: center;
       vertical-align: middle;
       @include transition($transition-other);
       &:first-child {
-        width: ($col*2.55);
+        width: ($col*1.92);
         text-align: left;
       }
       &:after {

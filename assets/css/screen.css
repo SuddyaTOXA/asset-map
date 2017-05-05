@@ -4525,7 +4525,7 @@ Copyright (c) 2015 Daniel Eden
     position: relative;
     z-index: 2;
     display: table-cell;
-    width: 11.25%;
+    width: 10.5%;
     padding: 49px 5px;
     text-align: center;
     vertical-align: middle;
@@ -4536,7 +4536,7 @@ Copyright (c) 2015 Daniel Eden
     -o-transition: 0.35s;
     transition: 0.35s; }
     .strategy-evaluation-list > li:first-child {
-      width: 21.25%;
+      width: 16%;
       text-align: left; }
     .strategy-evaluation-list > li:after {
       content: "";
@@ -5064,6 +5064,9 @@ img.level3-icon {
 
 /* media */
 /*--------------------------------------MEDIA-----------------------------------------*/
+@media all and (max-width: 1600px) {
+  .strategy-evaluation-list {
+    padding-left: 40px; } }
 @media all and (max-width: 1280px) {
   .container {
     padding: 0 20px; }
@@ -5104,7 +5107,7 @@ img.level3-icon {
     padding-left: 0;
     padding-right: 0; }
     .strategy-evaluation-list > li.table-label .table-label-box {
-      max-width: 100%;
+      max-width: 100% !important;
       padding-bottom: 20px;
       margin-left: 0; }
     .strategy-evaluation-list > li.table-label .strategy-label {
@@ -5124,7 +5127,6 @@ img.level3-icon {
       .section-level-2-2 .strategy-evaluation-list > li.table-label {
         padding-bottom: 0; }
       .section-level-2-2 .strategy-evaluation-list > li .table-label-box {
-        max-width: 100%;
         padding-bottom: 20px; } }
 @media all and (max-width: 1200px) {
   .footer-nav > li, .footer .menu > li {

@@ -169,7 +169,12 @@
             background: linear-gradient(to right, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.46) 10%, rgba(250,250,250,0.97) 30%, rgba(255,255,255,1) 70%, rgba(255,255,255,0.47) 90%, rgba(255,255,255,0.2) 100%);
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
           }
+
+          img {
+            @include css3-prefix('transform', 'translate(0, -5%) scale(1.05)');
+          }
         }
+
       }
       &:first-child > a {
         &:hover {
@@ -353,26 +358,40 @@
       vertical-align: middle;
       text-align: center;
       @include transition($transition-other);
+
+      span {
+        display: block;
+        @include animate-easoutcubic();
+      }
       &:after {
         content: "";
         display: table;
         clear: both;
       }
       &:before {
+        content: "";
         position: absolute;
-        content: '';
-        z-index: 10;
+        height: 8px;
+        background: black;
+        bottom: 0;
         left: 0;
-        top: 0;
         width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.5);
-        visibility: hidden;
-        opacity: 0;
-        @include transition($transition-other);
+        display: block;
+        opacity: 0.5;
+          @include animate-easoutcubic;
+          @include css3-prefix('transform', translateY(100%));
+        
       }
       &:hover {
-        opacity: .6;
+        // opacity: .6;
+
+        span {
+          @include css3-prefix('transform', translateY(-4px));
+        }
+
+        &:before {
+          @include css3-prefix('transform', translateY(0));
+        }
       }
       > a {
         display: block;

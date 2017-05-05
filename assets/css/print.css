@@ -1,0 +1,25 @@
+/* line 1, ../scss/print.scss */
+.header-box {
+  background-color: black;
+}
+
+/* line 6, ../scss/print.scss */
+.mobile-menu-wrap,
+nav,
+.menu {
+  display: none;
+}
+
+/* line 9, ../scss/print.scss */
+.breadcrumbs li {
+  display: inline-block;
+}
+
+/* line 17, ../scss/print.scss */
+.level3-box > p,
+.level3-box > h2,
+.level3-box > h5,
+.level3-box > .content,
+.level3-box .popup-btn-box {
+  display: none;
+}

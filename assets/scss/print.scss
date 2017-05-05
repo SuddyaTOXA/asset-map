@@ -1,0 +1,20 @@
+.header-box {
+	background-color: black;
+}
+.mobile-menu-wrap,
+nav,
+.menu {
+	display: none;
+}
+.breadcrumbs li {
+	display: inline-block;
+}
+.level3-box {
+	> p, 
+	>h2, 
+	>h5,
+	> .content,
+	.popup-btn-box {
+		display: none;
+	} 
+}

@@ -1,4 +1,4 @@
-.page-node {
+.page-node:not(.node-type-asset-list):not(.node-type-webform) {
 	.page-content {
 		  display: block;
 		  max-width: 100%;

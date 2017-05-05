@@ -173,6 +173,39 @@ jQuery(document).ready(function($) {
     });
 
 
+    /*viewportchecker to trigger animations throughout*/
+    $(".level-box .btn, .level-box .level-title").addClass("invisible").viewportChecker({
+        classToAdd: 'visible animated fadeInUp',
+        offset: 100
+    });
+    $(".level-box .content").addClass("invisible").viewportChecker({
+        classToAdd: 'visible animated fadeInUpCustom',
+        offset: 100
+    });
+    // $(".node-type-athlete-age .strategy-img-wrap img").addClass("invisible").viewportChecker({
+    //     classToAdd: 'visible animated fadeInUpBig',
+    //     offset: 50
+    // });
+    $(".level-img-wrap, .strategy-evaluation-list .btn, .section-title, .section-title-box, .info-box, .level3-list > li").addClass("invisible").viewportChecker({
+        classToAdd: 'visible animated fadeInUpSmall',
+        offset: 100
+    });
+    $(".level-list > li, .bottom-nav-list > li").addClass("invisible").viewportChecker({
+        classToAdd: 'visible animated fadeIn',
+        offset: 100,
+        removeClassAfterAnimation: true
+    });
+    $(".level-1-title-box, .strategy-evaluation-list span").addClass("invisible").viewportChecker({
+        classToAdd: 'visible animated fadeIn',
+        offset: 100
+    });
+    $(".strategy-evaluation-list").addClass("invisible").viewportChecker({
+        classToAdd: 'visible animated fadeIn',
+        offset: 50
+    });
+    /*end viewportchecker*/
+
+
     // for 2x sizes of images
     // $('.section-level-1 .level-box img[src*="2x"]').each(function( index ) {
     //    $(this).css( 'width', $(this).prop("naturalWidth")/2 );

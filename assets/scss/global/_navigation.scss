@@ -19,15 +19,20 @@
                 display: inline-block;
                 padding: 26px 20px 26px;
                 font: $size-nav $font-nav;
-                color: $color-main;
+                color: #ccc;
                 line-height: 1;
-                letter-spacing: 2px;
+                letter-spacing: 1.5px;
                 text-transform: uppercase;
                 text-decoration: none;
                 cursor: pointer;
                 &:hover {
                     color: $color-logo-text;
                     text-decoration: none;
+                }
+                &.active,
+                &.active-trail  {
+                    font-weight: bold;
+                    color: white;
                 }
             }
             .menu {
@@ -58,12 +63,16 @@
                         max-width: 250px;
                         padding: 15px 20px 15px;
                         font: $size-nav $font-nav;
-                        color: $color-main;
+                        color: #666;
                         line-height: 1;
                         letter-spacing: 2px;
                         text-transform: uppercase;
                         text-decoration: none;
                         cursor: pointer;
+
+                        &::first-line {
+                            color: $color-main;
+                        }
                         &:hover {
                             color: $color-logo-text;
                             text-decoration: none;

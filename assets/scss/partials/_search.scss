@@ -19,6 +19,7 @@
     float: none;
     margin: 0 -2px;
     padding: 0 0 20px 0;
+    vertical-align: top;
     &:not(.views-widget-filter-combine) {
       .views-widget {
         display: none;
@@ -54,7 +55,7 @@
       &:before {
         content: '\f002';
         position: absolute;
-        left: 15px;
+        left: 13px;
         top: 50%;
         font: 17px FontAwesome;
         color: #0cbcc9;
@@ -163,13 +164,22 @@
     &:hover {
       background-color: rgba(84, 99, 107, .05);
     }
-    .active & {
+    .active {
       background-color: rgba(84, 99, 107, .05);
       &:after {
         @include css3-prefix('transform', 'translate(0, -50%) rotate(180deg)');
       }
     }
   }
+  .active {
+    .widget-label-name {
+      background-color: rgba(84, 99, 107, .05);
+      &:after {
+        @include css3-prefix('transform', 'translate(0, -50%) rotate(180deg)');
+      }
+    }
+  }
+
   .count {
     position: relative;
     top: -2px;
@@ -178,6 +188,7 @@
     height: 17px;
     margin-left: -2px;
     margin-right: -3px;
+    padding-right: 1px;
     font-size: 10px;
     line-height: 17px;
     font-weight: 500;
@@ -225,9 +236,9 @@
         }
         img {
           position: absolute;
-          right: 0;
+          right: 14px;
           top: 50%;
-          @include css3-prefix('transform', 'translate(0, -50%)');
+          @include css3-prefix('transform', 'translate(50%, -50%)');
         }
       }
 
@@ -243,7 +254,7 @@
         content: "\f00c";
         left: 4px;
         top: 50%;
-        margin-top: -6px;
+        margin-top: -7px;
         color: #ffffff;
       }
     }

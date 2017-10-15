@@ -56,6 +56,11 @@
     width: 100%;
     min-width: 160px;
     clear: both;
+    
+    .page-node-edit & {
+        display: none;
+    }
+
     &.strategy-title-list:before {
       .hover & {
         opacity: 0;
@@ -151,6 +156,10 @@
       padding-right: 10px;
       width: 75px;
       text-align: center;
+
+        .page-node-edit & {
+          display: none;
+        }
     }
   }
 
@@ -198,6 +207,7 @@
       font: 500 1.13em/1.4 $font-main;
       opacity: 0.4;
       @include transition($transition-other);
+      color: white;
     }
   .section-title {
     display: inline-block;
@@ -225,6 +235,11 @@
   position: relative;
   //padding: 50px 0 43px;
   background-color: transparent;
+  
+  .page-node-edit & {
+      display: none;
+  }
+
   .container {
     display: table;
     width: 100%;

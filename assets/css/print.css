@@ -1,25 +1,52 @@
-/* line 1, ../scss/print.scss */
-.header-box {
-  background-color: black;
-}
+.header {
+  display: none; }
 
-/* line 6, ../scss/print.scss */
+.header-box {
+  background-color: black; }
+  .header-box a[href]:after {
+    display: none; }
+
 .mobile-menu-wrap,
 nav,
 .menu {
-  display: none;
-}
+  display: none; }
 
-/* line 9, ../scss/print.scss */
 .breadcrumbs li {
-  display: inline-block;
-}
+  display: inline-block; }
+  .breadcrumbs li a[href]:after {
+    display: none; }
 
-/* line 17, ../scss/print.scss */
-.level3-box > p,
-.level3-box > h2,
-.level3-box > h5,
-.level3-box > .content,
-.level3-box .popup-btn-box {
-  display: none;
-}
+.level3-list > li {
+  display: inline; }
+  .level3-list > li .level3-box {
+    padding: 0; }
+    .level3-list > li .level3-box > p,
+    .level3-list > li .level3-box > h2,
+    .level3-list > li .level3-box > h5,
+    .level3-list > li .level3-box > .content,
+    .level3-list > li .level3-box .popup-btn-box {
+      display: none; }
+    .level3-list > li .level3-box:before {
+      display: none; }
+  .level3-list > li a[href] {
+    text-indent: -95px; }
+  .level3-list > li a[href]:after {
+    text-indent: 0; }
+
+.level3-list-title {
+  margin-bottom: 5px !important; }
+
+.mfp-hide {
+  display: block !important; }
+
+.white-popup {
+  max-width: none;
+  padding: 0; }
+
+footer {
+  display: none; }
+
+.back-btn-wrapper {
+  display: none; }
+
+/*# sourceMappingURL=print.css.map */

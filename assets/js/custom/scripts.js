@@ -53,7 +53,6 @@ function drawSlash() {
 }
 
 jQuery(document).ready(function($) {
-
     // for burger menu
     $('.mobile-menu-toggle, .mobile-menu-overlay').on('click', function () {
         $('.mobile-menu-toggle').toggleClass('active');
@@ -211,6 +210,13 @@ jQuery(document).ready(function($) {
     //    $(this).css( 'width', $(this).prop("naturalWidth")/2 );
     // });
 
+   
+    $(".btn_print").on('click', function () {
+         window.print();
+    });
+
+
+
 
     //forms checkboxes
     $(window).on('load', function () {
@@ -292,26 +298,26 @@ jQuery(document).ready(function($) {
 
 
     // for popup agree on load Homepage
-    $(window).load(function () {
-        // if ($.cookie('assetMapPopup') == null) {
-        //     if ( $( "#popup-1" ).length ) {
-        //         $.magnificPopup.open({
-        //             items: {src: '.front #popup-1'},
-        //             type: 'inline',
-        //             removalDelay: 350,
-        //             mainClass: 'mfp-fade'
-        //         });
-        //     }
-        //     $.cookie('assetMapPopup', '1', { expires: 30 });
-        // };
-
-        //view more link in drupal views automatically formats the URL unless
-        //you put an absolute URL, so I used the replaceme placeholder below
-        // and replace it after the page loads
-        $('.views-more-link').each(function () {
-            this.href = this.href.replace('http://replaceme/', '');
-        });
-    });
+    // $(window).load(function () {
+    //     if ($.cookie('assetMapPopup') == null) {
+    //         if ( $( "#popup-1" ).length ) {
+    //             $.magnificPopup.open({
+    //                 items: {src: '.front #popup-1'},
+    //                 type: 'inline',
+    //                 removalDelay: 350,
+    //                 mainClass: 'mfp-fade'
+    //             });
+    //         }
+    //         $.cookie('assetMapPopup', '1', { expires: 30 });
+    //     };
+    //
+    //     //view more link in drupal views automatically formats the URL unless
+    //     //you put an absolute URL, so I used the replaceme placeholder below
+    //     // and replace it after the page loads
+    //     $('.views-more-link').each(function () {
+    //         this.href = this.href.replace('http://replaceme/', '');
+    //     });
+    // });
 
     //popup for readmore on stragety list page
     $('.level3-box .views-more-link').magnificPopup({
@@ -347,4 +353,222 @@ jQuery(document).ready(function($) {
         }
 
     });
+
+    //for search
+    $(window).on('load', function () {
+        //for placeholder
+        if ($('.views-widget-filter-combine').length) {
+            var searchBox = $('.views-widget-filter-combine'),
+                searchInput = searchBox.find('input'),
+                searchPlaceholder = $.trim(searchBox.find('label').text());
+
+            searchInput.attr('placeholder', searchPlaceholder);
+        }
+
+        //for icon
+        if ($('.views-exposed-widgets')) {
+            var iconParents = $('.views-exposed-widgets'),
+                iconBox = iconParents.find('label.option');
+
+            iconBox.each(function (i) {
+                var iconLabel = $.trim(iconBox.eq(i).attr('for')),
+                    tmpImg = new Image(),
+                    siteUrl = '',
+                    url = '';
+
+                switch (iconLabel) {
+                    case 'edit-pipeline-10':
+                        url = siteUrl + "img/icon/youth@2x.png";
+                        break;
+                    case 'edit-pipeline-11':
+                        url = siteUrl + 'img/icon/high_school@2x.png';
+                        break;
+                    case 'edit-pipeline-12':
+                        url = siteUrl + 'img/icon/college@2x.png';
+                        break;
+                    case 'edit-pipeline-13':
+                        url = siteUrl + 'img/icon/pro@2x.png';
+                        break;
+                    case 'edit-target-15':
+                        url = siteUrl + 'img/icon/athletes@2x.png';
+                        break;
+                    case 'edit-target-16':
+                        url = siteUrl + 'img/icon/coaches@2x.png';
+                        break;
+                    case 'edit-target-17':
+                        url = '';
+                        break;
+                    case 'edit-target-18':
+                        url = siteUrl + 'img/icon/families@2x.png';
+                        break;
+                    case 'edit-target-20':
+                        url = siteUrl + 'img/icon/leagues@2x.png';
+                        break;
+                    case 'edit-strategy-1':
+                        url = siteUrl + 'img/icon/enforce_policy@2x.png';
+                        break;
+                    case 'edit-strategy-2':
+                        url = siteUrl + 'img/icon/engage_in_partnership@2x.png';
+                        break;
+                    case 'edit-strategy-3':
+                        url = siteUrl + 'img/icon/join_communities_of_practice@2x.png';
+                        break;
+                    case 'edit-strategy-4':
+                        url = siteUrl + 'img/icon/build_champions@2x.png';
+                        break;
+                    case 'edit-strategy-5':
+                        url = siteUrl + 'img/icon/provide_resources@2x.png';
+                        break;
+                    case 'edit-strategy-6':
+                        url = siteUrl + 'img/icon/educate_train@2x.png';
+                        break;
+                    case 'edit-strategy-14':
+                        url = siteUrl + 'img/icon/measure_impact@2x.png';
+                        break;
+                    case 'edit-strategy-19':
+                        url = siteUrl + 'img/icon/raise_awareness@2x.png';
+                        break;
+                    default:
+                        url = '';
+                }
+
+                if (url || url !== '') {
+                    tmpImg.src= url;
+                    $(tmpImg).one('load',function(){
+                        var orgWidth = tmpImg.width / 2;
+                        iconBox.eq(i).append('<img src="'+ url +'" width ="'+ orgWidth +'" alt="">');
+                    });
+                }
+            });
+
+        }
+
+        //for new btn
+        if ($('.views-exposed-widgets')) {
+            var selectBox = $('.views-exposed-widget').not('.views-widget-filter-combine').find('.views-widget'),
+                btn = '<div class="views-widget-btn-box"><span class="btn blue-inverse">Apply</span> <span class="widget-cancel">Cancel</span> </div>';
+
+            selectBox.append(btn);
+        }
+    });
+
+    //open search list
+    $('.widget-label-name').on('click', function () {
+        if ($(this).hasClass('widget-label-name')) {
+            // var dann = $.map( $('input[type="checkbox"]:checked'), function(el){
+            //     return $(el).val();
+            // });
+            // alert(dann);
+
+            var allBox = $(this).parents('.views-exposed-widgets'),
+                AllParent = allBox.find('.views-exposed-widget'),
+                AllWidget = AllParent.not('.views-widget-filter-combine').find('.views-widget'),
+                parent = $(this).parents('.views-exposed-widget'),
+                widget = $(this).next(),
+                widgetInputList = widget.find('input[type="checkbox"]'),
+                listBox = parent.find('.views-widget');
+
+                if (parent.hasClass('active')) {
+                    parent.removeClass('active');
+                    widget.slideUp(350);
+                } else {
+                    AllParent.removeClass('active');
+                    AllWidget.slideUp(350);
+                    parent.addClass('active');
+                    widget.slideDown(350);
+                    if ($(window).width() < 1024) {
+                        $('body').css('overflow', 'hidden');
+
+                    } else {
+                        $('body').css('overflow', '');
+                    }
+                }
+
+            arrayCheck = $.map( widgetInputList , function(el){
+                return $(el).is(':checked') ? 1 : 0;
+            });
+        }
+    });
+
+    //close search list
+    $(document).on('click', function (e) {
+        var div = $('.checkbox-count.active');
+
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+            $('.views-exposed-widget.active .views-widget').slideUp(350);
+            $('.views-exposed-widget.active').removeClass('active');
+        }
+    });
+    //close search list
+    $(document).on('click', '.widget-cancel' , function() {
+        var widget = $(this).parents('.views-exposed-widget').find('.views-widget'),
+            parent = $(this).parents('.views-exposed-widget'),
+            boxCount = parent.find('.count'),
+            widgetInputList = widget.find('input[type="checkbox"]'),
+            ar = arrayCheck,
+            count = 0;
+
+            ar.forEach( function(v, i, ar) {
+                if (ar[i] == 1) {
+                    widgetInputList.eq(i).prop( 'checked', true );
+                    count++;
+                } else {
+                    console.log('false');
+                    widgetInputList.eq(i).prop( 'checked', false );
+                }
+            });
+
+            if (count > 0) {
+                boxCount.text(count);
+            } else {
+                boxCount.text('');
+            }
+
+            parent.removeClass('active');
+            widget.slideUp(350);
+            $('body').css('overflow', '');
+    });
+    //submit search list
+    $(document).on('click', '.views-widget-btn-box .btn' , function() {
+        var parentBtn = $(this).parents('.views-exposed-widgets').find('.views-submit-button input'),
+            widget = $(this).parents('.views-exposed-widget').find('.views-widget'),
+            parent = $(this).parents('.views-exposed-widget');
+
+            $('body').css('overflow', '');
+            parent.removeClass('active');
+            widget.slideUp(350);
+            parentBtn.click();
+    });
+
+    //checkbox count
+    if ($('.checkbox-count').length) {
+        $(window).on('load', function () {
+            var checkboxParent = $('.checkbox-count');
+
+                checkboxParent.each(function (i) {
+                    var count = checkboxParent.eq(i).find('input[type=checkbox]:checked').length,
+                        countSpan = checkboxParent.eq(i).find('.count');
+
+                    if (count > 0) {
+                        countSpan.text(count);
+                    } else {
+                        countSpan.text('');
+                    }
+                })
+        });
+
+        $('input[type="checkbox"]').change(function() {
+            var checkboxParent = $(this).parents('.form-item'),
+                widgetBox = checkboxParent.parents('.views-exposed-widget'),
+                boxCount = widgetBox.find('.count'),
+                checkboxCount = checkboxParent.find('input[type=checkbox]:checked').length;
+
+            console.log(checkboxCount);
+            if (checkboxCount > 0) {
+                boxCount.text(checkboxCount);
+            } else {
+                boxCount.text('');
+            }
+        });
+    }
 });

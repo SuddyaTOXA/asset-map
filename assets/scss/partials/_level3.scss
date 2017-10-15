@@ -214,3 +214,34 @@ img.level3-icon {
     }
   }
 }
+
+.fa-star {
+  color: #ffbd1f;
+}
+
+.node-type-asset-list {
+  header {
+    position: relative;
+  }
+  .btn_print {
+    max-width: 140px;
+    padding: 8px 5px 7px;
+    position: absolute;
+    bottom: -45px;
+    right: 0;
+    border-color: #ccc;
+    color: #aaa;
+    text-transform: capitalize;
+  }
+}
+
+.popup-content-wrap {
+  a {
+        font-size: 14px;
+        color: $color-level3;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+}

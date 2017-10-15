@@ -39,3 +39,27 @@ a.logo {
         margin-bottom: -5px;
     }
 }
+
+
+.sport-package-menu {
+    background-color: #232424;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+    a, span {
+        color: #a2a2a2;
+        display: inline-block;
+        padding: 4px 12px;
+        font-weight: 600;
+    }
+    span {
+        background-color: #2f3538;
+    }
+
+    @media (max-width: $screen-sm-max) {
+        display: none;
+    }
+}

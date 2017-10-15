@@ -10,6 +10,12 @@
 }
 
 @media all and (max-width: 1280px) {
+  .section-level-3 {
+    .view-asset-search {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
   .container {
         padding: 0 20px;
     }
@@ -100,10 +106,10 @@
 }
 
 @media all and (max-width: 1200px) {
-  .footer-nav > li {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
+  // .footer-nav > li {
+  //   margin-left: 10px;
+  //   margin-right: 10px;
+  // }
   .level3-list > li {
     width: $col*3.9;
   }
@@ -142,28 +148,28 @@
   .mobile-menu-toggle {
     display: block;
   }
-  .footer {
-    padding: 40px 0 35px;
-    .container {
-      display: table;
-    }
-    .footer-logo-wrap {
-      display: table-header-group;
-      text-align: center;
-    }
-    .logo, a.logo {
-      float: none;
-    }
-    .footer-nav {
-      display: table-cell;
-      padding: 20px 0;
-    }
-    .copyright {
-      float: none;
-      display: table-footer-group;
-      text-align: center;
-    }
-  }
+  // .footer {
+  //   padding: 40px 0 35px;
+  //   .container {
+  //     display: table;
+  //   }
+  //   .footer-logo-wrap {
+  //     display: table-header-group;
+  //     text-align: center;
+  //   }
+  //   .logo, a.logo {
+  //     float: none;
+  //   }
+  //   // .footer-nav {
+  //   //   display: table-cell;
+  //   //   padding: 20px 0;
+  //   // }
+  //   // .copyright {
+  //   //   float: none;
+  //   //   display: table-footer-group;
+  //   //   text-align: center;
+  //   // }
+  // }
   .locality-title {
     font-size: 1.4em;
   }
@@ -173,6 +179,33 @@
   //}
   .section-title {
     font-size: 2.4em;
+  }
+  .section-level-3 {
+    .views-exposed-widgets {
+      max-width: 640px;
+      margin: 0 auto 39px;
+      text-align: center;
+    }
+    .views-widget-filter-combine {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    .views-exposed-widget:not(.views-widget-filter-combine) {
+      .views-widget {
+        position: fixed;
+        z-index: 99999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        & > .form-item {
+          max-width: 420px;
+          margin: 0 auto;
+        }
+      }
+    }
   }
 }
 

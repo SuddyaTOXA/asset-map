@@ -22,3 +22,21 @@
 		opacity: 1;
 	}
 }
+
+.page-node-edit {
+	background-color: #f2fafa;
+
+	.section-title {
+		color: black;
+	}
+}
+.evaluation-list-wrap .node-form.node-region-form,
+.node-athlete_age-form {
+	width: 100%;
+    max-width: 1620px;
+    padding: 25px 20px 60px;
+    margin: 0 auto;
+
+  color: $color-inner;
+
+}

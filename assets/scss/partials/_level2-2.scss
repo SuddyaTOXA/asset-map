@@ -7,6 +7,11 @@
     padding: 0;
     table-layout: fixed;
     word-break: break-word;
+    
+    .qtip-link {
+      display: block;
+      border-bottom: none;
+    }
     > li {
       position: relative;
       padding-top: 26px;
@@ -24,6 +29,7 @@
         background-color: rgba(255, 255, 255, 0.5);
         opacity: 0;
         visibility: hidden;
+        pointer-events: none;
       }
       &:first-child {
         text-align: center;
@@ -57,6 +63,11 @@
   .strategy-title-list {
     overflow: visible;
     z-index: 2;
+
+    .page-node-edit & {
+      display: none;
+    }
+
     > li {
                 padding-top: 32px;
                 padding-bottom: 32px;

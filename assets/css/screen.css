@@ -5236,6 +5236,8 @@ img.level3-icon {
   padding-right: 20px; }
 .section-level-3 .form-item:not(.form-type-checkbox) {
   margin: 0; }
+.section-level-3 #edit-strategy-wrapper .views-widget {
+  min-width: 350px; }
 .section-level-3 .views-exposed-widgets {
   margin: 0 0 39px -14px; }
 .section-level-3 .views-exposed-widget {
@@ -5251,7 +5253,7 @@ img.level3-icon {
     z-index: 20;
     top: 45px;
     left: 1px;
-    min-width: 240px;
+    min-width: 280px;
     padding: 37px 30px 18px 30px;
     background-color: #ffffff;
     box-shadow: 0 6px 15px rgba(137, 160, 160, 0.2);
@@ -5449,15 +5451,14 @@ img.level3-icon {
     transform: translate(0, -50%) rotate(180deg); }
 .section-level-3 .count {
   position: relative;
-  top: -2px;
   display: none;
-  width: 17px;
-  height: 17px;
+  top: -1px;
+  width: 18px;
+  height: 18px;
   margin-left: -2px;
   margin-right: -3px;
-  padding-right: 1px;
   font-size: 10px;
-  line-height: 17px;
+  line-height: 18px;
   font-weight: 500;
   text-align: center;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.13);
@@ -5592,6 +5593,9 @@ img.level3-icon {
   .section-level-3 .views-submit-button input.button-primary,
   .section-level-3 .views-submit-button input.form-submit {
     min-width: 136px; }
+  .js .section-level-3 .views-reset-button, .js
+  .section-level-3 .views-submit-button {
+    opacity: 0; }
 .section-level-3 .views-reset-button input.webform-submit,
 .section-level-3 .views-reset-button input.button-primary,
 .section-level-3 .views-reset-button input.form-submit {

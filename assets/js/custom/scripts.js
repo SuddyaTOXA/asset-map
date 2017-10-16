@@ -52,7 +52,22 @@ function drawSlash() {
     });
 }
 
+function hideSubmitBox() {
+    var submitBox = jQuery('.views-submit-button, .views-reset-button');
+
+    if (jQuery('#edit-combine').val() === '') {
+        submitBox.fadeTo(350, 0, function() {
+            submitBox.hide(400);
+        });
+    } else {
+        submitBox.fadeTo(350, 1, function() {
+            submitBox.show(400);
+        });
+    }
+}
+
 jQuery(document).ready(function($) {
+
     // for burger menu
     $('.mobile-menu-toggle, .mobile-menu-overlay').on('click', function () {
         $('.mobile-menu-toggle').toggleClass('active');
@@ -298,26 +313,26 @@ jQuery(document).ready(function($) {
 
 
     // for popup agree on load Homepage
-    // $(window).load(function () {
-    //     if ($.cookie('assetMapPopup') == null) {
-    //         if ( $( "#popup-1" ).length ) {
-    //             $.magnificPopup.open({
-    //                 items: {src: '.front #popup-1'},
-    //                 type: 'inline',
-    //                 removalDelay: 350,
-    //                 mainClass: 'mfp-fade'
-    //             });
-    //         }
-    //         $.cookie('assetMapPopup', '1', { expires: 30 });
-    //     };
-    //
-    //     //view more link in drupal views automatically formats the URL unless
-    //     //you put an absolute URL, so I used the replaceme placeholder below
-    //     // and replace it after the page loads
-    //     $('.views-more-link').each(function () {
-    //         this.href = this.href.replace('http://replaceme/', '');
-    //     });
-    // });
+    $(window).load(function () {
+        if ($.cookie('assetMapPopup') == null) {
+            if ( $( "#popup-1" ).length ) {
+                $.magnificPopup.open({
+                    items: {src: '.front #popup-1'},
+                    type: 'inline',
+                    removalDelay: 350,
+                    mainClass: 'mfp-fade'
+                });
+            }
+            $.cookie('assetMapPopup', '1', { expires: 30 });
+        };
+
+        //view more link in drupal views automatically formats the URL unless
+        //you put an absolute URL, so I used the replaceme placeholder below
+        // and replace it after the page loads
+        $('.views-more-link').each(function () {
+            this.href = this.href.replace('http://replaceme/', '');
+        });
+    });
 
     //popup for readmore on stragety list page
     $('.level3-box .views-more-link').magnificPopup({
@@ -354,7 +369,8 @@ jQuery(document).ready(function($) {
 
     });
 
-    //FOR FILTERING FORM
+
+   //FOR FILTERING FORM    
         //for search
         $(window).on('load', function () {
             //for placeholder
@@ -374,7 +390,7 @@ jQuery(document).ready(function($) {
                 iconBox.each(function (i) {
                     var iconLabel = $.trim(iconBox.eq(i).attr('for')),
                         tmpImg = new Image(),
-                        siteUrl = '',
+                        siteUrl = 'sites/all/themes/assetmap/',
                         url = '';
 
                     switch (iconLabel) {
@@ -572,4 +588,17 @@ jQuery(document).ready(function($) {
                 }
             });
         }
+
+        // for hide-show submit box
+        $(window).on('load', function () {
+            var textField = $('#edit-combine');
+            
+            if (textField.val() != false) {
+                $('.views-submit-button, .views-reset-button').fadeTo(350, 1);
+            }
+            textField.on('input', function () {
+                hideSubmitBox();
+            });
+        });
+    // END FILTERING FORM
 });

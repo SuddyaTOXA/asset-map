@@ -296,6 +296,8 @@ img {
     clear: both; }
 .content em, .content i {
   font-style: italic !important; }
+.content .file-icon {
+  margin-bottom: 0; }
 
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
@@ -5228,10 +5230,36 @@ img.level3-icon {
   border-radius: 4px;
   padding: 10px 14px; }
 
-.section-level-3 .page-content h1 {
-  margin-bottom: 21px;
-  text-align: left; }
+.section-level-3 .view-filters {
+  position: relative;
+  margin-bottom: 12px;
+  padding: 20px 135px 20px 20px;
+  background-color: #ffffff;
+  border: 1px solid rgba(19, 22, 23, 0.05); }
+  .section-level-3 .view-filters h1 {
+    display: inline-block;
+    margin: -2px 0 0 0;
+    padding-right: 12px;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 700;
+    vertical-align: middle; }
+.section-level-3 #views-exposed-form-asset-search-page {
+  display: inline-block;
+  vertical-align: middle; }
+.section-level-3 .icon_legend {
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -khtml-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%); }
 .section-level-3 .view-asset-search {
+  padding-top: 5px;
   padding-left: 20px;
   padding-right: 20px; }
 .section-level-3 .form-item:not(.form-type-checkbox) {
@@ -5239,7 +5267,7 @@ img.level3-icon {
 .section-level-3 #edit-strategy-wrapper .views-widget {
   min-width: 350px; }
 .section-level-3 .views-exposed-widgets {
-  margin: 0 0 39px -14px; }
+  margin: 0 0 -20px 0; }
 .section-level-3 .views-exposed-widget {
   position: relative;
   display: inline-block;
@@ -5383,7 +5411,7 @@ img.level3-icon {
 .section-level-3 .widget-label-name {
   position: relative;
   display: inline-block;
-  padding: 8px 32px 8px 14px;
+  padding: 9px 32px 8px 14px;
   color: #131617;
   font-weight: 400;
   -webkit-border-radius: 2em;
@@ -5579,10 +5607,21 @@ img.level3-icon {
   .section-level-3 a.widget-cancel:hover:after,
   .section-level-3 .widget-cancel:hover:after {
     opacity: 0; }
-.section-level-3 .view-header .inner {
-  margin-bottom: 32px;
-  font-weight: 700;
-  color: #131617; }
+.section-level-3 .view-header {
+  border-top: solid 1px #e5edef; }
+  .section-level-3 .view-header .inner {
+    display: inline-block;
+    margin-bottom: 32px;
+    padding-right: 25px;
+    font-weight: 700;
+    color: #131617;
+    background-color: #f2fafa;
+    -webkit-transform: translateY(-11px);
+    -khtml-transform: translateY(-11px);
+    -moz-transform: translateY(-11px);
+    -ms-transform: translateY(-11px);
+    -o-transform: translateY(-11px);
+    transform: translateY(-11px); }
 .section-level-3 .views-reset-button,
 .section-level-3 .views-submit-button {
   padding: 0 5px 20px; }
@@ -5606,12 +5645,108 @@ img.level3-icon {
   .section-level-3 .views-reset-button input.form-submit:hover {
     color: #a7b8c2;
     background-color: transparent; }
+.section-level-3 .view-filter-print-box {
+  overflow: hidden;
+  margin-bottom: 12px; }
+.section-level-3 .btn_print {
+  float: right;
+  max-width: 140px;
+  padding: 8px 5px 7px;
+  border-color: #ccc;
+  color: #aaa;
+  text-transform: capitalize; }
+
+.node-4653 input.webform-submit.ajax-processed, .node-4653 input.button-primary.ajax-processed, .node-4653 input.form-submit.ajax-processed {
+  display: none;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  min-width: 150px;
+  font-size: 12px; }
+.node-4653 #edit-submitted-pdf-upload-upload {
+  display: none; }
+.node-4653 .messages, .node-4653 .messages--status {
+  overflow: hidden;
+  padding: 10px 15px;
+  font-size: 14px; }
+.node-4653 .file-wrap {
+  position: relative;
+  display: block;
+  margin-top: 16px; }
+.node-4653 .input-file-box {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 4px 0 16px 0;
+  padding: 0 40px 0 15px;
+  box-shadow: none;
+  font-weight: 400;
+  color: rgba(19, 22, 23, 0.3);
+  line-height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  background-color: #e6f5f5;
+  -webkit-transition: 0.35s;
+  -khtml-transition: 0.35s;
+  -moz-transition: 0.35s;
+  -ms-transition: 0.35s;
+  -o-transition: 0.35s;
+  transition: 0.35s; }
+  .node-4653 .input-file-box:after {
+    position: absolute;
+    content: '+';
+    font-size: 32px;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #54595C;
+    cursor: pointer;
+    background-color: #e6f5f5;
+    -webkit-border-radius: 0 3px 3px 0;
+    -khtml-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    -ms-border-radius: 0 3px 3px 0;
+    -o-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0; }
+  .node-4653 .input-file-box.added {
+    color: #121e25; }
 
 /* media */
 /*--------------------------------------MEDIA-----------------------------------------*/
 @media all and (max-width: 1600px) {
   .strategy-evaluation-list {
     padding-left: 40px; } }
+@media all and (max-width: 1320px) {
+  .section-level-3 .view-filters {
+    padding-right: 20px; }
+    .section-level-3 .view-filters h1 {
+      display: block;
+      text-align: left;
+      margin-bottom: 20px; }
+  .section-level-3 .views-exposed-widgets {
+    margin-left: -12px; }
+  .section-level-3 .icon_legend {
+    position: inherit;
+    right: 0;
+    top: 0;
+    margin-bottom: 10px;
+    -webkit-transform: translate(0, 0);
+    -khtml-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); } }
 @media all and (max-width: 1280px) {
   .section-level-3 .view-asset-search {
     padding-left: 0;
@@ -5713,9 +5848,20 @@ img.level3-icon {
   .section-title {
     font-size: 2.4em; }
 
+  .section-level-3 #views-exposed-form-asset-search-page {
+    display: block; }
   .section-level-3 .views-exposed-widgets {
     max-width: 640px;
-    margin: 0 auto 39px;
+    margin: 0 auto -20px;
+    text-align: center; }
+  .section-level-3 .view-filters {
+    max-width: 640px;
+    margin: 0 auto 24px; }
+    .section-level-3 .view-filters h1 {
+      margin-top: 0;
+      padding: 0;
+      text-align: center; }
+  .section-level-3 .icon_legend {
     text-align: center; }
   .section-level-3 .views-widget-filter-combine {
     display: block;

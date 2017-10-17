@@ -314,17 +314,17 @@ jQuery(document).ready(function($) {
 
     // for popup agree on load Homepage
     $(window).load(function () {
-        if ($.cookie('assetMapPopup') == null) {
-            if ( $( "#popup-1" ).length ) {
-                $.magnificPopup.open({
-                    items: {src: '.front #popup-1'},
-                    type: 'inline',
-                    removalDelay: 350,
-                    mainClass: 'mfp-fade'
-                });
-            }
-            $.cookie('assetMapPopup', '1', { expires: 30 });
-        };
+        // if ($.cookie('assetMapPopup') == null) {
+        //     if ( $( "#popup-1" ).length ) {
+        //         $.magnificPopup.open({
+        //             items: {src: '.front #popup-1'},
+        //             type: 'inline',
+        //             removalDelay: 350,
+        //             mainClass: 'mfp-fade'
+        //         });
+        //     }
+        //     $.cookie('assetMapPopup', '1', { expires: 30 });
+        // };
 
         //view more link in drupal views automatically formats the URL unless
         //you put an absolute URL, so I used the replaceme placeholder below
@@ -390,7 +390,7 @@ jQuery(document).ready(function($) {
                 iconBox.each(function (i) {
                     var iconLabel = $.trim(iconBox.eq(i).attr('for')),
                         tmpImg = new Image(),
-                        siteUrl = 'sites/all/themes/assetmap/',
+                        siteUrl = '',
                         url = '';
 
                     switch (iconLabel) {
@@ -601,4 +601,14 @@ jQuery(document).ready(function($) {
             });
         });
     // END FILTERING FORM
+
+    if ($('.webform-component-file')) {
+        $(window).on('load', function () {
+            $('.webform-component-file label').wrapAll('<span class="file-wrap"></span>').append('<span class="input-file-box">Add file...</span>');
+        })
+        $('.ajax-processed').on('click', function () {
+            $('.webform-component-file label').wrapAll('<span class="file-wrap"></span>').append('<span class="input-file-box">Add file...</span>');
+        })
+    }
+
 });

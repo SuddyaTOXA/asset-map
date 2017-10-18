@@ -602,6 +602,7 @@ jQuery(document).ready(function($) {
         });
     // END FILTERING FORM
 
+    //for file
     if ($('.webform-component-file')) {
         $(window).on('load', function () {
             $('.webform-component-file label').wrapAll('<span class="file-wrap"></span>').append('<span class="input-file-box">Add file...</span>');
@@ -610,5 +611,12 @@ jQuery(document).ready(function($) {
             $('.webform-component-file label').wrapAll('<span class="file-wrap"></span>').append('<span class="input-file-box">Add file...</span>');
         })
     }
+
+    function prevent(){
+        $('.prevent, a[href="#"]').on('click', function(event){
+            event.preventDefault();
+        });
+    }
+    prevent();
 
 });

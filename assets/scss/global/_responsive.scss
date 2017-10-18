@@ -9,29 +9,6 @@
   }
 }
 
-@media all and (max-width: 1320px) {
-  .section-level-3 {
-    .view-filters {
-      padding-right: 20px;
-      h1 {
-        display: block;
-        text-align: left;
-        margin-bottom: 20px;
-      }
-    }
-    .views-exposed-widgets {
-      margin-left: -12px;
-    }
-    .icon_legend {
-      position: inherit;
-      right: 0;
-      top: 0;
-      margin-bottom: 10px;
-      @include css3-prefix('transform', 'translate(0, 0)');
-    }
-  }
-}
-
 @media all and (max-width: 1280px) {
   .section-level-3 {
     .view-asset-search {
@@ -129,10 +106,6 @@
 }
 
 @media all and (max-width: 1200px) {
-  // .footer-nav > li {
-  //   margin-left: 10px;
-  //   margin-right: 10px;
-  // }
   .level3-list > li {
     width: $col*3.9;
   }
@@ -159,7 +132,43 @@
   .age-label {
     padding-top: 25px;
   }
+}
 
+@media all and (max-width: 1120px) {
+  .section-level-3 {
+    .view-filters {
+      padding-right: 20px;
+      h1 {
+        display: block;
+        text-align: center;
+        margin-bottom: 14px;
+        padding-right: 0;
+      }
+    }
+    .icon_legend {
+      top: auto;
+      bottom: 29px;
+      @include css3-prefix('transform', 'translate(0, 0)');
+    }
+    .views-widget-filter-combine {
+      margin-left: 8px;
+      margin-right: 6px;
+    }
+    .views-reset-button,
+    .views-submit-button {
+      .js & {
+        padding-left: 2px;
+        padding-right: 2px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1090px) {
+  .main-nav > ul > li > a {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 
 @media all and (max-width: 1024px) {
@@ -196,10 +205,6 @@
   .locality-title {
     font-size: 1.4em;
   }
-  //.strategy-title-icon-wrap {
-  //  display: block;
-  //  margin-right: 0;
-  //}
   .section-title {
     font-size: 2.4em;
   }
@@ -215,13 +220,20 @@
     .view-filters {
       max-width: 640px;
       margin: 0 auto 24px;
+      padding-right: 20px;
       h1 {
         margin-top: 0;
+        margin-bottom: 20px;
         padding: 0;
         text-align: center;
       }
     }
     .icon_legend {
+      position: inherit;
+      right: 0;
+      top: 0;
+      bottom: auto;
+      margin-bottom: 10px;
       text-align: center;
     }
     .views-widget-filter-combine {

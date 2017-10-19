@@ -113,6 +113,7 @@
     > li {
       display: inline-block;
       width: 24%;
+      min-width: 160px;
       padding: 0 5px;
       margin-bottom: 40px;
       text-align: center;
@@ -166,33 +167,101 @@
       .like-to-start-desc {}
 
 .section-who {
+  text-align: center;
   background-color: #428096;
   .table {
-    max-width: 1000px;
+    max-width: 1010px;
     min-height: 877px;
-    .container-cell {
-      vertical-align: top;
+  }
+    .section-big-title {
+      font-size: 3.75em;
+      margin-bottom: 19px;
     }
-  }
-  .content {
+    .content {
+      font-family: $font-nav;
+    }
+}
 
-  }
+.section-desc {
+  max-width: 720px;
+  margin: 0 auto 58px;
+  line-height: 1.65;
+  text-align: center;
 }
   .section-big-title {
-    margin-bottom: 20px;
-    font-size: 3.75em;
+    margin-bottom: 25px;
+    font-size: 4em;
+    line-height: 1;
     letter-spacing: -.02em;
     text-align: center;
   }
   .section-desc {}
   .who-list {
-    > li {}
+    margin: 0 -10px -40px;
+    > li {
+      display: inline-block;
+      width: 19%;
+      min-width: 188px;
+      padding: 0 10px;
+      vertical-align: top;
+      margin-bottom: 40px;
+    }
   }
-      .who-list-box {}
-        .who-img-box {
-          img {}
+      .who-list-box {
+        a {
+          &:hover {
+            color: $white;
+            text-decoration: none;
+            .who-img-box {
+              background-color: #cc3234;
+              img {
+                opacity: 0;
+              }
+            }
+            .who-img-box-hover {
+              opacity: 1;
+            }
+          }
         }
-      .who-box-desc {}
+      }
+        .who-img-box {
+          position: relative;
+          display: block;
+          margin: 0 auto 10px;
+          width: 171px;
+          height: 171px;
+          line-height: 123px;
+          text-align: center;
+          border: 24px solid #80A6B8;
+          background-color: $white;
+          @include border-radius(50%);
+          @include transition(all .55s);
+          img {
+            display: inline-block;
+            max-width: 123px;
+            height: auto;
+            vertical-align: middle;
+          }
+        }
+        .who-img-box-hover {
+          position: absolute;
+          display: block;
+          width: 100%;
+          left: 50%;
+          top: 50%;
+          letter-spacing: .04em;
+          @include border-radius(50%);
+          @include css3-prefix('transform','translate(-50%, -50%)');
+          opacity: 0;
+          .fa {
+            font-size: 20px;
+          }
+        }
+      .who-box-desc {
+        display: inline-block;
+        letter-spacing: .04em;
+        line-height: 1.4;
+      }
 
 .section-runner {
   position: relative;
@@ -278,39 +347,388 @@
   }
 
 .section-where {
-  .section-title {}
+  overflow: hidden;
+  padding-top: 94px;
+  padding-bottom: 101px;
+  color: $color-inner;
+  text-align: center;
+  background-color: $white;
+  background-image: linear-gradient(to top, #dfeff5 0%, rgba(223, 239, 245, 0) 100%);
+  .section-desc {
+    max-width: 600px;
+    margin-bottom: 31px;
+  }
 }
   .were-list {
-    > li {}
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 10px;
+    > li {
+      float: left;
+      width: 25%;
+      padding: 0 1px;
+    }
   }
-      .where-box {}
-        .where-img-box {
-          img {}
+      .where-box {
+        a {
+          &:hover {
+            color: $white;
+            text-decoration: none;
+            .where-title {
+              @include css3-prefix('transform','scale(1.15)');
+            }
+            .where-img-box {
+              img {
+                &.youth-img {
+                  bottom: 42px;
+                  @include css3-prefix('transform','translate(-50%, 0) scale(1.1)');
+                }
+                &.high-school-img {
+                  bottom: 45px;
+                  @include css3-prefix('transform','translate(-48%, 0) scale(1.1)');
+                }
+                &.college-img {
+                  bottom: 54px;
+                  @include css3-prefix('transform','translate(-42%, 0) scale(1.1)');
+                }
+                &.pro-img {
+                  bottom: 39px;
+                  @include css3-prefix('transform','translate(-24%, 0) scale(1.1)');
+                }
+              }
+            }
+          }
         }
-          .where-circle {}
+      }
+        .where-img-box {
+          position: relative;
+          display: table;
+          width: 100%;
+          height: 355px;
+          img {
+            position: absolute;
+            z-index: 20;
+            left: 50%;
+            bottom: 22px;
+            @include css3-prefix('transform','translate(-50%, 0)');
+            @include transition($transition-other);
+            &.youth-img {
+              bottom: 22px;
+            }
+            &.high-school-img {
+              bottom: 25px;
+              @include css3-prefix('transform','translate(-48%, 0)');
+            }
+            &.college-img {
+              bottom: 34px;
+              @include css3-prefix('transform','translate(-42%, 0)');
+            }
+            &.pro-img {
+              bottom: 19px;
+              @include css3-prefix('transform','translate(-24%, 0)');
+            }
+          }
+        }
+          .where-circle-wrap {
+            position: relative;
+            z-index: 15;
+            display: table-cell;
+            width: 100%;
+            vertical-align: bottom;
+          }
+            .where-circle {
+              position: relative;
+              display: block;
+              width: 202px;
+              height: 202px;
+              margin: 0 auto 20px;
+              @include border-radius(50%);
+              background-color: #98B3C6;
+              &:after {
+                position: absolute;
+                content: '';
+                width: 1px;
+                height: 20px;
+                left: 50%;
+                bottom: -20px;
+                @include css3-prefix('transform','translate(-50%, 0)');
+                background-color: #98B3C6;
+              }
+            }
         .where-info-box {
           a.btn,
-          .btn {}
+          .btn {
+            min-width: 123px;
+            width: auto;
+            font-size: 13px;
+            padding: 12px 10px 10px;
+          }
         }
-          .where-title-box {}
-            .where-title {}
+          .where-title-box {
+            position: relative;
+            display: block;
+            height: 50px;
+            margin-bottom: 20px;
+            padding: 15px 10px 15px;
+            //line-height: 50px;
+            text-align: center;
+            background-color: #98B3C6;
+            &:before,
+            &:after {
+              position: absolute;
+              content: '';
+              top: 0;
+              border-top: 25px solid transparent;
+              border-left: 10px solid $white;
+              border-bottom: 25px solid transparent;
+            }
+            &:before {
+              z-index: 10;
+              left: 0;
+              width: 0;
+              height: 0;
+            }
+            &:after {
+              z-index: 15;
+              right: -10px;
+              width: 0;
+              height: 0;
+              border-left-color: #98B3C6;
+            }
+          }
+            .where-title {
+              font-size: 1.25em;
+              font-weight: 700;
+              line-height: 1;
+              @include transition($transition-other);
+            }
+
+  .youth-color {
+    .where-title-box,
+    .where-circle,
+    .where-circle:after {
+      background-color: #1C2340;
+    }
+    .where-title-box:after {
+      border-left-color: #1C2340;
+    }
+    a.btn,
+    .btn {
+      color: #1C2340;
+      border-color: #1C2340;
+      //&:hover {
+      //  color: $white;
+      //  background-color: #1C2340;
+      //}
+    }
+    .where-box {
+      a {
+        &:hover {
+          .btn {
+            color: $white;
+            background-color: #1C2340;
+          }
+        }
+      }
+    }
+  }
+  .high-school-color {
+    .where-title-box,
+    .where-circle,
+    .where-circle:after {
+      background-color: #107182;
+    }
+    .where-title-box:after {
+      border-left-color: #107182;
+    }
+    a.btn,
+    .btn {
+      color: #107182;
+      border-color: #107182;
+      //&:hover {
+      //  color: $white;
+      //  background-color: #107182;
+      //}
+    }
+    .where-box {
+      a {
+        &:hover {
+          .btn {
+            color: $white;
+            background-color: #107182;
+          }
+        }
+      }
+    }
+  }
+  .college-color {
+    .where-title-box,
+    .where-circle,
+    .where-circle:after {
+      background-color: #98B3C6;
+    }
+    .where-title-box:after {
+      border-left-color: #98B3C6;
+    }
+    a.btn,
+    .btn {
+      color: #98B3C6;
+      border-color: #98B3C6;
+      //&:hover {
+      //  color: $white;
+      //  background-color: #98B3C6;
+      //}
+    }
+    .where-box {
+      a {
+        &:hover {
+          .btn {
+            color: $white;
+            background-color: #98B3C6;
+          }
+        }
+      }
+    }
+  }
+  .pro-color {
+    .where-title-box,
+    .where-circle,
+    .where-circle:after {
+      background-color: #0CBCC9;
+    }
+    .where-title-box:after {
+      border-left-color: #0CBCC9;
+    }
+    a.btn,
+    .btn {
+      color: #0CBCC9;
+      border-color: #0CBCC9;
+      //&:hover {
+      //  color: $white;
+      //  background-color: #0CBCC9;
+      //}
+    }
+    .where-box {
+      a {
+        &:hover {
+          .btn {
+            color: $white;
+            background-color: #0CBCC9;
+          }
+        }
+      }
+    }
+  }
 
 .section-how {
-  .section-title {}
+  overflow: hidden;
+  padding-top: 86px;
+  background-color: #1F3D59;
+  .section-big-title {
+
+  }
+  .section-desc {
+    max-width: 620px;
+  }
 }
   .how-list {
     > li {
-
+      float: left;
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        .how-box {
+          border-top: none;
+        }
+      }
+      &:nth-child(4n + 4) {
+        .how-box {
+          border-right: none;
+        }
+      }
+      &:nth-child(4n + 1) {
+        .how-box {
+          border-left: none;
+        }
+      }
     }
   }
-      .how-box {}
+      .how-box {
+        overflow: hidden;
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, .1);
+        cursor: pointer;
+      }
+        .how-box-table {
+          display: table;
+          width: 100%;
+          height: 100%;
+          padding: 10px 5px;
+          text-align: center;
+          //background-color: $white;
+        }
+          .how-box-cell {
+            display: table-cell;
+            width: 100%;
+            height: 30px;
+            vertical-align: middle;
+          }
         .how-img-wrap {
-          img {}
+          display: block;
+          width: 202px;
+          height: 202px;
+          margin: 0 auto 20px;
+          line-height: 202px;
+          text-align: center;
+          @include border-radius(50%);
+          background-color: $white;
+          img {
+            display: inline-block;
+            max-width: 130px;
+            height: auto;
+            vertical-align: middle;
+          }
         }
-        .how-title {}
+        .how-title {
+          font-size: 1.375em;
+          font-weight: 500;
+          line-height: 1.2;
+        }
         .how-overlay-box {
-          .content {}
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: -100%;
+          padding: 34px 40px 32px;
+          background-color: $white;
+          @include transition($transition-other);
+          .how-box:hover & {
+            left: 0;
+          }
+          .content {
+            margin-bottom: 22px;
+            font-size: 14px;
+            line-height: 1.75;
+            color: $color-text7;
+          }
           a.btn,
-          .btn {}
+          .btn {
+            width: auto;
+            padding: 13px 15px 10px;
+            min-width: 176px;
+            font-size: 13px;
+            font-weight: 700;
+          }
         }
+          .how-overlay-title {
+            margin-bottom: 26px;
+            font-size: 1.375em;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -.02em;
+            color: $color-inner;
+          }
 

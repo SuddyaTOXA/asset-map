@@ -612,6 +612,28 @@ jQuery(document).ready(function($) {
         })
     }
 
+    //for square grid
+    if ($('.how-list').length) {
+        $(window).on('load resize', function () {
+            var parent = $('.how-list'),
+                item = parent.find('.how-box'),
+                windowWidth = $(window).width(),
+                coll = 4;
+
+            console.log('work');
+
+            if (windowWidth > 1024) {
+                var collLength = windowWidth / coll;
+                item.each(function (i) {
+                    item.eq(i).css('width', collLength);
+                    item.eq(i).css('height', collLength);
+                })
+
+            }
+        })
+    }
+
+
     function prevent(){
         $('.prevent, a[href="#"]').on('click', function(event){
             event.preventDefault();

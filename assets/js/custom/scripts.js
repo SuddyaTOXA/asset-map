@@ -627,7 +627,7 @@ jQuery(document).ready(function($) {
                     item.eq(i).css('width', collLength);
                     item.eq(i).css('height', collLength);
                 })
-            } else if (windowWidth > 768 && windowWidth < 1024) {
+            } else if (windowWidth > 768 && windowWidth < 1161) {
                 var collLength = windowWidth / (coll - 1);
                 item.each(function (i) {
                     item.eq(i).css('width', collLength);
@@ -657,7 +657,7 @@ jQuery(document).ready(function($) {
                         parent.removeClass('hide-overlay');
                     }
                 }
-            }, 500)
+            }, 300)
         })
     }
 

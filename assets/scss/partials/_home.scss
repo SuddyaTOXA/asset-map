@@ -355,6 +355,16 @@
     left: 50%;
     @include css3-prefix('transform','translate(-50%, -50%)');
   }
+  .start-block {
+    display: none;
+    bottom: 27px;
+    top: auto;
+    max-width: 100%;
+    min-width: auto;
+    min-height: auto;
+    padding: 0 15px;
+    @include css3-prefix('transform','translate(-50%, 0)');
+  }
   .quote {
 
   }
@@ -747,6 +757,47 @@
             min-width: 176px;
             font-size: 13px;
             font-weight: 700;
+          }
+        }
+        .popup-content-wrap {
+          text-align: center;
+          .content {
+            text-align: left;
+          }
+
+          a.btn,
+          .btn {
+            width: auto;
+            padding: 13px 15px 10px;
+            min-width: 176px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+          }
+        }
+        .close-btn {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+          &:after {
+            position: absolute;
+            content: '\f00d';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            font: 32px/40px FontAwesome;
+            text-align: center;
+            color: $color-level3;
+            @include transition($transition-other);
+          }
+          &:hover {
+            &:after {
+              color: $color-inner;
+            }
           }
         }
           .how-overlay-title {

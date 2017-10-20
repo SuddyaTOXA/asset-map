@@ -335,7 +335,7 @@ jQuery(document).ready(function($) {
     });
 
     //popup for readmore on stragety list page
-    $('.level3-box .views-more-link').magnificPopup({
+    $('.level3-box .views-more-link, .how-box-open-popup').magnificPopup({
         type: 'inline',
         midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
         removalDelay: 350,
@@ -617,10 +617,11 @@ jQuery(document).ready(function($) {
         $(window).on('load resize', function () {
             var parent = $('.how-list'),
                 item = parent.find('.how-box'),
+                box =  parent.find('.how-overlay-content'),
                 windowWidth = $(window).width(),
                 coll = 4;
 
-            console.log('work');
+
 
             if (windowWidth > 1024) {
                 var collLength = windowWidth / coll;
@@ -628,8 +629,37 @@ jQuery(document).ready(function($) {
                     item.eq(i).css('width', collLength);
                     item.eq(i).css('height', collLength);
                 })
-
+            } else if (windowWidth > 768 && windowWidth < 1024) {
+                var collLength = windowWidth / (coll - 1);
+                item.each(function (i) {
+                    item.eq(i).css('width', collLength);
+                    item.eq(i).css('height', collLength);
+                })
+            } else {
+                var collLength = windowWidth / (coll - 2);
+                item.each(function (i) {
+                    item.eq(i).css('width', collLength);
+                    item.eq(i).css('height', collLength);
+                })
             }
+
+            setTimeout(function () {
+                var maxHeight = 0;
+                box.each(function (i) {
+                    if ( jQuery(this).height() > maxHeight ) {
+                        maxHeight = jQuery(this).outerHeight();
+                    }
+                });
+                if (maxHeight > collLength || windowWidth < 1024) {
+                    if (!(parent.hasClass('hide-overlay'))) {
+                        parent.addClass('hide-overlay');
+                    }
+                } else {
+                    if (parent.hasClass('hide-overlay')) {
+                        parent.removeClass('hide-overlay');
+                    }
+                }
+            }, 500)
         })
     }
 

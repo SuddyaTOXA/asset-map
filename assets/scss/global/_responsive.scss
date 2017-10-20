@@ -7,6 +7,18 @@
   .strategy-evaluation-list {
     padding-left: 40px;
   }
+  .how-overlay-box {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+    .how-overlay-title {
+      margin-bottom: 14px;
+    }
+  .how-img-wrap {
+    width: 172px;
+    height: 172px;
+    line-height: 172px;
+  }
 }
 
 @media all and (max-width: 1280px) {
@@ -19,7 +31,9 @@
   .container {
         padding: 0 20px;
     }
-
+  .table {
+    padding: 40px 20px 40px;
+  }
   .evaluation-list-wrap {
     overflow: hidden;
     display: table;
@@ -257,6 +271,61 @@
       }
     }
   }
+  .how-list {
+    > li {
+      &:nth-child(4) {
+        .how-box {
+          border-top: 1px solid rgba(255, 255, 255, .1);
+        }
+      }
+      &:nth-child(4n + 4) {
+        .how-box {
+          border-right: 1px solid rgba(255, 255, 255, .1);
+        }
+      }
+      &:nth-child(4n + 1) {
+        .how-box {
+          border-left: 1px solid rgba(255, 255, 255, .1);
+        }
+      }
+      &:nth-child(3n + 3) {
+        border-right: none;
+      }
+      &:nth-child(3n + 1) {
+        border-left: none;
+      }
+    }
+  }
+  .section-hero {
+    .table {
+      min-height: 480px;
+    }
+  }
+  //.section-who {
+  //  .table {
+  //    min-height: 640px;
+  //  }
+  //}
+  .section-runner {
+    .table{
+      min-height: 600px;
+    }
+  }
+  .section-who .section-big-title {
+    font-size: 3.1em;
+  }
+  .section-big-title {
+    font-size: 3.25em;
+  }
+  .section-runner .content {
+    font-size: 1.5em;
+  }
+  .how-box-open-popup {
+    display: block;
+  }
+  .how-title {
+    font-size: 1.2em;
+  }
 }
 
 @media all and (max-width: 991px) {
@@ -300,7 +369,11 @@
         }
       }
     }
-
+  .were-list {
+    > li {
+      width: 33.33%;
+    }
+  }
 }
 
 @media all and (max-width: 960px) {
@@ -320,6 +393,16 @@
     }
     .strategy-evaluation-list {
       min-width: 800px;
+    }
+  }
+  .who-list {
+    > li {
+      width: 32%;
+    }
+  }
+  .were-list {
+    > li {
+      width: 50%;
     }
   }
 }
@@ -483,6 +566,58 @@
   .level-box {
    padding-top: 50px;
   }
+  .how-list {
+    > li {
+      &:nth-child(3) {
+        .how-box {
+          border-top: 1px solid rgba(255, 255, 255, .1);
+        }
+      }
+      &:nth-child(3n + 3) {
+        .how-box {
+          border-right: 1px solid rgba(255, 255, 255, .1);
+        }
+      }
+      &:nth-child(3n + 1) {
+        .how-box {
+          border-left: 1px solid rgba(255, 255, 255, .1);
+        }
+      }
+      &:nth-child(even) {
+        border-right: none;
+      }
+      &:nth-child(odd) {
+        border-left: none;
+      }
+    }
+  }
+  .like-to-start-list {
+    > li {
+      width: 32%;
+    }
+  }
+  .section-who .section-big-title {
+    font-size: 2.4em;
+  }
+  .section-big-title {
+    font-size: 2.5em;
+  }
+  .section-runner .content {
+    font-size: 1.3em;
+  }
+  .hero-title {
+    font-size: 2.5em;
+  }
+  .hero-desc {
+    line-height: 1.3em;
+  }
+  .section-runner.football-girl .table,
+  .section-runner .table {
+    min-height: 400px;
+  }
+    .bg-img {
+      display: none;
+    }
 }
 
 @media all and (max-width: 680px) {
@@ -514,11 +649,47 @@
   .right-form-box {
     width: 100%;
   }
-
+  .who-list > li {
+    min-width: 150px;
+  }
+  .who-img-box {
+    width: 131px;
+    height: 131px;
+    line-height: 101px;
+    border-width: 15px;
+  }
 }
-
-@media all and (max-width: 560px) {
-
+@media all and (max-width: 580px) {
+  .were-list {
+    > li {
+      float: none;
+      width: 100%;
+    }
+  }
+  .how-list {
+    > li {
+      width: 50%;
+      margin-bottom: 40px;
+      &:nth-child(odd) {
+        clear: both;
+      }
+    }
+  }
+  .how-box {
+    width: 100% !important;
+    height: auto !important;
+    border: none !important;
+  }
+}
+@media all and (max-width: 520px) {
+  .who-list > li {
+    width: 49%;
+  }
+  .like-to-start-list {
+    > li {
+      width: 49%;
+    }
+  }
 }
 
 @media all and (max-width: 480px) {
@@ -562,10 +733,21 @@
       }
     }
   }
+  .how-list {
+    > li {
+      width: 100%;
+    }
+  }
 }
 
 @media all and (max-width: 360px) {
   .container {
+    padding: 0 15px;
+  }
+  .table {
+    padding: 40px 15px 40px;
+  }
+  .section-like-to-start .container {
     padding: 0 15px;
   }
   .logo-wrap {

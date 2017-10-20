@@ -32,7 +32,7 @@
         padding: 0 20px;
     }
   .table {
-    padding: 40px 20px 40px;
+    padding: 70px 20px 80px;
   }
   .evaluation-list-wrap {
     overflow: hidden;
@@ -122,6 +122,34 @@
 @media all and (max-width: 1200px) {
   .level3-list > li {
     width: $col*3.9;
+  }
+}
+
+@media all and (max-width: 1160px) {
+  .how-list {
+    > li {
+      &:nth-child(4) {
+        .how-box {
+          border-top: 1px solid rgba(255, 255, 255, .1);
+        }
+      }
+      &:nth-child(4n + 4) {
+        .how-box {
+          border-right: 1px solid rgba(255, 255, 255, .1);
+        }
+      }
+      &:nth-child(4n + 1) {
+        .how-box {
+          border-left: 1px solid rgba(255, 255, 255, .1);
+        }
+      }
+      &:nth-child(3n + 3) {
+        border-right: none;
+      }
+      &:nth-child(3n + 1) {
+        border-left: none;
+      }
+    }
   }
 }
 
@@ -268,31 +296,6 @@
           max-width: 420px;
           margin: 0 auto;
         }
-      }
-    }
-  }
-  .how-list {
-    > li {
-      &:nth-child(4) {
-        .how-box {
-          border-top: 1px solid rgba(255, 255, 255, .1);
-        }
-      }
-      &:nth-child(4n + 4) {
-        .how-box {
-          border-right: 1px solid rgba(255, 255, 255, .1);
-        }
-      }
-      &:nth-child(4n + 1) {
-        .how-box {
-          border-left: 1px solid rgba(255, 255, 255, .1);
-        }
-      }
-      &:nth-child(3n + 3) {
-        border-right: none;
-      }
-      &:nth-child(3n + 1) {
-        border-left: none;
       }
     }
   }
@@ -693,6 +696,23 @@
     border: none !important;
   }
 }
+@media all and (max-width: 560px) {
+  .logo, a.logo {
+    float: none;
+    margin-right: 0;
+  }
+  .logo-wrap {
+    float: none;
+    padding-top: 8px;
+    padding-right: 0;
+    text-align: center;
+    strong {
+      display: block;
+      font-size: 1.35em;
+      line-height: 1.25;
+    }
+  }
+}
 @media all and (max-width: 520px) {
   .who-list > li {
     width: 49%;
@@ -726,28 +746,29 @@
     width: 100%;
   }
 }
-
-@media all and (max-width: 420px) {
-  .logo-wrap {
-    .logo {
-      margin-right: 20px;
-    }
-    strong {
-      margin-top: 5px;
-      font-size: 18px;
+@media all and (max-width: 480px) {
+  .how-list {
+    > li {
+      width: 100%;
     }
   }
+}
+@media all and (max-width: 420px) {
+  //.logo-wrap {
+  //  .logo {
+  //    margin-right: 20px;
+  //  }
+  //  strong {
+  //    margin-top: 5px;
+  //    font-size: 18px;
+  //  }
+  //}
   .mobile-menu {
     li {
       a {
         padding-left: 20px;
         padding-right: 20px;
       }
-    }
-  }
-  .how-list {
-    > li {
-      width: 100%;
     }
   }
 }

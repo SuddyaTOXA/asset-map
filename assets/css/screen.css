@@ -6496,7 +6496,7 @@ a.hero-down-btn,
     padding: 0 20px; }
 
   .table {
-    padding: 40px 20px 40px; }
+    padding: 70px 20px 80px; }
 
   .evaluation-list-wrap {
     overflow: hidden;
@@ -6558,6 +6558,17 @@ a.hero-down-btn,
 @media all and (max-width: 1200px) {
   .level3-list > li {
     width: 32.5%; } }
+@media all and (max-width: 1160px) {
+  .how-list > li:nth-child(4) .how-box {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  .how-list > li:nth-child(4n + 4) .how-box {
+    border-right: 1px solid rgba(255, 255, 255, 0.1); }
+  .how-list > li:nth-child(4n + 1) .how-box {
+    border-left: 1px solid rgba(255, 255, 255, 0.1); }
+  .how-list > li:nth-child(3n + 3) {
+    border-right: none; }
+  .how-list > li:nth-child(3n + 1) {
+    border-left: none; } }
 @media all and (max-width: 1140px) {
   .level-list > li {
     width: 50%; }
@@ -6656,17 +6667,6 @@ a.hero-down-btn,
     .section-level-3 .views-exposed-widget:not(.views-widget-filter-combine) .views-widget > .form-item {
       max-width: 420px;
       margin: 0 auto; }
-
-  .how-list > li:nth-child(4) .how-box {
-    border-top: 1px solid rgba(255, 255, 255, 0.1); }
-  .how-list > li:nth-child(4n + 4) .how-box {
-    border-right: 1px solid rgba(255, 255, 255, 0.1); }
-  .how-list > li:nth-child(4n + 1) .how-box {
-    border-left: 1px solid rgba(255, 255, 255, 0.1); }
-  .how-list > li:nth-child(3n + 3) {
-    border-right: none; }
-  .how-list > li:nth-child(3n + 1) {
-    border-left: none; }
 
   .section-hero .table {
     padding-top: 30px;
@@ -6920,6 +6920,20 @@ a.hero-down-btn,
     width: 100% !important;
     height: auto !important;
     border: none !important; } }
+@media all and (max-width: 560px) {
+  .logo, a.logo {
+    float: none;
+    margin-right: 0; }
+
+  .logo-wrap {
+    float: none;
+    padding-top: 8px;
+    padding-right: 0;
+    text-align: center; }
+    .logo-wrap strong {
+      display: block;
+      font-size: 1.35em;
+      line-height: 1.25; } }
 @media all and (max-width: 520px) {
   .who-list > li {
     width: 49%; }
@@ -6943,19 +6957,13 @@ a.hero-down-btn,
   .left-check-box,
   .right-check-box {
     width: 100%; } }
-@media all and (max-width: 420px) {
-  .logo-wrap .logo {
-    margin-right: 20px; }
-  .logo-wrap strong {
-    margin-top: 5px;
-    font-size: 18px; }
-
-  .mobile-menu li a, .mobile-menu-box > ul li a {
-    padding-left: 20px;
-    padding-right: 20px; }
-
+@media all and (max-width: 480px) {
   .how-list > li {
     width: 100%; } }
+@media all and (max-width: 420px) {
+  .mobile-menu li a, .mobile-menu-box > ul li a {
+    padding-left: 20px;
+    padding-right: 20px; } }
 @media all and (max-width: 360px) {
   .container {
     padding: 0 15px; }

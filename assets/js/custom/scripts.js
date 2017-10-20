@@ -53,7 +53,7 @@ function drawSlash() {
 }
 
 function hideSubmitBox() {
-    var submitBox = jQuery('.views-submit-button, .views-reset-button');
+    var submitBox = jQuery('.views-submit-button');
 
     if (jQuery('#edit-combine').val() === '') {
         submitBox.fadeTo(350, 0, function() {
@@ -67,6 +67,12 @@ function hideSubmitBox() {
 }
 
 jQuery(document).ready(function($) {
+    function prevent(){
+        $('.prevent, a[href="#"]').on('click', function(event){
+            event.preventDefault();
+        });
+    }
+    prevent();
 
     // for burger menu
     $('.mobile-menu-toggle, .mobile-menu-overlay').on('click', function () {
@@ -312,27 +318,7 @@ jQuery(document).ready(function($) {
     });
 
 
-    // for popup agree on load Homepage
-    $(window).load(function () {
-        // if ($.cookie('assetMapPopup') == null) {
-        //     if ( $( "#popup-1" ).length ) {
-        //         $.magnificPopup.open({
-        //             items: {src: '.front #popup-1'},
-        //             type: 'inline',
-        //             removalDelay: 350,
-        //             mainClass: 'mfp-fade'
-        //         });
-        //     }
-        //     $.cookie('assetMapPopup', '1', { expires: 30 });
-        // };
 
-        //view more link in drupal views automatically formats the URL unless
-        //you put an absolute URL, so I used the replaceme placeholder below
-        // and replace it after the page loads
-        $('.views-more-link').each(function () {
-            this.href = this.href.replace('http://replaceme/', '');
-        });
-    });
 
     //popup for readmore on stragety list page
     $('.level3-box .views-more-link, .how-box-open-popup').magnificPopup({
@@ -390,7 +376,7 @@ jQuery(document).ready(function($) {
                 iconBox.each(function (i) {
                     var iconLabel = $.trim(iconBox.eq(i).attr('for')),
                         tmpImg = new Image(),
-                        siteUrl = '',
+                        siteUrl = 'sites/all/themes/assetmap/',
                         url = '';
 
                     switch (iconLabel) {
@@ -594,7 +580,7 @@ jQuery(document).ready(function($) {
             var textField = $('#edit-combine');
             
             if (textField.val() != false) {
-                $('.views-submit-button, .views-reset-button').fadeTo(350, 1);
+                $('.views-submit-button').fadeTo(350, 1);
             }
             textField.on('input', function () {
                 hideSubmitBox();
@@ -602,14 +588,24 @@ jQuery(document).ready(function($) {
         });
     // END FILTERING FORM
 
-    //for file
+    //for input file
     if ($('.webform-component-file')) {
         $(window).on('load', function () {
             $('.webform-component-file label').wrapAll('<span class="file-wrap"></span>').append('<span class="input-file-box">Add file...</span>');
         })
-        $('.ajax-processed').on('click', function () {
-            $('.webform-component-file label').wrapAll('<span class="file-wrap"></span>').append('<span class="input-file-box">Add file...</span>');
-        })
+        
+        $('input.form-file').on('change', function () {
+            var value =  $(this).val().replace(/C:\\fakepath\\/i, ''),
+                fileParent =  $(this).parents('.webform-component-file'),
+                fileBox = fileParent.find('.file-wrap .input-file-box');
+
+                console.log('This - '+ value);
+                if (value || value !== '') {
+                    fileBox.text(value).addClass('added');
+                } else {
+                    fileBox.text('Add file...').removeClass('added');
+                }
+        });
     }
 
     //for square grid
@@ -661,12 +657,37 @@ jQuery(document).ready(function($) {
         })
     }
 
-
-    function prevent(){
-        $('.prevent, a[href="#"]').on('click', function(event){
-            event.preventDefault();
+    // for smooth scroll
+    if ( $('.hero-down-btn').length ) {
+        smoothScroll.init({
+            selector: '.smooth-scroll, .hero-down-btn', // Selector for links (must be a class, ID, data attribute, or element tag)
+            speed: 500, // Integer. How fast to complete the scroll in milliseconds
+            easing: 'easeInQuad', // Easing pattern to use
+            // offset: 130 // Integer. How far to offset the scrolling anchor location in pixels
         });
     }
-    prevent();
+
+    // for popup agree on load Homepage
+    $(window).load(function () {
+        if ($.cookie('assetMapPopup') == null) {
+            if ( $( "#popup-1" ).length ) {
+                $.magnificPopup.open({
+                    items: {src: '.front #popup-1'},
+                    type: 'inline',
+                    removalDelay: 350,
+                    mainClass: 'mfp-fade'
+                });
+            }
+            $.cookie('assetMapPopup', '1', { expires: 30 });
+        };
+
+        //view more link in drupal views automatically formats the URL unless
+        //you put an absolute URL, so I used the replaceme placeholder below
+        // and replace it after the page loads
+        $('.views-more-link').each(function () {
+            this.href = this.href.replace('http://replaceme/', '');
+        });
+    });
+
 
 });

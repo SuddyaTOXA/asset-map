@@ -5995,7 +5995,9 @@ a.hero-down-btn,
   overflow: hidden;
   background-color: #FBC435; }
   .section-runner .table {
-    text-align: center; }
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 100px; }
   .section-runner .content {
     position: relative;
     font-size: 1.75rem;
@@ -6717,6 +6719,9 @@ a.hero-down-btn,
 
   .were-list > li {
     width: 33.33%; } }
+@media all and (max-width: 960px) {
+  .section-runner.football-girl .content {
+    margin-left: 240px; } }
 @media all and (max-width: 860px) {
   .level3-list > li {
     width: 49.58333%; } }
@@ -6861,7 +6866,10 @@ a.hero-down-btn,
     display: none; }
 
   .section-hero .bg-img {
-    display: block; } }
+    display: block; }
+
+  .section-runner.football-girl .content {
+    margin-left: 0; } }
 @media all and (max-width: 640px) {
   .evaluation-list-wrap {
     display: block;

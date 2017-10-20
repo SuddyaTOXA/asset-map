@@ -621,8 +621,6 @@ jQuery(document).ready(function($) {
                 windowWidth = $(window).width(),
                 coll = 4;
 
-
-
             if (windowWidth > 1024) {
                 var collLength = windowWidth / coll;
                 item.each(function (i) {

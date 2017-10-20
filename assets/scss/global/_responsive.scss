@@ -374,10 +374,13 @@
       width: 33.33%;
     }
   }
+
 }
 
 @media all and (max-width: 960px) {
-
+  .section-runner.football-girl .content {
+    margin-left: 240px;
+  }
 }
 
 @media all and (max-width: 860px) {
@@ -623,7 +626,9 @@
       display: block;
     }
   }
-
+  .section-runner.football-girl .content {
+    margin-left: 0;
+  }
 }
 
 @media all and (max-width: 680px) {

@@ -5743,7 +5743,7 @@ img.level3-icon {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 40px 20px 40px; }
+  padding: 90px 20px 100px; }
   .table .container-cell {
     display: table-cell;
     width: 100%;
@@ -5861,7 +5861,7 @@ a.hero-down-btn,
 
 .like-to-start-icon-wrap {
   height: 82px;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
   text-align: center; }
   .like-to-start-icon-wrap img {
     display: inline-block;
@@ -5879,10 +5879,14 @@ a.hero-down-btn,
       display: none; }
 
 .like-to-start-title {
-  margin-bottom: -6px;
+  margin-bottom: -2px;
   font-size: 1.69rem;
   font-weight: 700;
   line-height: 1.2; }
+
+.like-to-start-desc {
+  display: inline-block;
+  line-height: 1.1; }
 
 .section-who {
   text-align: center;
@@ -5995,9 +5999,7 @@ a.hero-down-btn,
   overflow: hidden;
   background-color: #FBC435; }
   .section-runner .table {
-    text-align: center;
-    padding-top: 90px;
-    padding-bottom: 100px; }
+    text-align: center; }
   .section-runner .content {
     position: relative;
     font-size: 1.75rem;
@@ -6667,6 +6669,7 @@ a.hero-down-btn,
     border-left: none; }
 
   .section-hero .table {
+    padding-top: 30px;
     height: 480px; }
 
   .section-runner .table {
@@ -6968,6 +6971,12 @@ a.hero-down-btn,
 
   .back-link .btn {
     padding-left: 25px;
-    padding-right: 25px; } }
+    padding-right: 25px; }
+
+  .like-to-start-list > li {
+    width: 100%; }
+
+  .who-list > li {
+    width: 100%; } }
 
 /*# sourceMappingURL=screen.css.map */

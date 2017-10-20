@@ -298,6 +298,7 @@
   }
   .section-hero {
     .table {
+      padding-top: 30px;
       height: 480px;
     }
   }
@@ -769,6 +770,16 @@
   .back-link .btn {
     padding-left: 25px;
     padding-right: 25px;
+  }
+  .like-to-start-list {
+    > li {
+      width: 100%;
+    }
+  }
+  .who-list {
+    > li {
+      width: 100%;
+    }
   }
 }
 

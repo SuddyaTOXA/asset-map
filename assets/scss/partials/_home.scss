@@ -23,7 +23,7 @@
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
-    padding: 40px 20px 40px;
+    padding: 90px 20px 100px;
     .container { }
     .container-cell {
       display: table-cell;
@@ -163,12 +163,15 @@
           }
         }
       .like-to-start-title {
-        margin-bottom: -6px;
+        margin-bottom: -2px;
         font-size: 1.69rem;
         font-weight: 700;
         line-height: $line-height-small;
       }
-      .like-to-start-desc {}
+      .like-to-start-desc {
+        display: inline-block;
+        line-height: 1.1;
+      }
 
 .section-who {
   text-align: center;
@@ -279,8 +282,6 @@
   background-color: #FBC435;
   .table {
     text-align: center;
-    padding-top: 90px;
-    padding-bottom: 100px;
   }
     .container-cell {}
       .content-runner-box {

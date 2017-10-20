@@ -6668,7 +6668,10 @@ a.hero-down-btn,
 @media all and (max-width: 1090px) {
   .main-nav > ul > li > a {
     padding-left: 12px;
-    padding-right: 12px; } }
+    padding-right: 12px; }
+
+  .section-who .table {
+    height: 680px; } }
 @media all and (max-width: 1024px) {
   .desktop {
     display: none !important; }
@@ -6932,7 +6935,18 @@ a.hero-down-btn,
     display: block; }
 
   .section-runner.football-girl .content {
-    margin-left: 0; } }
+    margin-left: 0; }
+
+  .section-runner.football-girl .content {
+    text-align: center; }
+    .section-runner.football-girl .content:after {
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+      -khtml-transform: translate(-50%, 0);
+      -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -o-transform: translate(-50%, 0);
+      transform: translate(-50%, 0); } }
 @media all and (max-width: 640px) {
   .evaluation-list-wrap {
     display: block;
@@ -6972,7 +6986,7 @@ a.hero-down-btn,
 
   .how-list > li {
     width: 50%;
-    margin-bottom: 50px; }
+    margin-bottom: 40px; }
     .how-list > li:nth-child(odd) {
       clear: both; }
 
@@ -6984,6 +6998,9 @@ a.hero-down-btn,
   .how-box-table {
     padding-left: 15px;
     padding-right: 15px; }
+
+  .section-how {
+    padding-bottom: 40px; }
 
   .who-list > li {
     width: 49%; } }
@@ -7034,6 +7051,10 @@ a.hero-down-btn,
 
   .table {
     padding: 40px 15px 40px; }
+
+  .section-who .table {
+    padding-top: 70px;
+    padding-bottom: 80px; }
 
   .section-like-to-start .container {
     padding: 0 15px; }

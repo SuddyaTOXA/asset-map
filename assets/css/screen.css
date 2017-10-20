@@ -5724,13 +5724,14 @@ img.level3-icon {
     color: #121e25; }
 
 .section-hero {
+  overflow: hidden;
   position: relative;
   background-color: #0B67A1; }
   .section-hero .bg-img {
     opacity: .7; }
   .section-hero .table {
     max-width: 984px;
-    min-height: 664px;
+    height: 664px;
     height: -webkit-calc(100vh - 102px);
     height: calc(100vh - 102px); }
 
@@ -5738,7 +5739,7 @@ img.level3-icon {
   position: relative;
   z-index: 10;
   display: table;
-  min-height: 649px;
+  height: 649px;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
@@ -5893,7 +5894,7 @@ a.hero-down-btn,
   background: linear-gradient(to right, #4e909f 0%, #226984 100%); }
   .section-who .table {
     max-width: 1010px;
-    min-height: 877px; }
+    height: 877px; }
   .section-who .section-big-title {
     font-size: 3.75em;
     margin-bottom: 19px; }
@@ -6028,7 +6029,7 @@ a.hero-down-btn,
     background-color: #ffffff; }
     .section-runner.football-girl .table {
       max-width: 1040px;
-      min-height: 542px; }
+      height: 542px; }
     .section-runner.football-girl .content-runner-box {
       text-align: right; }
     .section-runner.football-girl .content {
@@ -6073,6 +6074,10 @@ a.hero-down-btn,
   color: #131617;
   text-align: center;
   background-color: #ffffff;
+  background-image: -webkit-linear-gradient(bottom, #dfeff5 0%, rgba(223, 239, 245, 0) 100%);
+  background-image: -o-linear-gradient(bottom, #dfeff5 0%, rgba(223, 239, 245, 0) 100%);
+  background-image: -ms-linear-gradient(bottom, #dfeff5 0%, rgba(223, 239, 245, 0) 100%);
+  background-image: -moz-linear-gradient(bottom, #dfeff5 0%, rgba(223, 239, 245, 0) 100%);
   background-image: linear-gradient(to top, #dfeff5 0%, rgba(223, 239, 245, 0) 100%); }
   .section-where .section-desc {
     max-width: 600px;
@@ -6660,10 +6665,10 @@ a.hero-down-btn,
     border-left: none; }
 
   .section-hero .table {
-    min-height: 480px; }
+    height: 480px; }
 
   .section-runner .table {
-    min-height: 600px; }
+    height: 600px; }
 
   .section-who .section-big-title {
     font-size: 3.1em; }
@@ -6850,10 +6855,13 @@ a.hero-down-btn,
 
   .section-runner.football-girl .table,
   .section-runner .table {
-    min-height: 400px; }
+    height: 400px; }
 
   .bg-img {
-    display: none; } }
+    display: none; }
+
+  .section-hero .bg-img {
+    display: block; } }
 @media all and (max-width: 640px) {
   .evaluation-list-wrap {
     display: block;

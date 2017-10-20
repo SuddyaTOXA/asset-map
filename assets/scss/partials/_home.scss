@@ -1,4 +1,5 @@
 .section-hero {
+  overflow: hidden;
   position: relative;
   background-color: #0B67A1;
   .bg-img {
@@ -6,7 +7,7 @@
   }
   .table {
     max-width: 984px;
-    min-height: 664px;
+    height: 664px;
     height: -webkit-calc(100vh - 102px);
     height: calc(100vh - 102px);
     .container-cell { }
@@ -18,7 +19,7 @@
     position: relative;
     z-index: 10;
     display: table;
-    min-height: 649px;
+    height: 649px;
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
@@ -180,7 +181,7 @@
 
   .table {
     max-width: 1010px;
-    min-height: 877px;
+    height: 877px;
   }
     .section-big-title {
       font-size: 3.75em;
@@ -315,7 +316,7 @@
     background-color: $white;
     .table {
       max-width: 1040px;
-      min-height: 542px;
+      height: 542px;
     }
       .container-cell { }
         .content-runner-box {
@@ -362,6 +363,11 @@
   color: $color-inner;
   text-align: center;
   background-color: $white;
+  //background-image: linear-gradient(to top, #dfeff5 0%, rgba(223, 239, 245, 0) 100%);
+  background-image: -webkit-linear-gradient(bottom, #dfeff5 0%, rgba(223, 239, 245, 0) 100%);
+  background-image: -o-linear-gradient(bottom, #dfeff5 0%, rgba(223, 239, 245, 0) 100%);
+  background-image: -ms-linear-gradient(bottom, #dfeff5 0%, rgba(223, 239, 245, 0) 100%);
+  background-image: -moz-linear-gradient(bottom, #dfeff5 0%, rgba(223, 239, 245, 0) 100%);
   background-image: linear-gradient(to top, #dfeff5 0%, rgba(223, 239, 245, 0) 100%);
   .section-desc {
     max-width: 600px;
